@@ -29,4 +29,11 @@ The script reads the service-role key from `.env.local`, refuses to promote a cu
 
 ## Applying migrations
 
-After `supabase link` has authenticated and stored the development project reference, review the pending list with `pnpm exec supabase migration list`. Commit migrations before applying them with `pnpm exec supabase db push`. Never run linked commands while the CLI points at a production project.
+Authenticate the project-local CLI with an account that has access to the Grand Pa development project, then link only that project:
+
+```sh
+pnpm exec supabase login
+pnpm exec supabase link --project-ref <grand-pa-development-project-ref>
+```
+
+After the link succeeds and the CLI prompts for the remote database password, review pending migrations with `pnpm exec supabase migration list`. Migrations must be committed before applying them with `pnpm exec supabase db push`. Never run linked commands while the CLI points at a production project.
