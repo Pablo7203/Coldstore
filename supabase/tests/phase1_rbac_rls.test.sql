@@ -1,7 +1,7 @@
 begin;
 
 create extension if not exists pgtap with schema extensions;
-select plan(19);
+select plan(28);
 
 insert into auth.users (
   id, aud, role, email, encrypted_password, email_confirmed_at,
@@ -20,10 +20,13 @@ insert into public.staff_profiles (user_id, full_name, role, is_active) values
 
 select has_table('public', 'staff_profiles', 'staff profile table exists');
 select has_table('public', 'customers', 'customer table exists');
+select has_table('public', 'staff_profile_audit', 'staff role audit table exists');
 select ok((select relrowsecurity from pg_class where oid = 'public.staff_profiles'::regclass), 'staff profiles enforce RLS');
 select ok((select relrowsecurity from pg_class where oid = 'public.customers'::regclass), 'customers enforce RLS');
+select ok((select relrowsecurity from pg_class where oid = 'public.staff_profile_audit'::regclass), 'staff role audit enforces RLS');
 select isnt(has_column_privilege('authenticated', 'public.staff_profiles', 'role', 'UPDATE'), true, 'authenticated users cannot update staff roles');
 select isnt(has_column_privilege('authenticated', 'public.customers', 'auth_user_id', 'UPDATE'), true, 'authenticated users cannot relink customer accounts');
+select isnt(has_table_privilege('authenticated', 'public.staff_profiles', 'INSERT'), true, 'authenticated users cannot insert staff profiles directly');
 
 set local role authenticated;
 select set_config('request.jwt.claim.sub', '10000000-0000-0000-0000-000000000002', true);
@@ -33,6 +36,21 @@ select ok(not public.has_permission('manage_credit'), 'cashier cannot manage cre
 select is((select count(*)::integer from public.staff_profiles), 1, 'cashier can read only their own staff profile');
 select is((select count(*)::integer from public.customers), 2, 'cashier can read customers for service');
 select ok(not public.has_permission('manage_staff'), 'cashier cannot manage staff');
+select is((select count(*)::integer from public.staff_profile_audit), 0, 'cashier cannot read staff role audit history');
+select throws_ok(
+  $$select public.assign_staff_profile('10000000-0000-0000-0000-000000000002', 'Escalated Cashier', null, 'admin', true)$$,
+  '42501',
+  'cashier cannot assign staff roles'
+);
+
+select set_config('request.jwt.claim.sub', '10000000-0000-0000-0000-000000000001', true);
+select lives_ok(
+  $$select public.assign_staff_profile('10000000-0000-0000-0000-000000000002', 'Test Cashier', null, 'manager', true)$$,
+  'administrator can assign a staff role'
+);
+select is((select role::text from public.staff_profiles where user_id = '10000000-0000-0000-0000-000000000002'), 'manager', 'role assignment updates the staff profile');
+select is((select event_type from public.staff_profile_audit where staff_user_id = '10000000-0000-0000-0000-000000000002' order by id desc limit 1), 'role_changed', 'role changes create an audit event');
+select is((select actor_user_id::text from public.staff_profile_audit where staff_user_id = '10000000-0000-0000-0000-000000000002' order by id desc limit 1), '10000000-0000-0000-0000-000000000001', 'audit event records the acting administrator');
 
 select set_config('request.jwt.claim.sub', '10000000-0000-0000-0000-000000000003', true);
 select ok(public.current_staff_role() is null, 'inactive staff have no active role');

@@ -17,7 +17,7 @@ Invite or create the owner's Auth identity in Supabase Auth. After the Phase 1 m
 pnpm bootstrap:admin -- owner@example.com "Owner Name"
 ```
 
-The script reads the service-role key from `.env.local`, refuses to promote a customer identity, and does not print credentials. Staff profiles cannot be inserted or assigned roles by an authenticated browser client.
+The script reads the service-role key from `.env.local`, refuses to promote a customer identity, and does not print credentials. Direct client inserts and updates to staff profiles are disabled. The database-only `assign_staff_profile` function checks the caller's active `manage_staff` permission and records role or activation changes in `staff_profile_audit`.
 
 ## Authentication behavior
 
