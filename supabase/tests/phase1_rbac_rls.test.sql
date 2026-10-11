@@ -1,7 +1,7 @@
 begin;
 
 create extension if not exists pgtap with schema extensions;
-select plan(28);
+select plan(30);
 
 insert into auth.users (
   id, aud, role, email, encrypted_password, email_confirmed_at,
@@ -52,6 +52,13 @@ select lives_ok(
 select is((select role::text from public.staff_profiles where user_id = '10000000-0000-0000-0000-000000000002'), 'manager', 'role assignment updates the staff profile');
 select is((select event_type from public.staff_profile_audit where staff_user_id = '10000000-0000-0000-0000-000000000002' order by id desc limit 1), 'role_changed', 'role changes create an audit event');
 select is((select actor_user_id::text from public.staff_profile_audit where staff_user_id = '10000000-0000-0000-0000-000000000002' order by id desc limit 1), '10000000-0000-0000-0000-000000000001', 'audit event records the acting administrator');
+select throws_ok(
+  $$select public.assign_staff_profile('20000000-0000-0000-0000-000000000001', 'Customer A', null, 'manager', true)$$,
+  '42501',
+  'Customer identities cannot be assigned a staff profile.',
+  'customer identities cannot be promoted to staff'
+);
+select is((select count(*)::integer from public.staff_profiles where user_id = '20000000-0000-0000-0000-000000000001'), 0, 'rejected customer promotion leaves no staff profile');
 
 select set_config('request.jwt.claim.sub', '10000000-0000-0000-0000-000000000003', true);
 select ok(public.current_staff_role() is null, 'inactive staff have no active role');

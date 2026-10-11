@@ -181,6 +181,14 @@ begin
       using errcode = '42501';
   end if;
 
+  if exists (
+    select 1 from public.customers as customer
+    where customer.auth_user_id = target_user_id
+  ) then
+    raise exception 'Customer identities cannot be assigned a staff profile.'
+      using errcode = '42501';
+  end if;
+
   insert into public.staff_profiles (user_id, full_name, phone, role, is_active)
   values (target_user_id, profile_name, profile_phone, assigned_role, active)
   on conflict (user_id) do update
