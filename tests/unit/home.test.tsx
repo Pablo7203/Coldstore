@@ -6,8 +6,10 @@ describe("foundation homepage", () => {
   it("renders the project name and foundation state", () => {
     render(<Home />);
     expect(
-      screen.getByRole("heading", { name: "Grand Pa’s Cold Store" }),
+      screen.getByRole("heading", { name: "Welcome to Grand Pa’s" }),
     ).toBeInTheDocument();
-    expect(screen.getByText("System Foundation Ready")).toBeInTheDocument();
+    expect(
+      screen.getByText("Your neighbourhood cold store, online."),
+    ).toBeInTheDocument();
   });
 });

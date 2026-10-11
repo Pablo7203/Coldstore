@@ -1,11 +1,17 @@
 import { expect, test } from "@playwright/test";
 
-test("homepage renders the foundation heading", async ({ page }) => {
+test("homepage offers sign-in and customer registration", async ({ page }) => {
   await page.goto("/");
   await expect(
-    page.getByRole("heading", { name: "Grand Pa’s Cold Store" }),
+    page.getByRole("heading", { name: "Welcome to Grand Pa’s" }),
   ).toBeVisible();
-  await expect(page.getByText("System Foundation Ready")).toBeVisible();
+  await expect(page.getByRole("link", { name: "Sign in" })).toHaveAttribute(
+    "href",
+    "/login",
+  );
+  await expect(
+    page.getByRole("link", { name: "Create customer account" }),
+  ).toHaveAttribute("href", "/register");
 });
 
 test("PWA manifest is available with install metadata", async ({ page }) => {
@@ -26,6 +32,18 @@ test("service worker response supports safe updates", async ({ page }) => {
   expect(response.ok()).toBeTruthy();
   expect(response.headers()["cache-control"]).toContain("no-store");
   expect(response.headers()["content-type"]).toContain("application/javascript");
+});
+
+test("anonymous visitors cannot open the staff workspace", async ({ page }) => {
+  await page.goto("/staff");
+  await expect(page).toHaveURL(/\/login(?:\?|$)/);
+  await expect(page.getByRole("heading", { name: "Sign in" })).toBeVisible();
+});
+
+test("anonymous visitors cannot open a customer account", async ({ page }) => {
+  await page.goto("/account");
+  await expect(page).toHaveURL(/\/login(?:\?|$)/);
+  await expect(page.getByRole("heading", { name: "Sign in" })).toBeVisible();
 });
 
 test("production service worker caches only the public foundation shell", async ({
@@ -56,7 +74,7 @@ test("production service worker caches only the public foundation shell", async 
   await context.setOffline(true);
   await page.reload();
   await expect(
-    page.getByRole("heading", { name: "Grand Pa’s Cold Store" }),
+    page.getByRole("heading", { name: "Welcome to Grand Pa’s" }),
   ).toBeVisible();
   await context.setOffline(false);
 });

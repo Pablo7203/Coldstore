@@ -1,0 +1,50 @@
+begin;
+
+create extension if not exists pgtap with schema extensions;
+select plan(19);
+
+insert into auth.users (
+  id, aud, role, email, encrypted_password, email_confirmed_at,
+  raw_app_meta_data, raw_user_meta_data, created_at, updated_at
+) values
+  ('10000000-0000-0000-0000-000000000001', 'authenticated', 'authenticated', 'admin@example.test', '', now(), '{}', '{}', now(), now()),
+  ('10000000-0000-0000-0000-000000000002', 'authenticated', 'authenticated', 'cashier@example.test', '', now(), '{}', '{}', now(), now()),
+  ('10000000-0000-0000-0000-000000000003', 'authenticated', 'authenticated', 'inactive@example.test', '', now(), '{}', '{}', now(), now()),
+  ('20000000-0000-0000-0000-000000000001', 'authenticated', 'authenticated', 'customer-a@example.test', '', now(), '{}', '{"account_type":"customer","full_name":"Customer A","phone":"0200000001"}', now(), now()),
+  ('20000000-0000-0000-0000-000000000002', 'authenticated', 'authenticated', 'customer-b@example.test', '', now(), '{}', '{"account_type":"customer","full_name":"Customer B","phone":"0200000002"}', now(), now());
+
+insert into public.staff_profiles (user_id, full_name, role, is_active) values
+  ('10000000-0000-0000-0000-000000000001', 'Test Admin', 'admin', true),
+  ('10000000-0000-0000-0000-000000000002', 'Test Cashier', 'cashier', true),
+  ('10000000-0000-0000-0000-000000000003', 'Inactive Staff', 'stock_assistant', false);
+
+select has_table('public', 'staff_profiles', 'staff profile table exists');
+select has_table('public', 'customers', 'customer table exists');
+select ok((select relrowsecurity from pg_class where oid = 'public.staff_profiles'::regclass), 'staff profiles enforce RLS');
+select ok((select relrowsecurity from pg_class where oid = 'public.customers'::regclass), 'customers enforce RLS');
+select isnt(has_column_privilege('authenticated', 'public.staff_profiles', 'role', 'UPDATE'), true, 'authenticated users cannot update staff roles');
+select isnt(has_column_privilege('authenticated', 'public.customers', 'auth_user_id', 'UPDATE'), true, 'authenticated users cannot relink customer accounts');
+
+set local role authenticated;
+select set_config('request.jwt.claim.sub', '10000000-0000-0000-0000-000000000002', true);
+select is(public.current_staff_role()::text, 'cashier', 'cashier role is resolved from the server-owned profile');
+select ok(public.has_permission('complete_sale'), 'cashier can complete sales');
+select ok(not public.has_permission('manage_credit'), 'cashier cannot manage credit');
+select is((select count(*)::integer from public.staff_profiles), 1, 'cashier can read only their own staff profile');
+select is((select count(*)::integer from public.customers), 2, 'cashier can read customers for service');
+select ok(not public.has_permission('manage_staff'), 'cashier cannot manage staff');
+
+select set_config('request.jwt.claim.sub', '10000000-0000-0000-0000-000000000003', true);
+select ok(public.current_staff_role() is null, 'inactive staff have no active role');
+select ok(not public.is_active_staff(), 'inactive staff fail the active staff check');
+select ok(not public.has_permission('receive_stock'), 'inactive staff have no permissions');
+
+select set_config('request.jwt.claim.sub', '20000000-0000-0000-0000-000000000001', true);
+select ok(public.current_staff_role() is null, 'customers are not represented as staff roles');
+select is((select count(*)::integer from public.staff_profiles), 0, 'customer cannot read staff profiles');
+select is((select count(*)::integer from public.customers), 1, 'customer can read only their linked customer profile');
+select is((select count(*)::integer from public.customers where auth_user_id = '20000000-0000-0000-0000-000000000002'), 0, 'customer cannot read another customer profile');
+
+reset role;
+select * from finish();
+rollback;
