@@ -40,6 +40,7 @@ select is((select count(*)::integer from public.staff_profile_audit), 0, 'cashie
 select throws_ok(
   $$select public.assign_staff_profile('10000000-0000-0000-0000-000000000002', 'Escalated Cashier', null, 'admin', true)$$,
   '42501',
+  'Only an active administrator may assign staff profiles.',
   'cashier cannot assign staff roles'
 );
 
