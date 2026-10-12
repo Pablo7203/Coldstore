@@ -1,0 +1,15 @@
+Phase 1C live identity verification — 2026-10-12
+
+Status: blocked before identity provisioning.
+Target: linked GrandPa development project.
+Opt-in hosted E2E: attempted against the hosted Auth API.
+First privileged Auth request: rejected with HTTP/API error “Invalid API key”.
+No fictional credentials were printed, persisted, or committed.
+Cleanup verification using linked SQL counts:
+- Matching Phase 1C Auth identities: 0.
+- Matching Phase 1C customer profiles: 0.
+- Matching Phase 1C staff profiles: 0.
+
+No bootstrap, sign-in, staff creation/deactivation, registration, or customer data operations ran after the failed first request.
+The project’s linked SQL role remains able to execute read-only verification queries. The service-role configuration in ignored `.env.local` must be replaced locally with a valid server-side key for this project before live identity checks can proceed.
+No Phase 2 work was started.

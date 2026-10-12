@@ -64,6 +64,12 @@ async function main() {
     );
   }
 
+  if (!matchedUser.email_confirmed_at) {
+    throw new Error(
+      "Confirm this Auth identity before bootstrapping its administrator profile.",
+    );
+  }
+
   const { data: customer, error: customerError } = await admin
     .from("customers")
     .select("id")

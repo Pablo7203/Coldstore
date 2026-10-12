@@ -95,3 +95,54 @@ export async function createStaffAccount(
       "Staff account created. Ask the staff member to use Forgot password to set a password.",
   };
 }
+
+export async function deactivateStaffAccount(
+  _previousState: StaffActionState,
+  formData: FormData,
+): Promise<StaffActionState> {
+  const targetUserId = z.uuid().safeParse(formData.get("userId"));
+  if (!targetUserId.success) return { message: "Select a valid staff account." };
+
+  const client = await createClient();
+  const actor = await resolveAuthContext(client);
+  if (actor?.type !== "staff") {
+    return { message: "Only an active administrator can deactivate staff." };
+  }
+
+  const { data: canManageStaff, error: permissionError } = await client.rpc(
+    "has_permission",
+    { requested_permission: "manage_staff" },
+  );
+  if (permissionError || canManageStaff !== true) {
+    return { message: "Only an active administrator can deactivate staff." };
+  }
+
+  const { data: target, error: targetError } = await client
+    .from("staff_profiles")
+    .select("user_id, full_name, phone, role, is_active")
+    .eq("user_id", targetUserId.data)
+    .maybeSingle();
+
+  if (targetError || !target) return { message: "Staff account was not found." };
+  if (!target.is_active) return { message: "This staff account is already inactive." };
+
+  const { error } = await client.rpc("assign_staff_profile", {
+    target_user_id: target.user_id,
+    profile_name: target.full_name,
+    profile_phone: target.phone ?? "",
+    assigned_role: target.role,
+    active: false,
+  });
+
+  if (error) {
+    return {
+      message:
+        error.code === "42501"
+          ? "Administrators cannot deactivate their own account."
+          : "We could not deactivate this staff account.",
+    };
+  }
+
+  revalidatePath("/staff");
+  return { success: true, message: "Staff account deactivated." };
+}

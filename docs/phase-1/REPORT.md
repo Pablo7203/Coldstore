@@ -42,6 +42,7 @@
 
 - Playwright verified failed hosted Auth login, anonymous redirects, customer-only registration fields, recovery screens, public home links, manifest, and service worker.
 - Live successful customer signup/login/logout, initial admin bootstrap, live deactivated-user route denial, and end-to-end admin-created staff sign-in were not executed. There are no controlled test identities/passwords in this workspace, and the verification did not create user accounts or request/print account data. The staff creation path is covered through its server/database authorization design, but its complete hosted UI lifecycle remains an acceptance limitation.
+- Phase 1C attempted the full controlled hosted workflow. It stopped on the first Auth Admin API call with `Invalid API key`; linked SQL counts confirmed that no test identities or profiles were created. See `docs/phase-1/PHASE-1C-REPORT.md`.
 
 ## Regression results
 
@@ -59,7 +60,7 @@
 - `.env.local` was confirmed ignored by Git and is not staged.
 - Browser client uses only public Supabase URL/key. Admin client is marked `server-only`; no service-role value is referenced by client UI code.
 - No secret values or user account data are included in documentation/evidence.
-- Staff/service-role real-world operations were deliberately not attempted as a side effect of verification.
+- A Phase 1C test attempt was explicitly authorized; its initial privileged Auth API call was rejected before mutation. No staff/service-role operation succeeded. The configured value remains local and was not printed.
 
 ## Files and artifacts
 

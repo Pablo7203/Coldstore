@@ -1,22 +1,21 @@
-Phase 1B final checks — 2026-10-12
+Phase 1C final checks — 2026-10-12
 
 Development project: GrandPa (xjzdcpuwrjnpjzntytjs), linked, healthy.
 Migrations: local and remote synchronized at 20261011230000, 20261012010000, 20261012030000.
 .env.local: Git-ignored.
-Supabase public Auth endpoint: HTTP 200.
-Public Supabase client initialized: yes.
-Server admin client initialized: yes; no privileged data request made.
-Hosted schema assertions: expected Phase 1 schema; RLS enabled on all 5 application tables; no Phase 2 tables.
-Hosted pgTAP SQL assertions: 30 passed, 0 failed, rollback transaction.
-Hosted Ghana phone SQL checks: 6 valid normalized, 6 invalid rejected, rollback transaction.
+Public Auth endpoint: HTTP 200.
+Public Supabase client: initialized.
+Server admin client: constructor initialized; first live Auth Admin request returned Invalid API key.
+Hosted RLS suite rerun after Admin deactivation changes: 30 assertions passed through privileged SQL verification in rollback transaction.
+Phase 1B hosted Ghana phone SQL checks: 6 valid normalized, 6 invalid rejected, rollback transaction.
+Phase 1C fictional account cleanup check: 0 matching Auth users, customer profiles, or staff profiles created.
 pnpm.cmd typecheck: pass.
 pnpm.cmd lint: pass.
 pnpm.cmd format:check: pass.
 pnpm.cmd test: 5 files, 20 tests passed.
-pnpm.cmd test:e2e: 8 passed, 1 production-only test skipped in development mode.
+pnpm.cmd test:e2e: 8 passed, 2 skipped (production-only and opt-in hosted identity test).
+PHASE1C_LIVE=1 hosted E2E attempt: failed before identity provisioning because Supabase Auth returned Invalid API key.
 pnpm.cmd build: pass.
-git diff --check: pass.
-Browser static bundle scan: no SUPABASE_SERVICE_ROLE_KEY reference found.
-
-Note: `supabase test db --linked` cannot access pgTAP in the `extensions` schema under its CLI runner role. A persistent schema grant was rejected by automatic review and reverted. All 30 hosted assertions passed using the privileged SQL query path instead.
-Note: controlled successful customer/staff identity journeys were not provisioned or executed.
+git diff --check: pass after evidence/report updates.
+Production browser static bundle scan: no SUPABASE_SERVICE_ROLE_KEY reference found.
+.env.local value and credentials are not included in this evidence.

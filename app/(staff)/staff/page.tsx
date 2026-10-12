@@ -1,6 +1,8 @@
 import { signOut } from "@/app/(auth)/actions";
 import { CreateStaffForm } from "@/components/staff/create-staff-form";
+import { StaffDirectory } from "@/components/staff/staff-directory";
 import { requireStaffContext, userHasPermission } from "@/lib/auth/authorization";
+import { createClient } from "@/lib/supabase/server";
 
 const roleNames = {
   admin: "Administrator",
@@ -12,6 +14,13 @@ const roleNames = {
 export default async function StaffHomePage() {
   const staff = await requireStaffContext();
   const canManageStaff = await userHasPermission("manage_staff");
+  const client = canManageStaff ? await createClient() : null;
+  const { data: staffProfiles } = client
+    ? await client
+        .from("staff_profiles")
+        .select("user_id, full_name, phone, role, is_active, created_at, updated_at")
+        .order("full_name")
+    : { data: [] };
 
   return (
     <main className="min-h-svh bg-[#f4f3ed] px-5 py-8 text-[#20251f] sm:px-8">
@@ -41,7 +50,12 @@ export default async function StaffHomePage() {
             project phases.
           </p>
         </section>
-        {canManageStaff ? <CreateStaffForm /> : null}
+        {canManageStaff ? (
+          <>
+            <StaffDirectory profiles={staffProfiles ?? []} />
+            <CreateStaffForm />
+          </>
+        ) : null}
       </div>
     </main>
   );
