@@ -1,0 +1,45 @@
+
+> grandpa-web@0.1.0 test:e2e C:\Users\Thoma\OneDrive\Documents\ChatGPT\coldstore
+> playwright test
+
+[WebServer] (node:17392) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:30588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:45108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:40224) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:41296) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 8 workers
+
+(node:18980) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8464) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17332) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17452) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:33836) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:15068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › tests\e2e\home.spec.ts:18:1 › PWA manifest is available with install metadata (2.8s)
+  -  9 [chromium] › tests\e2e\home.spec.ts:82:1 › production service worker caches only the public foundation shell
+  ok 6 [chromium] › tests\e2e\home.spec.ts:31:1 › service worker response supports safe updates (4.6s)
+  ok 2 [chromium] › tests\e2e\home.spec.ts:4:1 › homepage offers sign-in and customer registration (12.8s)
+  ok 4 [chromium] › tests\e2e\home.spec.ts:38:1 › anonymous visitors cannot open the staff workspace (13.7s)
+  ok 8 [chromium] › tests\e2e\home.spec.ts:44:1 › anonymous visitors cannot open a customer account (12.4s)
+  ok 5 [chromium] › tests\e2e\home.spec.ts:50:1 › login form rejects unknown credentials through Supabase Auth (14.0s)
+  ok 3 [chromium] › tests\e2e\home.spec.ts:60:1 › customer registration collects customer details without a staff role field (15.5s)
+  ok 7 [chromium] › tests\e2e\home.spec.ts:72:1 › password recovery screens are reachable and labelled (16.1s)
+
+  1 skipped
+  8 passed (36.9s)

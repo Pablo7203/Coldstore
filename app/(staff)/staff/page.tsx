@@ -1,5 +1,6 @@
 import { signOut } from "@/app/(auth)/actions";
-import { requireStaffContext } from "@/lib/auth/authorization";
+import { CreateStaffForm } from "@/components/staff/create-staff-form";
+import { requireStaffContext, userHasPermission } from "@/lib/auth/authorization";
 
 const roleNames = {
   admin: "Administrator",
@@ -10,6 +11,7 @@ const roleNames = {
 
 export default async function StaffHomePage() {
   const staff = await requireStaffContext();
+  const canManageStaff = await userHasPermission("manage_staff");
 
   return (
     <main className="min-h-svh bg-[#f4f3ed] px-5 py-8 text-[#20251f] sm:px-8">
@@ -39,6 +41,7 @@ export default async function StaffHomePage() {
             project phases.
           </p>
         </section>
+        {canManageStaff ? <CreateStaffForm /> : null}
       </div>
     </main>
   );

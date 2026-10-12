@@ -1,39 +1,32 @@
 # Phase 1 — Database, Auth, RBAC and RLS
 
-All application schema in this phase is defined in `supabase/migrations/` and must be committed before it is applied to the development project. Do not create application tables manually in the Supabase Dashboard.
+All application schema is defined by committed migrations in `supabase/migrations/`. Do not create Grand Pa application tables manually in the Supabase Dashboard.
 
 ## Development environment
 
-- `supabase/config.toml` identifies the local CLI project as `grandpa-coldstore-dev`.
-- The linked remote project is the dedicated **GrandPa development project**. Production uses a separate Supabase project when it is created.
-- `.env.local` is ignored by Git. Keep the project URL, publishable key, and service-role key there; never paste credentials into docs, issues, or source files.
-- Use the project-local CLI with `pnpm exec supabase`. The CLI is pinned in `package.json`.
+- Dedicated development project: GrandPa, Supabase ref `xjzdcpuwrjnpjzntytjs` (region `eu-west-3`). Production will use a separate project later.
+- Supabase CLI is linked to this development project. Confirm the target before any linked database operation with `pnpm exec supabase projects list` and `pnpm exec supabase migration list`.
+- `.env.local` is Git-ignored. Store public URL/key and server-only service-role key locally. Never put secret values in source, docs, terminal captures, or evidence.
+- `pnpm exec node scripts/verify-supabase-clients.mjs` checks public Auth reachability and initializes both public and server admin clients. It prints statuses only and makes no privileged data request.
 
 ## Initial administrator
 
-Invite or create the owner's Auth identity in Supabase Auth. After the Phase 1 migration has been applied, create its staff profile from the local machine:
+Use the local operator bootstrap only for the confirmed owner Auth identity:
 
 ```sh
 pnpm bootstrap:admin -- owner@example.com "Owner Name"
 ```
 
-The script reads the service-role key from `.env.local`, refuses to promote a customer identity, and does not print credentials. Direct client inserts and updates to staff profiles are disabled. The database-only `assign_staff_profile` function checks the caller's active `manage_staff` permission and records role or activation changes in `staff_profile_audit`.
+The script reads the service-role key locally, refuses customer or already-profiled identities, and does not print credentials. Staff accounts can then be created from `/staff` by an active admin with `manage_staff`; the server action creates a confirmed Auth identity, assigns its profile through the permission-checked database function, and removes the new identity if profile assignment fails. Staff set their password through password recovery.
 
 ## Authentication behavior
 
-- Staff sign in at `/login`; only active rows in `staff_profiles` enter `/staff`.
+- Staff sign in at `/login`; only active `staff_profiles` identities can use `/staff`.
 - Customers register at `/register`, confirm their email, then use `/account`.
 - Password reset uses `/forgot-password` and `/reset-password`.
-- Staff identities have no public registration route. The first admin is bootstrapped locally; staff management is reserved for a later phase.
-- Next.js Proxy refreshes the cookie-backed Supabase session on protected paths. Server layouts revalidate claims and resolve profiles; PostgreSQL RLS remains the data-access boundary.
+- Staff registration is not public. Database role changes and profile assignment remain protected by `assign_staff_profile` and audit events.
+- Ghana phones are normalized to `+233` plus nine digits in both application validation and database triggers. Local `0XXXXXXXXX`, `233XXXXXXXXX`, and `+233XXXXXXXXX` forms are accepted; malformed or non-Ghana values are rejected.
 
-## Applying migrations
+## Migrations and checks
 
-Authenticate the project-local CLI with an account that has access to the Grand Pa development project, then link only that project:
-
-```sh
-pnpm exec supabase login
-pnpm exec supabase link --project-ref <grand-pa-development-project-ref>
-```
-
-After the link succeeds and the CLI prompts for the remote database password, review pending migrations with `pnpm exec supabase migration list`. Migrations must be committed before applying them with `pnpm exec supabase db push`. Never run linked commands while the CLI points at a production project.
+Apply only committed migrations to the linked development project with `pnpm exec supabase db push`. Generated database types in `types/database.ts` come from the linked hosted schema. Hosted evidence and the Phase 1 report are in `docs/evidence/phase-1/` and `docs/phase-1/REPORT.md`.

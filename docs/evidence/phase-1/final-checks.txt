@@ -1,0 +1,22 @@
+Phase 1B final checks — 2026-10-12
+
+Development project: GrandPa (xjzdcpuwrjnpjzntytjs), linked, healthy.
+Migrations: local and remote synchronized at 20261011230000, 20261012010000, 20261012030000.
+.env.local: Git-ignored.
+Supabase public Auth endpoint: HTTP 200.
+Public Supabase client initialized: yes.
+Server admin client initialized: yes; no privileged data request made.
+Hosted schema assertions: expected Phase 1 schema; RLS enabled on all 5 application tables; no Phase 2 tables.
+Hosted pgTAP SQL assertions: 30 passed, 0 failed, rollback transaction.
+Hosted Ghana phone SQL checks: 6 valid normalized, 6 invalid rejected, rollback transaction.
+pnpm.cmd typecheck: pass.
+pnpm.cmd lint: pass.
+pnpm.cmd format:check: pass.
+pnpm.cmd test: 5 files, 20 tests passed.
+pnpm.cmd test:e2e: 8 passed, 1 production-only test skipped in development mode.
+pnpm.cmd build: pass.
+git diff --check: pass.
+Browser static bundle scan: no SUPABASE_SERVICE_ROLE_KEY reference found.
+
+Note: `supabase test db --linked` cannot access pgTAP in the `extensions` schema under its CLI runner role. A persistent schema grant was rejected by automatic review and reverted. All 30 hosted assertions passed using the privileged SQL query path instead.
+Note: controlled successful customer/staff identity journeys were not provisioned or executed.

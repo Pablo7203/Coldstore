@@ -3,6 +3,7 @@ import "server-only";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 import { browserEnvironment } from "@/lib/env";
+import type { Database } from "@/types/database";
 
 export async function createClient() {
   if (
@@ -14,7 +15,7 @@ export async function createClient() {
 
   const cookieStore = await cookies();
 
-  return createServerClient(
+  return createServerClient<Database>(
     browserEnvironment.NEXT_PUBLIC_SUPABASE_URL,
     browserEnvironment.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     {

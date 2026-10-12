@@ -1,0 +1,7 @@
+lint: exit 0
+typecheck: exit 0
+format-check: exit 0
+unit-tests: exit 0
+playwright-e2e: exit 0
+production-build: exit 0
+git diff --check: exit 0

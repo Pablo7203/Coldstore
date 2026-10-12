@@ -1,0 +1,18 @@
+Initialising login role...
+Connecting to remote database...
+psql:/Users/Thoma/OneDrive/Documents/ChatGPT/coldstore/supabase/tests/phase1_rbac_rls.test.sql:3: NOTICE:  extension "pgtap" already exists, skipping
+psql:/Users/Thoma/OneDrive/Documents/ChatGPT/coldstore/supabase/tests/phase1_rbac_rls.test.sql:4: ERROR:  permission denied for schema extensions
+LINE 1: select extensions.plan(30);
+               ^
+/Users/Thoma/OneDrive/Documents/ChatGPT/coldstore/supabase/tests/phase1_rbac_rls.test.sql ..
+Dubious, test returned 3 (wstat 768, 0x300)
+No subtests run
+
+Test Summary Report
+-------------------
+/Users/Thoma/OneDrive/Documents/ChatGPT/coldstore/supabase/tests/phase1_rbac_rls.test.sql (Wstat: 768 (exited 3) Tests: 0 Failed: 0)
+  Non-zero exit status: 3
+  Parse errors: No plan found in TAP output
+Files=1, Tests=0,  3 wallclock secs ( 0.01 usr  0.02 sys +  0.01 cusr  0.00 csys =  0.04 CPU)
+Result: FAIL
+error running container: exit 1

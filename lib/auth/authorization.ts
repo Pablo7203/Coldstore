@@ -3,6 +3,7 @@ import "server-only";
 import { redirect } from "next/navigation";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/server";
+import type { Database } from "@/types/database";
 
 export const staffRoles = ["admin", "manager", "cashier", "stock_assistant"] as const;
 export type StaffRole = (typeof staffRoles)[number];
@@ -19,7 +20,9 @@ export type AuthContext =
   | { type: "customer"; userId: string; fullName: string; customerId: string }
   | null;
 
-export async function resolveAuthContext(client: SupabaseClient): Promise<AuthContext> {
+export async function resolveAuthContext(
+  client: SupabaseClient<Database>,
+): Promise<AuthContext> {
   const { data: claimData, error: claimError } = await client.auth.getClaims();
   const claims = claimData?.claims;
   const userId = claims?.sub;

@@ -2,6 +2,7 @@ import "server-only";
 
 import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import { browserEnvironment, getServerEnvironment } from "@/lib/env";
+import type { Database } from "@/types/database";
 
 export function createAdminClient() {
   const { SUPABASE_SERVICE_ROLE_KEY } = getServerEnvironment();
@@ -9,7 +10,7 @@ export function createAdminClient() {
     throw new Error("Supabase admin environment is not configured.");
   }
 
-  return createSupabaseClient(
+  return createSupabaseClient<Database>(
     browserEnvironment.NEXT_PUBLIC_SUPABASE_URL,
     SUPABASE_SERVICE_ROLE_KEY,
     {

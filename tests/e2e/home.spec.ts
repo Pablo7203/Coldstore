@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { randomUUID } from "node:crypto";
 
 test("homepage offers sign-in and customer registration", async ({ page }) => {
   await page.goto("/");
@@ -44,6 +45,38 @@ test("anonymous visitors cannot open a customer account", async ({ page }) => {
   await page.goto("/account");
   await expect(page).toHaveURL(/\/login(?:\?|$)/);
   await expect(page.getByRole("heading", { name: "Sign in" })).toBeVisible();
+});
+
+test("login form rejects unknown credentials through Supabase Auth", async ({ page }) => {
+  await page.goto("/login");
+  await page.getByLabel("Email address").fill(`missing-${randomUUID()}@example.test`);
+  await page.getByLabel("Password").fill("not-a-real-password-123");
+  await page.getByRole("button", { name: "Sign in" }).click();
+  await expect(
+    page.getByText("We could not sign you in with those details."),
+  ).toBeVisible();
+});
+
+test("customer registration collects customer details without a staff role field", async ({
+  page,
+}) => {
+  await page.goto("/register");
+  await expect(page.getByLabel("Full name")).toBeVisible();
+  await expect(page.getByLabel("Phone number")).toBeVisible();
+  await expect(page.getByLabel("Email address")).toBeVisible();
+  await expect(page.getByLabel("Password")).toBeVisible();
+  await expect(page.locator('form select[name="role"]')).toHaveCount(0);
+  await expect(page.locator('form input[name="role"]')).toHaveCount(0);
+});
+
+test("password recovery screens are reachable and labelled", async ({ page }) => {
+  await page.goto("/forgot-password");
+  await expect(page.getByLabel("Email address")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Send reset link" })).toBeVisible();
+
+  await page.goto("/reset-password");
+  await expect(page.getByLabel("New password", { exact: true })).toBeVisible();
+  await expect(page.getByLabel("Confirm new password", { exact: true })).toBeVisible();
 });
 
 test("production service worker caches only the public foundation shell", async ({

@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { resolveAuthContext } from "@/lib/auth/authorization";
 import { createClient } from "@/lib/supabase/server";
+import { normalizeGhanaPhone } from "@/lib/validation/ghana-phone";
 
 export type AuthActionState = { message?: string; success?: boolean };
 
@@ -15,7 +16,14 @@ const credentialsSchema = z.object({
 
 const registrationSchema = credentialsSchema.extend({
   fullName: z.string().trim().min(2).max(120),
-  phone: z.string().trim().min(7).max(32),
+  phone: z.string().transform((phone, context) => {
+    const normalizedPhone = normalizeGhanaPhone(phone);
+    if (!normalizedPhone) {
+      context.addIssue({ code: "custom", message: "Enter a valid Ghana phone number." });
+      return z.NEVER;
+    }
+    return normalizedPhone;
+  }),
 });
 
 const resetSchema = z.object({ email: z.email().trim().toLowerCase() });

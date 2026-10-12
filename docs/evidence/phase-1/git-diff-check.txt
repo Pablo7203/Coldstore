@@ -1,0 +1,4 @@
+warning: in the working copy of 'docs/phase-1/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/phase-1/REPORT.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'next-env.d.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/e2e/home.spec.ts', LF will be replaced by CRLF the next time Git touches it

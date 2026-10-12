@@ -1,0 +1,79 @@
+begin;
+
+create temp table phase1_test_results (line text not null);
+grant insert on phase1_test_results to authenticated;
+create extension if not exists pgtap with schema extensions;
+insert into phase1_test_results(line) select extensions.plan(30);
+
+insert into auth.users (
+  id, aud, role, email, encrypted_password, email_confirmed_at,
+  raw_app_meta_data, raw_user_meta_data, created_at, updated_at
+) values
+  ('10000000-0000-0000-0000-000000000001', 'authenticated', 'authenticated', 'admin@example.test', '', now(), '{}', '{}', now(), now()),
+  ('10000000-0000-0000-0000-000000000002', 'authenticated', 'authenticated', 'cashier@example.test', '', now(), '{}', '{}', now(), now()),
+  ('10000000-0000-0000-0000-000000000003', 'authenticated', 'authenticated', 'inactive@example.test', '', now(), '{}', '{}', now(), now()),
+  ('20000000-0000-0000-0000-000000000001', 'authenticated', 'authenticated', 'customer-a@example.test', '', now(), '{}', '{"account_type":"customer","full_name":"Customer A","phone":"0200000001"}', now(), now()),
+  ('20000000-0000-0000-0000-000000000002', 'authenticated', 'authenticated', 'customer-b@example.test', '', now(), '{}', '{"account_type":"customer","full_name":"Customer B","phone":"0200000002"}', now(), now());
+
+insert into public.staff_profiles (user_id, full_name, role, is_active) values
+  ('10000000-0000-0000-0000-000000000001', 'Test Admin', 'admin', true),
+  ('10000000-0000-0000-0000-000000000002', 'Test Cashier', 'cashier', true),
+  ('10000000-0000-0000-0000-000000000003', 'Inactive Staff', 'stock_assistant', false);
+
+insert into phase1_test_results(line) select extensions.has_table('public', 'staff_profiles', 'staff profile table exists');
+insert into phase1_test_results(line) select extensions.has_table('public', 'customers', 'customer table exists');
+insert into phase1_test_results(line) select extensions.has_table('public', 'staff_profile_audit', 'staff role audit table exists');
+insert into phase1_test_results(line) select extensions.ok((select relrowsecurity from pg_class where oid = 'public.staff_profiles'::regclass), 'staff profiles enforce RLS');
+insert into phase1_test_results(line) select extensions.ok((select relrowsecurity from pg_class where oid = 'public.customers'::regclass), 'customers enforce RLS');
+insert into phase1_test_results(line) select extensions.ok((select relrowsecurity from pg_class where oid = 'public.staff_profile_audit'::regclass), 'staff role audit enforces RLS');
+insert into phase1_test_results(line) select extensions.isnt(has_column_privilege('authenticated', 'public.staff_profiles', 'role', 'UPDATE'), true, 'authenticated users cannot update staff roles');
+insert into phase1_test_results(line) select extensions.isnt(has_column_privilege('authenticated', 'public.customers', 'auth_user_id', 'UPDATE'), true, 'authenticated users cannot relink customer accounts');
+insert into phase1_test_results(line) select extensions.isnt(has_table_privilege('authenticated', 'public.staff_profiles', 'INSERT'), true, 'authenticated users cannot insert staff profiles directly');
+
+set local role authenticated;
+select set_config('request.jwt.claim.sub', '10000000-0000-0000-0000-000000000002', true);
+insert into phase1_test_results(line) select extensions.is(public.current_staff_role()::text, 'cashier', 'cashier role is resolved from the server-owned profile');
+insert into phase1_test_results(line) select extensions.ok(public.has_permission('complete_sale'), 'cashier can complete sales');
+insert into phase1_test_results(line) select extensions.ok(not public.has_permission('manage_credit'), 'cashier cannot manage credit');
+insert into phase1_test_results(line) select extensions.is((select count(*)::integer from public.staff_profiles), 1, 'cashier can read only their own staff profile');
+insert into phase1_test_results(line) select extensions.is((select count(*)::integer from public.customers), 2, 'cashier can read customers for service');
+insert into phase1_test_results(line) select extensions.ok(not public.has_permission('manage_staff'), 'cashier cannot manage staff');
+insert into phase1_test_results(line) select extensions.is((select count(*)::integer from public.staff_profile_audit), 0, 'cashier cannot read staff role audit history');
+insert into phase1_test_results(line) select extensions.throws_ok(
+  $$select public.assign_staff_profile('10000000-0000-0000-0000-000000000002', 'Escalated Cashier', null, 'admin', true)$$,
+  '42501',
+  'Only an active administrator may assign staff profiles.',
+  'cashier cannot assign staff roles'
+);
+
+select set_config('request.jwt.claim.sub', '10000000-0000-0000-0000-000000000001', true);
+insert into phase1_test_results(line) select extensions.lives_ok(
+  $$select public.assign_staff_profile('10000000-0000-0000-0000-000000000002', 'Test Cashier', null, 'manager', true)$$,
+  'administrator can assign a staff role'
+);
+insert into phase1_test_results(line) select extensions.is((select role::text from public.staff_profiles where user_id = '10000000-0000-0000-0000-000000000002'), 'manager', 'role assignment updates the staff profile');
+insert into phase1_test_results(line) select extensions.is((select event_type from public.staff_profile_audit where staff_user_id = '10000000-0000-0000-0000-000000000002' order by id desc limit 1), 'role_changed', 'role changes create an audit event');
+insert into phase1_test_results(line) select extensions.is((select actor_user_id::text from public.staff_profile_audit where staff_user_id = '10000000-0000-0000-0000-000000000002' order by id desc limit 1), '10000000-0000-0000-0000-000000000001', 'audit event records the acting administrator');
+insert into phase1_test_results(line) select extensions.throws_ok(
+  $$select public.assign_staff_profile('20000000-0000-0000-0000-000000000001', 'Customer A', null, 'manager', true)$$,
+  '42501',
+  'Customer identities cannot be assigned a staff profile.',
+  'customer identities cannot be promoted to staff'
+);
+insert into phase1_test_results(line) select extensions.is((select count(*)::integer from public.staff_profiles where user_id = '20000000-0000-0000-0000-000000000001'), 0, 'rejected customer promotion leaves no staff profile');
+
+select set_config('request.jwt.claim.sub', '10000000-0000-0000-0000-000000000003', true);
+insert into phase1_test_results(line) select extensions.ok(public.current_staff_role() is null, 'inactive staff have no active role');
+insert into phase1_test_results(line) select extensions.ok(not public.is_active_staff(), 'inactive staff fail the active staff check');
+insert into phase1_test_results(line) select extensions.ok(not public.has_permission('receive_stock'), 'inactive staff have no permissions');
+
+select set_config('request.jwt.claim.sub', '20000000-0000-0000-0000-000000000001', true);
+insert into phase1_test_results(line) select extensions.ok(public.current_staff_role() is null, 'customers are not represented as staff roles');
+insert into phase1_test_results(line) select extensions.is((select count(*)::integer from public.staff_profiles), 0, 'customer cannot read staff profiles');
+insert into phase1_test_results(line) select extensions.is((select count(*)::integer from public.customers), 1, 'customer can read only their linked customer profile');
+insert into phase1_test_results(line) select extensions.is((select count(*)::integer from public.customers where auth_user_id = '20000000-0000-0000-0000-000000000002'), 0, 'customer cannot read another customer profile');
+
+reset role;
+select * from extensions.finish();
+select jsonb_pretty(jsonb_build_object('total', count(*), 'passed', count(*) filter (where line like 'ok %'), 'failed', count(*) filter (where line like 'not ok %'), 'results', jsonb_agg(line order by ctid))) as verification from phase1_test_results;
+rollback;

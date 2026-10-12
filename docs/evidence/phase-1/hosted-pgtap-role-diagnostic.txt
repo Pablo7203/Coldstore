@@ -1,0 +1,16 @@
+Initialising login role...
+Connecting to remote database...
+psql:/Users/Thoma/OneDrive/Documents/ChatGPT/coldstore/docs/evidence/phase-1/hosted-pgtap-role-diagnostic.sql:1: ERROR:  pgTAP runner role: cli_login_postgres
+CONTEXT:  PL/pgSQL function inline_code_block line 1 at RAISE
+/Users/Thoma/OneDrive/Documents/ChatGPT/coldstore/docs/evidence/phase-1/hosted-pgtap-role-diagnostic.sql ..
+Dubious, test returned 3 (wstat 768, 0x300)
+No subtests run
+
+Test Summary Report
+-------------------
+/Users/Thoma/OneDrive/Documents/ChatGPT/coldstore/docs/evidence/phase-1/hosted-pgtap-role-diagnostic.sql (Wstat: 768 (exited 3) Tests: 0 Failed: 0)
+  Non-zero exit status: 3
+  Parse errors: No plan found in TAP output
+Files=1, Tests=0,  2 wallclock secs ( 0.01 usr  0.01 sys +  0.01 cusr  0.00 csys =  0.03 CPU)
+Result: FAIL
+error running container: exit 1
