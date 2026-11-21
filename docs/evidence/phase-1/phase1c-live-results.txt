@@ -1,15 +1,37 @@
-Phase 1C live identity verification — 2026-10-12
+Phase 1C.1 API key migration and live verification — 2026-10-12
 
-Status: blocked before identity provisioning.
-Target: linked GrandPa development project.
-Opt-in hosted E2E: attempted against the hosted Auth API.
-First privileged Auth request: rejected with HTTP/API error “Invalid API key”.
-No fictional credentials were printed, persisted, or committed.
-Cleanup verification using linked SQL counts:
-- Matching Phase 1C Auth identities: 0.
-- Matching Phase 1C customer profiles: 0.
-- Matching Phase 1C staff profiles: 0.
+Target: GrandPa development project only (project reference verified).
+Environment: .env.local uses the current publishable/secret variable names and is Git-ignored. No values are recorded here.
 
-No bootstrap, sign-in, staff creation/deactivation, registration, or customer data operations ran after the failed first request.
-The project’s linked SQL role remains able to execute read-only verification queries. The service-role configuration in ignored `.env.local` must be replaced locally with a valid server-side key for this project before live identity checks can proceed.
-No Phase 2 work was started.
+Connectivity probe:
+- Project endpoint matches the configured GrandPa development reference: PASS.
+- Browser publishable client initialized; Auth settings returned HTTP 200: PASS.
+- Minimal Auth Admin listUsers request using the server-only secret key: PASS; response data discarded.
+
+Hosted identity flow:
+- Initial Admin bootstrap, Admin login, staff creation for Manager/Cashier/Stock Assistant, role logins, unauthorized role-assignment denial, Ghana phone normalization/rejection, and staff deactivation checks passed before the customer signup blocker.
+- The test harness was corrected to launch the bootstrap script directly under Node on Windows, retry Auth identity lookup during propagation, and select the form validation alert rather than Next.js's route announcer.
+- Customer registration form returned a generic error. An isolated fictional signup probe returned provider error code over_email_send_rate_limit. The probe cleanup completed; the live test finally cleanup runs after each failed attempt.
+- Read-only cleanup verification found two stale fictional identities from earlier failed attempts; both were deleted, and the follow-up count was zero. Test cleanup now covers the complete Phase 1C fictional email namespace.
+
+Existing hosted database evidence:
+- 30 RBAC/RLS pgTAP assertions passed again through the privileged SQL query route inside a rollback transaction.
+- Hosted Ghana phone SQL checks passed (Phase 1B evidence).
+- No schema or persistent auth configuration changes were made in this attempt.
+
+Regression:
+- `pnpm lint`: PASS.
+- `pnpm typecheck`: PASS.
+- `pnpm format:check`: PASS.
+- `pnpm test`: PASS (5 files, 20 tests).
+- `pnpm test:e2e`: PASS (8 passed, 2 skipped: production-only and opt-in hosted identity workflow).
+- `pnpm build`: PASS.
+- `git diff --check`: PASS.
+
+Secret boundary:
+- `.env.local` Git-ignore check and new key-format/project-ref checks: PASS.
+- Secret value absent from Git content, production static bundles, service worker, and evidence files: PASS.
+- Server secret-variable source absent from production static bundles, service worker, HTML, IndexedDB, and evidence: PASS.
+- Public secret-key environment variable names are unset. No API keys or Auth records were printed or stored in evidence.
+
+No credentials, Auth user data, or API-key values are included in this file.

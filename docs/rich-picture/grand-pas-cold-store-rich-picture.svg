@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1240" viewBox="0 0 1900 1240">
+<title>Grand Pa’s Cold Store — Daily Operations Rich Picture</title>
+<desc>A rich picture of the cold store’s daily work: supplier deliveries, stock checks, customer purchases, POS payments, pickup orders, and management oversight. Potential pressure points are explicitly marked for validation.</desc>
+<style>text{font-family:Arial, Helvetica, sans-serif}.title{font-size:34px;font-weight:700;fill:#23352E}.subtitle{font-size:17px;fill:#637169}.boundary-title{font-size:18px;font-weight:700;letter-spacing:1px;fill:#3D6753}.node-title{font-size:20px;font-weight:700;fill:#23352E}.body{font-size:15px;fill:#23352E}.small{font-size:13px;fill:#23352E}.muted{fill:#637169}.person-title{font-size:17px;font-weight:700;fill:#23352E}.flow-label{font-size:15px;font-weight:600;paint-order:stroke;stroke:#FBFAF6;stroke-width:8px;stroke-linejoin:round}.tag{font-size:12px;font-weight:700;letter-spacing:.8px}</style>
+<defs>
+<marker id="arrow-goods" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3D6753"/></marker>
+<marker id="arrow-info" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#39728A"/></marker>
+<marker id="arrow-money" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#B98025"/></marker>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#e9e8e0" stroke-width="1"/></pattern>
+</defs>
+<rect width="1900" height="1240" fill="#FBFAF6"/>
+<rect x="0" y="0" width="1900" height="1240" fill="url(#grid)" opacity=".42"/>
+<text x="72" y="70" class="title">Grand Pa’s Cold Store</text>
+<text x="74" y="101" class="subtitle">A rich picture of the people, products, money and information moving through a typical trading day</text>
+<rect x="188" y="145" width="1495" height="905" rx="34" fill="#fffefa" stroke="#3D6753" stroke-width="3"/>
+<rect x="220" y="126" width="420" height="40" rx="20" fill="#fffefa"/>
+<text x="232" y="153" class="boundary-title">INSIDE THE COLD STORE</text>
+<text x="1636" y="153" text-anchor="end" class="small muted">daily operations</text>
+<rect x="760" y="194" width="450" height="145" rx="18" fill="#E8F2F6" stroke="#39728A" stroke-width="2"/>
+<text x="790" y="227" class="tag" fill="#39728A">COORDINATION</text>
+<text x="790" y="258" class="node-title">Manager</text>
+<text x="790" y="286" class="body">Sets prices and oversees staff, stock, orders,</text>
+<text x="790" y="308" class="body">sales and customer-credit decisions.</text>
+<rect x="288" y="353" width="424" height="155" rx="18" fill="#E6F0E9" stroke="#3D6753" stroke-width="2"/>
+<text x="316" y="386" class="tag" fill="#3D6753">STOCK CONTROL</text>
+<text x="316" y="418" class="node-title">Stock assistant</text>
+<text x="316" y="447" class="body">Checks deliveries, counts goods and stores them.</text>
+<text x="316" y="472" class="body">Records receipts, wastage, damage and adjustments.</text>
+<rect x="1060" y="421" width="360" height="150" rx="18" fill="#E6F0E9" stroke="#3D6753" stroke-width="2"/>
+<text x="1088" y="453" class="tag" fill="#3D6753">IN-STORE SALES</text>
+<text x="1088" y="486" class="node-title">Cashier</text>
+<text x="1088" y="515" class="body">Looks up items, records quantity, takes payment,</text>
+<text x="1088" y="539" class="body">links a customer when needed and gives a receipt.</text>
+<rect x="745" y="407" width="280" height="158" rx="16" fill="#E8F2F6" stroke="#39728A" stroke-width="2"/>
+<text x="770" y="439" class="tag" fill="#39728A">BUSINESS RECORDS</text>
+<text x="770" y="472" class="node-title">Store ledger</text>
+<text x="770" y="500" class="small">Products · stock movements · customers</text>
+<text x="770" y="523" class="small">Sales · payments · orders · credit</text>
+<text x="770" y="547" class="small muted">Each change is recorded for follow-up.</text>
+<rect x="340" y="603" width="370" height="245" rx="16" fill="#f2f8fa" stroke="#39728A" stroke-width="2.5"/>
+<text x="366" y="639" class="tag" fill="#39728A">PHYSICAL STOCK</text>
+<text x="366" y="673" class="node-title">Freezer / stockroom</text>
+<rect x="366" y="697" width="145" height="113" rx="8" fill="#fff" stroke="#39728A" stroke-width="2"/>
+<rect x="528" y="697" width="155" height="113" rx="8" fill="#fff" stroke="#39728A" stroke-width="2"/>
+<line x1="438" y1="699" x2="438" y2="808" stroke="#39728A" stroke-width="2"/>
+<line x1="607" y1="699" x2="607" y2="808" stroke="#39728A" stroke-width="2"/>
+<line x1="373" y1="752" x2="504" y2="752" stroke="#39728A" stroke-width="1.5"/>
+<line x1="535" y1="752" x2="676" y2="752" stroke="#39728A" stroke-width="1.5"/>
+<text x="438" y="735" text-anchor="middle" class="small">Poultry</text>
+<text x="438" y="788" text-anchor="middle" class="small">Meat</text>
+<text x="607" y="735" text-anchor="middle" class="small">Fish</text>
+<text x="607" y="788" text-anchor="middle" class="small">Other frozen goods</text>
+<text x="366" y="833" class="small muted">Available quantity changes as goods move.</text>
+<rect x="1010" y="650" width="415" height="190" rx="16" fill="#fff" stroke="#39728A" stroke-width="2.5"/>
+<text x="1038" y="686" class="tag" fill="#39728A">SALES AND RECORDS</text>
+<text x="1038" y="720" class="node-title">Point of sale</text>
+<text x="1038" y="749" class="body">Product lookup · quantity · tender · receipt</text>
+<text x="1038" y="776" class="body">Sale updates stock and, for credit, the customer balance.</text>
+<rect x="1038" y="794" width="345" height="29" rx="5" fill="#E8F2F6" stroke="#39728A" stroke-width="1.2"/>
+<text x="1210" y="814" text-anchor="middle" class="small">sales · payments · stock · credit records</text>
+<rect x="743" y="873" width="335" height="112" rx="16" fill="#E8F2F6" stroke="#39728A" stroke-width="2"/>
+<text x="770" y="906" class="tag" fill="#39728A">ONLINE SHOP</text>
+<text x="770" y="939" class="node-title">Pickup order</text>
+<text x="770" y="964" class="small">Customer reserves available items for collection.</text>
+<rect x="1150" y="873" width="390" height="112" rx="16" fill="#E6F0E9" stroke="#3D6753" stroke-width="2"/>
+<text x="1177" y="906" class="tag" fill="#3D6753">PICKUP AT THE STORE</text>
+<text x="1177" y="939" class="node-title">Prepare → mark ready → collect</text>
+<text x="1177" y="964" class="small">Cash is recorded when the customer collects.</text>
+<circle cx="91" cy="210" r="18" fill="#fff" stroke="#B98025" stroke-width="4"/>
+<path d="M91 228 L91 280 M63 248 L91 242 L119 248 M91 280 L67 315 M91 280 L115 315" fill="none" stroke="#B98025" stroke-width="4" stroke-linecap="round"/>
+<text x="91" y="346" text-anchor="middle" class="person-title">SUPPLIER</text>
+<text x="91" y="368" text-anchor="middle" class="small muted">wholesaler / delivery</text>
+<rect x="42" y="455" width="98" height="48" rx="8" fill="#FBF2DE" stroke="#B98025" stroke-width="2"/>
+<rect x="53" y="439" width="54" height="25" rx="4" fill="#FBF2DE" stroke="#B98025" stroke-width="2"/>
+<circle cx="67" cy="507" r="9" fill="#fff" stroke="#B98025" stroke-width="3"/><circle cx="116" cy="507" r="9" fill="#fff" stroke="#B98025" stroke-width="3"/>
+<text x="90" y="484" text-anchor="middle" class="small">delivery</text>
+<circle cx="1792" cy="234" r="18" fill="#fff" stroke="#39728A" stroke-width="4"/>
+<path d="M1792 252 L1792 304 M1764 272 L1792 266 L1820 272 M1792 304 L1768 339 M1792 304 L1816 339" fill="none" stroke="#39728A" stroke-width="4" stroke-linecap="round"/>
+<text x="1792" y="370" text-anchor="middle" class="person-title">ADMIN</text>
+<text x="1792" y="392" text-anchor="middle" class="small muted">staff accounts · roles</text>
+<circle cx="1792" cy="565" r="18" fill="#fff" stroke="#3D6753" stroke-width="4"/>
+<path d="M1792 583 L1792 635 M1764 603 L1792 597 L1820 603 M1792 635 L1768 670 M1792 635 L1816 670" fill="none" stroke="#3D6753" stroke-width="4" stroke-linecap="round"/>
+<text x="1792" y="701" text-anchor="middle" class="person-title">CUSTOMER</text>
+<text x="1792" y="723" text-anchor="middle" class="small muted">walk-in or online</text>
+<path d="M145 480 C195 480 220 430 286 430" fill="none" stroke="#3D6753" stroke-width="4" marker-end="url(#arrow-goods)"/>
+<path d="M500 510 C500 548 500 566 500 600" fill="none" stroke="#3D6753" stroke-width="4" marker-end="url(#arrow-goods)"/>
+<path d="M710 714 C820 705 902 713 1008 723" fill="none" stroke="#3D6753" stroke-width="4" marker-end="url(#arrow-goods)"/>
+<path d="M712 430 C724 430 732 445 745 455" fill="none" stroke="#39728A" stroke-width="3.5" marker-end="url(#arrow-info)"/>
+<path d="M780 339 C762 355 742 367 712 385" fill="none" stroke="#39728A" stroke-width="3.5" marker-end="url(#arrow-info)"/>
+<path d="M1688 292 C1515 188 1360 188 1210 230" fill="none" stroke="#39728A" stroke-width="3.5" marker-end="url(#arrow-info)"/>
+<path d="M1210 315 C1270 355 1298 385 1304 419" fill="none" stroke="#39728A" stroke-width="3.5" marker-end="url(#arrow-info)"/>
+<path d="M1240 572 C1240 603 1230 619 1224 648" fill="none" stroke="#39728A" stroke-width="3.5" marker-end="url(#arrow-info)"/>
+<path d="M1692 565 C1590 552 1510 540 1423 520" fill="none" stroke="#39728A" stroke-width="3.5" marker-end="url(#arrow-info)"/>
+<path d="M1692 611 C1585 610 1510 596 1423 562" fill="none" stroke="#B98025" stroke-width="4" marker-end="url(#arrow-money)"/>
+<path d="M1422 480 C1518 462 1600 473 1693 525" fill="none" stroke="#3D6753" stroke-width="4" marker-end="url(#arrow-goods)"/>
+<path d="M1079 929 C1105 929 1123 929 1148 929" fill="none" stroke="#39728A" stroke-width="3.5" marker-end="url(#arrow-info)"/>
+<path d="M710 820 C840 855 1000 855 1150 873" fill="none" stroke="#3D6753" stroke-width="3.5" marker-end="url(#arrow-goods)"/>
+<path d="M1689 650 C1630 715 1590 800 1541 890" fill="none" stroke="#39728A" stroke-width="3.5" marker-end="url(#arrow-info)"/>
+<path d="M1540 928 C1613 896 1660 830 1694 684" fill="none" stroke="#39728A" stroke-width="3.5" marker-end="url(#arrow-info)"/>
+<text x="212" y="408" text-anchor="middle" fill="#3D6753" class="flow-label" font-size="12">frozen goods + delivery note</text>
+<text x="548" y="568" text-anchor="middle" fill="#3D6753" class="flow-label" font-size="13">check, count, store</text>
+<text x="856" y="692" text-anchor="middle" fill="#3D6753" class="flow-label" font-size="13">picked / weighed items</text>
+<text x="872" y="394" text-anchor="middle" fill="#39728A" class="flow-label" font-size="12">record receipts · damage · wastage</text>
+<text x="785" y="353" text-anchor="middle" fill="#39728A" class="flow-label" font-size="12">reorder needs · stock priorities</text>
+<text x="1450" y="196" text-anchor="middle" fill="#39728A" class="flow-label" font-size="13">user access and role assignment</text>
+<text x="1318" y="374" text-anchor="middle" fill="#39728A" class="flow-label" font-size="13">price · credit · order decisions</text>
+<text x="1288" y="622" text-anchor="middle" fill="#39728A" class="flow-label" font-size="13">sale details and tender</text>
+<text x="1544" y="543" text-anchor="middle" fill="#39728A" class="flow-label" font-size="13">product choice · questions</text>
+<text x="1556" y="603" text-anchor="middle" fill="#B98025" class="flow-label" font-size="13">cash · mobile money · credit</text>
+<text x="1555" y="462" text-anchor="middle" fill="#3D6753" class="flow-label" font-size="13">receipt + purchased goods</text>
+<text x="1600" y="820" text-anchor="middle" fill="#39728A" class="flow-label" font-size="13">place pickup order</text>
+<text x="1110" y="862" text-anchor="middle" fill="#39728A" class="flow-label" font-size="13">reserve + queue</text>
+<text x="925" y="848" text-anchor="middle" fill="#3D6753" class="flow-label" font-size="13">pick reserved stock</text>
+<text x="1618" y="856" text-anchor="middle" fill="#39728A" class="flow-label" font-size="13">ready notice → collection</text>
+<text x="220" y="1022" class="tag" fill="#B55D55">POTENTIAL PRESSURE POINTS TO CHECK</text>
+<rect x="520" y="997" width="330" height="42" rx="12" fill="#F9ECE9" stroke="#B55D55" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="685" y="1024" text-anchor="middle" class="small" fill="#B55D55">delivery delays · stock discrepancies</text>
+<rect x="875" y="997" width="330" height="42" rx="12" fill="#F9ECE9" stroke="#B55D55" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="1040" y="1024" text-anchor="middle" class="small" fill="#B55D55">wastage · damaged frozen goods</text>
+<rect x="1230" y="997" width="400" height="42" rx="12" fill="#F9ECE9" stroke="#B55D55" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="1430" y="1024" text-anchor="middle" class="small" fill="#B55D55">checkout queues · credit / collection disputes</text>
+<line x1="230" y1="1111" x2="300" y2="1111" stroke="#3D6753" stroke-width="4" marker-end="url(#arrow-goods)"/><text x="312" y="1117" class="small">physical goods</text>
+<line x1="495" y1="1111" x2="565" y2="1111" stroke="#39728A" stroke-width="4" marker-end="url(#arrow-info)"/><text x="577" y="1117" class="small">information / records</text>
+<line x1="825" y1="1111" x2="895" y2="1111" stroke="#B98025" stroke-width="4" marker-end="url(#arrow-money)"/><text x="907" y="1117" class="small">money / payment</text>
+<line x1="1137" y1="1111" x2="1207" y2="1111" stroke="#B55D55" stroke-width="2" stroke-dasharray="7 6"/><text x="1219" y="1117" class="small">possible tension to validate</text>
+<text x="230" y="1188" class="subtitle">Figure 5.18: Rich Picture of Grand Pa’s Cold Store Daily Operations</text>
+</svg>

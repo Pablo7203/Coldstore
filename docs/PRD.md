@@ -523,13 +523,13 @@ Audit:
 - repayment recorded;
 - sync conflict resolved.
 
-Never log passwords, tokens, service-role keys or Paystack secrets.
+Never log passwords, tokens, Supabase secret keys or Paystack secrets.
 
 ## 31. Security
 
 Use HTTPS, Supabase Auth, RLS, server-side authorization, runtime input validation, least privilege and secure environment variables.
 
-Supabase service-role and Paystack secret keys must never reach browser JavaScript.
+Supabase secret and Paystack secret keys must never reach browser JavaScript.
 
 ## 32. Required Security Tests
 

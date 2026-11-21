@@ -16,7 +16,7 @@ const roleNames = {
 
 export function StaffDirectory({ profiles }: { profiles: StaffProfile[] }) {
   return (
-    <section className="mt-8 rounded-2xl border border-[#d9ded3] bg-white p-6 sm:p-8">
+    <section className="rounded-2xl border border-[#d7e0d9] bg-white p-6 sm:p-8">
       <h2 className="text-lg font-semibold">Staff accounts</h2>
       <ul className="mt-4 divide-y divide-[#e5e8e1]">
         {profiles.map((profile) => (
@@ -34,7 +34,7 @@ function StaffDirectoryRow({ profile }: { profile: StaffProfile }) {
     <li className="flex flex-wrap items-center justify-between gap-3 py-4 first:pt-0 last:pb-0">
       <div>
         <p className="font-medium">{profile.full_name}</p>
-        <p className="mt-1 text-sm text-[#667066]">
+        <p className="mt-1 text-sm text-[#5e6b64]">
           {roleNames[profile.role]} · {profile.is_active ? "Active" : "Inactive"}
         </p>
         {state.message ? (
@@ -47,7 +47,7 @@ function StaffDirectoryRow({ profile }: { profile: StaffProfile }) {
           <button
             type="submit"
             disabled={pending}
-            className="min-h-10 rounded-lg border border-[#cfd6cc] px-3 text-sm font-medium hover:bg-[#f7f8f5] disabled:opacity-60"
+            className="min-h-10 rounded-lg border border-[#d7e0d9] px-3 text-sm font-medium hover:bg-[#f7f4ec] disabled:opacity-60"
           >
             {pending ? "Deactivating…" : "Deactivate"}
           </button>

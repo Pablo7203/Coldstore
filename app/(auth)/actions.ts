@@ -1,11 +1,15 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { resolveAuthContext } from "@/lib/auth/authorization";
+import { phase2Diagnostic } from "@/lib/diagnostics/phase2";
 import { createClient } from "@/lib/supabase/server";
+import { safeRedirectPath } from "@/lib/auth/redirect-path";
 import { normalizeGhanaPhone } from "@/lib/validation/ghana-phone";
+import { sendWelcomeEmail } from "@/lib/email/notifications";
 
 export type AuthActionState = { message?: string; success?: boolean };
 
@@ -48,19 +52,46 @@ export async function signIn(
   _previousState: AuthActionState,
   formData: FormData,
 ): Promise<AuthActionState> {
+  const actionStarted = performance.now();
+  phase2Diagnostic("signin.action.started");
   const parsed = credentialsSchema.safeParse({
     email: formData.get("email"),
     password: formData.get("password"),
   });
   if (!parsed.success) return { message: "Enter a valid email and password." };
 
+  const clientStarted = performance.now();
   const supabase = await createClient();
+  phase2Diagnostic("signin.server_client.ready", clientStarted);
+  const signInStarted = performance.now();
   const { error } = await supabase.auth.signInWithPassword(parsed.data);
+  phase2Diagnostic("signin.supabase.completed", signInStarted, error ? "error" : "ok");
   if (error) return { message: "We could not sign you in with those details." };
 
+  // Drop signed-out storefront RSC payloads so the header reflects this session.
+  revalidatePath("/", "layout");
+
+  const contextStarted = performance.now();
   const context = await resolveAuthContext(supabase);
-  if (context?.type === "staff") redirect("/staff");
-  if (context?.type === "customer") redirect("/account");
+  phase2Diagnostic(
+    "signin.auth_context.completed",
+    contextStarted,
+    context?.type === "staff"
+      ? "staff"
+      : context?.type === "customer"
+        ? "customer"
+        : context?.type === "inactive-staff"
+          ? "inactive"
+          : "unknown",
+  );
+  if (context?.type === "staff") {
+    phase2Diagnostic("signin.redirect.staff", actionStarted);
+    redirect("/staff");
+  }
+  if (context?.type === "customer") {
+    phase2Diagnostic("signin.redirect.customer", actionStarted);
+    redirect(safeRedirectPath(String(formData.get("next") ?? ""), "/account"));
+  }
 
   await supabase.auth.signOut();
   return {
@@ -87,6 +118,7 @@ export async function signUpCustomer(
 
   const supabase = await createClient();
   const origin = await getApplicationOrigin();
+  const destination = safeRedirectPath(String(formData.get("next") ?? ""), "/account");
   const { data, error } = await supabase.auth.signUp({
     email: parsed.data.email,
     password: parsed.data.password,
@@ -96,7 +128,8 @@ export async function signUpCustomer(
         full_name: parsed.data.fullName,
         phone: parsed.data.phone,
       },
-      emailRedirectTo: `${origin}/auth/callback?next=%2Faccount`,
+      emailRedirectTo:
+        origin + "/auth/callback?event=signup&next=" + encodeURIComponent(destination),
     },
   });
 
@@ -105,7 +138,17 @@ export async function signUpCustomer(
       message: "We could not complete registration. Check the details and try again.",
     };
   }
-  if (data.session) redirect("/account");
+  if (data.session) {
+    if (data.user?.email) {
+      await sendWelcomeEmail({
+        userId: data.user.id,
+        email: data.user.email,
+        fullName: parsed.data.fullName,
+      });
+    }
+    revalidatePath("/", "layout");
+    redirect(destination);
+  }
 
   return {
     success: true,
@@ -163,5 +206,6 @@ export async function setNewPassword(
 export async function signOut() {
   const supabase = await createClient();
   await supabase.auth.signOut();
+  revalidatePath("/", "layout");
   redirect("/login");
 }

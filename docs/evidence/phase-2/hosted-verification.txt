@@ -1,0 +1,50 @@
+GrandPa Phase 2 hosted verification
+Date: 2026-10-12
+Environment: GrandPa development only (project ref xjzdcpuwrjnpjzntytjs)
+Secrets: none recorded
+
+Migration state
+Command: pnpm exec supabase migration list --linked
+Result: local and remote histories match for 20261011230000, 20261012010000,
+20261012030000, 20261012050000, and 20261012060000.
+Command: pnpm exec supabase db push --dry-run --linked (before applying the last migration)
+Result: only 20261012060000_allow_stock_actor_redaction.sql was pending.
+Command: pnpm exec supabase db push --linked
+Result: migration applied successfully to the linked development project.
+
+Hosted schema and SQL verification
+Command: pnpm exec supabase db query --linked --file docs/evidence/phase-2/hosted-schema-verification.sql --output json
+Result: all five Phase 2 tables exist and have RLS enabled; catalogue and history policies are present; authenticated clients have no balance/movement update or product delete grants; anonymous users cannot read balances; Phase 3 table check returned null (none present). Database NUMERIC columns remain unconstrained by typmod and their scale/range is enforced with check constraints.
+Command: pnpm exec supabase db query --linked --file supabase/tests/phase2_products_inventory.test.sql --output json
+Result: pgTAP finish plan returned 1..67 after migration 20261012060000; no failed assertion output was returned.
+Command: pnpm exec supabase db lint --linked --schema public --level error
+Result: No schema errors found.
+
+Hosted concurrency verification
+Command: pnpm test:phase2:concurrency
+Result: PASS. Two concurrent authenticated stock receipts both succeeded; balance and movement-ledger total were both 100.375 over three movements. Temporary staff identity was removed. Fictional test catalogue rows remain inactive to preserve append-only stock history.
+Final sanitized fixture query (`test-fixture-cleanup.sql`): 0 temporary Phase 2 Auth accounts, 0 active Phase 2 test products, and 0 active Phase 2 test categories.
+
+Hosted application journey
+Command: PHASE2_LIVE=1 pnpm exec playwright test tests/e2e/phase2-live.spec.ts --workers=1 --trace=off
+Result: one earlier run completed catalogue, product edit/search, stock movement, negative-stock, role, customer, and anonymous-boundary assertions, then failed in fixture cleanup. Root cause was the immutable movement trigger conflicting with the actor foreign key's ON DELETE SET NULL action. Migration 20261012060000_allow_stock_actor_redaction.sql fixed this by allowing only actor_user_id nullification while retaining actor_name.
+After that fix, concurrency and cleanup passed. A later diagnostic hosted browser attempt provisioned all four temporary identities, passed direct manager Auth sign-in preflight, completed manager UI sign-in, category creation, product creation, and product edit-page loading. The edit Server Action POST returned HTTP 200, but the form stayed pending and did not render its success status within five seconds. No browser console or page errors were captured. Cleanup passed, deactivating the exact test product/category and removing all four temporary identities. The retained safe trace is `phase2-e2e-mv57h9vk-ff1e232fd0-safe-trace.json`; it excludes request bodies, cookies, credentials, and session tokens.
+
+The diagnostic attempt did not identify the server-side action result, so the underlying UI/action issue remains undetermined. A subsequent attempt to restart Playwright failed before launching the app: Next.js 16.4.0's SWC compiler could not canonicalize the workspace path (`Access is denied`), and the configured Playwright webServer exited. This environment failure is not counted as an application test. Phase 2 hosted browser verification remains INCONCLUSIVE and no code-level root cause or fix is claimed.
+
+Temporary Playwright failure artifacts containing generated test form values were removed. No passwords, tokens, or service keys are retained.
+
+Regression
+pnpm lint: PASS
+pnpm typecheck: PASS
+pnpm format:check: PASS
+pnpm test: PASS (7 files, 26 tests)
+pnpm test:e2e: PASS (8 passed, 4 skipped; live hosted tests are opt-in)
+pnpm build: PASS
+git diff --check: PASS
+Hosted pgTAP: PASS plan 1..67
+Hosted schema lint: PASS
+Hosted concurrency: PASS
+
+Configuration hygiene
+.env.local is matched by .gitignore and is not tracked. No credential values were copied to documentation or evidence.

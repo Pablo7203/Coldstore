@@ -1,0 +1,79 @@
+{
+  "run_id": "phase3-e2e-mv5bwzed-a1a6a39c",
+  "outcome": "PASS",
+  "stages": [
+    {
+      "at_ms": 3881,
+      "event": "fixture_ready",
+      "result": "pass"
+    },
+    {
+      "at_ms": 9219,
+      "event": "pos_product_lookup_and_add",
+      "result": "pass"
+    },
+    {
+      "at_ms": 10393,
+      "event": "walk_in_customer_created_and_normalized",
+      "result": "pass"
+    },
+    {
+      "at_ms": 11645,
+      "event": "duplicate_phone_warning",
+      "result": "pass"
+    },
+    {
+      "at_ms": 19856,
+      "event": "manager_customer_search_view_edit_and_activation",
+      "result": "pass"
+    },
+    {
+      "at_ms": 21937,
+      "event": "cash_sale_and_print_receipt",
+      "result": "pass"
+    },
+    {
+      "at_ms": 25319,
+      "event": "external_momo_sale_and_receipt",
+      "result": "pass"
+    },
+    {
+      "at_ms": 28379,
+      "event": "hosted_sale_payment_stock_and_rls_verified",
+      "result": "pass"
+    },
+    {
+      "at_ms": 29231,
+      "event": "hosted_concurrency_one_of_two_four_unit_sales_succeeded",
+      "result": "pass"
+    },
+    {
+      "at_ms": 34228,
+      "event": "stock_assistant_sale_denied",
+      "result": "pass"
+    },
+    {
+      "at_ms": 37661,
+      "event": "customer_sales_rls_denied_and_unauthenticated_pos_redirect",
+      "result": "pass"
+    }
+  ],
+  "cash_sale": "PASS",
+  "externally_confirmed_momo": "PASS",
+  "receipt_and_history": "PASS",
+  "cash_receipt_number": "GP-261012-CC27F1440BC04B13",
+  "cash_total_ghe": 18.51,
+  "momo_receipt_number": "GP-261012-41173E0EF0EC40AE",
+  "momo_total_ghe": 6.17,
+  "stock_after_cash_and_momo": 8,
+  "concurrency_stock_before_sales": 5,
+  "concurrency_stock_after_sales": 1,
+  "movement_ledger_after_concurrency": "1",
+  "walk_in_customer": "PASS",
+  "cashier_rls": "PASS",
+  "stock_assistant_denied": "PASS",
+  "customer_sale_rls_denied": "PASS",
+  "customer_browser_login_and_staff_redirect": "DEFERRED with Phase 1 customer-auth verification",
+  "concurrency": "PASS: exactly one of two simultaneous 4-unit sales completed from stock 5; ending balance and ledger both 1",
+  "cleanup": "fictional products/categories/customer deactivated; temporary manager, stock assistant and Auth customer removed; append-only sales and stock ledger preserved"
+}

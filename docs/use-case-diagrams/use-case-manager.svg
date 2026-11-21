@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="951" viewBox="0 0 1500 951">
+<title>Figure 5.14: Use Case Diagram for the Manager</title>
+<desc>UML use-case diagram showing the functional requirements available to the Manager user role in Grand Pa’s Cold Store Management System.</desc>
+<style>text{font-family:Arial, Helvetica, sans-serif}.system{font-size:22px;font-weight:700;fill:#222}.case{font-size:18px;font-weight:600;fill:#222}.actor{font-size:23px;font-weight:700;fill:#222}.caption{font-size:21px;font-style:italic;fill:#233954}</style>
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M 24 0 L 0 0 0 24" fill="none" stroke="#e4e4e4" stroke-width="1"/></pattern></defs>
+<rect width="1500" height="951" fill="#ffffff"/>
+<rect x="8" y="8" width="1484" height="898" fill="url(#grid)"/>
+<rect x="630" y="28" width="760" height="831" rx="76" fill="#ffffff" stroke="#333333" stroke-width="2.2"/>
+<text x="1010.0" y="76" text-anchor="middle" class="system">Grand Pa’s Cold Store Management System</text>
+<line x1="300" y1="388.5" x2="675" y2="143" stroke="#333333" stroke-width="1.7"/>
+<line x1="300" y1="388.5" x2="675" y2="221" stroke="#333333" stroke-width="1.7"/>
+<line x1="300" y1="388.5" x2="675" y2="299" stroke="#333333" stroke-width="1.7"/>
+<line x1="300" y1="388.5" x2="675" y2="377" stroke="#333333" stroke-width="1.7"/>
+<line x1="300" y1="388.5" x2="675" y2="455" stroke="#333333" stroke-width="1.7"/>
+<line x1="300" y1="388.5" x2="675" y2="533" stroke="#333333" stroke-width="1.7"/>
+<line x1="300" y1="388.5" x2="675" y2="611" stroke="#333333" stroke-width="1.7"/>
+<line x1="300" y1="388.5" x2="675" y2="689" stroke="#333333" stroke-width="1.7"/>
+<line x1="300" y1="388.5" x2="675" y2="767" stroke="#333333" stroke-width="1.7"/>
+<ellipse cx="1007.5" cy="143" rx="332.5" ry="29" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="1007.5" y="149" text-anchor="middle" class="case">Manage products and categories</text>
+<ellipse cx="1007.5" cy="221" rx="332.5" ry="29" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="1007.5" y="227" text-anchor="middle" class="case">View stock and record inventory movements</text>
+<ellipse cx="1007.5" cy="299" rx="332.5" ry="29" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="1007.5" y="305" text-anchor="middle" class="case">Review stock movement history</text>
+<ellipse cx="1007.5" cy="377" rx="332.5" ry="29" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="1007.5" y="383" text-anchor="middle" class="case">Search, create, and update customer records</text>
+<ellipse cx="1007.5" cy="455" rx="332.5" ry="29" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="1007.5" y="461" text-anchor="middle" class="case">Complete point-of-sale sales</text>
+<ellipse cx="1007.5" cy="533" rx="332.5" ry="29" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="1007.5" y="539" text-anchor="middle" class="case">View all sales history and receipts</text>
+<ellipse cx="1007.5" cy="611" rx="332.5" ry="29" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="1007.5" y="617" text-anchor="middle" class="case">View customer credit balances and history</text>
+<ellipse cx="1007.5" cy="689" rx="332.5" ry="29" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="1007.5" y="695" text-anchor="middle" class="case">Manage credit limits and record repayments</text>
+<ellipse cx="1007.5" cy="767" rx="332.5" ry="29" fill="#ffffff" stroke="#333333" stroke-width="1.8"/>
+<text x="1007.5" y="773" text-anchor="middle" class="case">Manage pickup orders and confirm collection</text>
+<circle cx="220" cy="295" r="43" fill="#ffffff" stroke="#222222" stroke-width="2.2"/>
+<line x1="220" y1="338" x2="220" y2="478" stroke="#222222" stroke-width="2.2"/>
+<line x1="142" y1="388" x2="298" y2="388" stroke="#222222" stroke-width="2.2"/>
+<line x1="220" y1="478" x2="145" y2="608" stroke="#222222" stroke-width="2.2"/>
+<line x1="220" y1="478" x2="295" y2="608" stroke="#222222" stroke-width="2.2"/>
+<text x="220" y="645" text-anchor="middle" class="actor">Manager</text>
+<text x="38" y="929" class="caption">Figure 5.14: Use Case Diagram for the Manager</text>
+</svg>

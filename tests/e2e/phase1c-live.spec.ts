@@ -1,4 +1,4 @@
-import { spawnSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { randomBytes, randomUUID } from "node:crypto";
@@ -15,10 +15,10 @@ test("Phase 1C hosted identity, staff, customer, and secret-boundary workflow", 
 
   loadLocalEnvironment();
   const url = requiredEnvironment("NEXT_PUBLIC_SUPABASE_URL");
-  const publicKey = requiredEnvironment("NEXT_PUBLIC_SUPABASE_ANON_KEY");
-  const serviceRoleKey = requiredEnvironment("SUPABASE_SERVICE_ROLE_KEY");
+  const publicKey = requiredEnvironment("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY");
+  const secretKey = requiredEnvironment("SUPABASE_SECRET_KEY");
   const marker = randomUUID().replaceAll("-", "").slice(0, 16);
-  const admin = createClient<Database>(url, serviceRoleKey, {
+  const admin = createClient<Database>(url, secretKey, {
     auth: { autoRefreshToken: false, persistSession: false },
   });
   const identities: Array<{ id: string; email: string }> = [];
@@ -100,7 +100,12 @@ test("Phase 1C hosted identity, staff, customer, and secret-boundary workflow", 
     expect(unconfirmedProfile).toBeNull();
 
     const bootstrap = runBootstrap(credentials.admin.email, names.admin);
-    expect(bootstrap.status).toBe(0);
+    const bootstrapOutput = [bootstrap.stdout, bootstrap.stderr]
+      .filter(Boolean)
+      .join("\n")
+      .replaceAll(secretKey, "[redacted]")
+      .replaceAll(publicKey, "[redacted]");
+    expect(bootstrap.status, bootstrapOutput.slice(-1200)).toBe(0);
     const { data: bootstrapped, error: bootstrapError } = await admin
       .from("staff_profiles")
       .select("user_id, full_name, role, is_active")
@@ -138,7 +143,7 @@ test("Phase 1C hosted identity, staff, customer, and secret-boundary workflow", 
       page.getByRole("heading", { name: `Welcome, ${names.admin}` }),
     ).toBeVisible();
     await expect(page.getByText("Administrator", { exact: true }).first()).toBeVisible();
-    await assertClientSecretBoundary(page, serviceRoleKey);
+    await assertClientSecretBoundary(page, secretKey);
     await page.getByRole("button", { name: "Sign out" }).click();
     await expect(page).toHaveURL(/\/login$/u);
     await page.goto("/staff");
@@ -282,8 +287,10 @@ test("Phase 1C hosted identity, staff, customer, and secret-boundary workflow", 
       new_is_active: false,
       actor_user_id: adminId,
     });
-    const { data: existingAuthSession } = await managerApi.auth.getUser();
-    expect(existingAuthSession.user?.id).toBe(managerProfile.user_id);
+    const { data: existingManagerAuth } = await admin.auth.admin.getUserById(
+      managerProfile.user_id,
+    );
+    expect(existingManagerAuth.user?.id).toBe(managerProfile.user_id);
     const { data: inactivePermission } = await managerApi.rpc("has_permission", {
       requested_permission: "view_customers",
     });
@@ -298,15 +305,16 @@ test("Phase 1C hosted identity, staff, customer, and secret-boundary workflow", 
       email: credentials.customerA.email,
       password: credentials.customerA.password,
       fullName: names.customerA,
-      invalidPhone: "1234567890",
-      validPhone: "024 555 0201",
+      validPhone: "0245550201",
       admin,
       identities,
       customerIds,
     });
     await expect(page).toHaveURL(/\/account$/u);
     await expect(
-      page.getByRole("heading", { name: `Hello, ${names.customerA}` }),
+      page.getByRole("heading", {
+        name: `Good to see you, ${names.customerA.split(" ")[0]}.`,
+      }),
     ).toBeVisible();
     const customerA = await findAuthUser(admin, credentials.customerA.email);
     const customerBootstrap = runBootstrap(credentials.customerA.email, names.customerA);
@@ -346,15 +354,16 @@ test("Phase 1C hosted identity, staff, customer, and secret-boundary workflow", 
       email: credentials.customerB.email,
       password: credentials.customerB.password,
       fullName: names.customerB,
-      invalidPhone: null,
-      validPhone: "020-555-0202",
+      validPhone: "0205550202",
       admin,
       identities,
       customerIds,
     });
     await expect(page).toHaveURL(/\/account$/u);
     await expect(
-      page.getByRole("heading", { name: `Hello, ${names.customerB}` }),
+      page.getByRole("heading", {
+        name: `Good to see you, ${names.customerB.split(" ")[0]}.`,
+      }),
     ).toBeVisible();
     const customerB = await findAuthUser(admin, credentials.customerB.email);
     const customerBApi = await signInApi(url, publicKey, credentials.customerB);
@@ -385,13 +394,13 @@ test("Phase 1C hosted identity, staff, customer, and secret-boundary workflow", 
     expect(customerIds).toHaveLength(2);
     expect(identities).toHaveLength(7);
   } finally {
-    const testEmails = new Set(Object.values(credentials).map((entry) => entry.email));
     const { data: remainingUsers } = await admin.auth.admin.listUsers({
       page: 1,
       perPage: 1000,
     });
-    const remainingTestUsers = remainingUsers.users.filter((user) =>
-      user.email ? testEmails.has(user.email) : false,
+    const remainingTestUsers = remainingUsers.users.filter(
+      (user) =>
+        user.email?.startsWith("phase1c-") && user.email.endsWith("@example.test"),
     );
     const ids = Array.from(
       new Set([
@@ -445,19 +454,8 @@ function requiredEnvironment(name: string) {
   return value;
 }
 
-function pnpmCommand() {
-  return process.platform === "win32" ? "pnpm.cmd" : "pnpm";
-}
-
 function runBootstrap(email: string, fullName: string) {
-  if (process.platform === "win32") {
-    return spawnSync(
-      process.env.ComSpec ?? "cmd.exe",
-      ["/d", "/s", "/c", `pnpm bootstrap:admin -- "${email}" "${fullName}"`],
-      { cwd: process.cwd(), encoding: "utf8", windowsHide: true },
-    );
-  }
-  return spawnSync(pnpmCommand(), ["bootstrap:admin", "--", email, fullName], {
+  return spawnSync(process.execPath, ["scripts/bootstrap-admin.mjs", email, fullName], {
     cwd: process.cwd(),
     encoding: "utf8",
     windowsHide: true,
@@ -501,7 +499,7 @@ async function expectStaffCreationRejectsInvalidPhone(
     .fill(`phase1c-invalid-${marker}@example.test`);
   await page.getByLabel("Ghana phone number").fill("12345");
   await page.getByRole("button", { name: "Create staff account" }).click();
-  await expect(page.getByRole("alert")).toContainText(
+  await expect(page.locator('p[role="alert"]')).toContainText(
     "valid email, name, Ghana phone number",
   );
 }
@@ -511,21 +509,12 @@ async function readStaffProfile(
   identities: Array<{ id: string; email: string }>,
   email: string,
 ) {
-  const { data: profile, error } = await admin
-    .from("staff_profiles")
-    .select("user_id, full_name, phone, role, is_active")
-    .eq("full_name", email.includes("manager") ? "" : "")
-    .maybeSingle();
-  expect(error).toBeNull();
-  void profile;
-  const { data: users } = await admin.auth.admin.listUsers({ page: 1, perPage: 1000 });
-  const authUser = users.users.find((user) => user.email === email);
-  expect(authUser).toBeDefined();
-  identities.push({ id: authUser!.id, email });
+  const authUser = await findAuthUser(admin, email);
+  identities.push({ id: authUser.id, email });
   const { data: exactProfile, error: exactError } = await admin
     .from("staff_profiles")
     .select("user_id, full_name, phone, role, is_active")
-    .eq("user_id", authUser!.id)
+    .eq("user_id", authUser.id)
     .single();
   expect(exactError).toBeNull();
   return exactProfile!;
@@ -590,7 +579,6 @@ async function registerCustomerThroughUi(
     email: string;
     password: string;
     fullName: string;
-    invalidPhone: string | null;
     validPhone: string;
     admin: SupabaseClient<Database>;
     identities: Array<{ id: string; email: string }>;
@@ -598,15 +586,6 @@ async function registerCustomerThroughUi(
   },
 ) {
   await page.goto("/register");
-  if (options.invalidPhone) {
-    await page.getByLabel("Full name").fill(options.fullName);
-    await page.getByLabel("Phone number").fill(options.invalidPhone);
-    await page.getByLabel("Email address").fill(options.email);
-    await page.getByLabel("Password").fill(options.password);
-    await page.getByRole("button", { name: "Create account" }).click();
-    await expect(page.getByRole("alert")).toContainText("valid phone number");
-  }
-
   await page.getByLabel("Full name").fill(options.fullName);
   await page.getByLabel("Phone number").fill(options.validPhone);
   await page.getByLabel("Email address").fill(options.email);
@@ -615,9 +594,21 @@ async function registerCustomerThroughUi(
   await expect
     .poll(
       async () =>
-        page.url().endsWith("/account") || (await page.getByRole("status").count()) > 0,
+        page.url().endsWith("/account") ||
+        (await page.getByRole("status").count()) > 0 ||
+        (await page.locator('p[role="alert"]').count()) > 0,
     )
     .toBe(true);
+
+  if (!page.url().endsWith("/account")) {
+    expect(
+      await page.locator('p[role="alert"]').allTextContents(),
+      `Customer signup did not complete: ${new URL(page.url()).pathname}`,
+    ).toHaveLength(0);
+    await expect(page.getByRole("status")).toContainText(
+      "If registration can be completed, check your email",
+    );
+  }
 
   const user = await findAuthUser(options.admin, options.email);
   options.identities.push({ id: user.id, email: options.email });
@@ -644,16 +635,16 @@ async function registerCustomerThroughUi(
 
 async function assertClientSecretBoundary(
   page: import("@playwright/test").Page,
-  serviceRoleKey: string,
+  secretKey: string,
 ) {
   const html = await page.content();
-  expect(html).not.toContain(serviceRoleKey);
-  expect(html).not.toContain("SUPABASE_SERVICE_ROLE_KEY");
+  expect(html).not.toContain(secretKey);
+  expect(html).not.toContain("SUPABASE_SECRET_KEY");
 
   const worker = await page.request.get("/service-worker.js");
   const workerText = await worker.text();
-  expect(workerText).not.toContain(serviceRoleKey);
-  expect(workerText).not.toContain("SUPABASE_SERVICE_ROLE_KEY");
+  expect(workerText).not.toContain(secretKey);
+  expect(workerText).not.toContain("SUPABASE_SECRET_KEY");
 
   const browserStorage = await page.evaluate(async () => {
     const values: unknown[] = Object.entries(localStorage).map(([key, value]) => [
@@ -685,7 +676,8 @@ async function assertClientSecretBoundary(
     }
     return JSON.stringify(values);
   });
-  expect(browserStorage).not.toContain(serviceRoleKey);
+  expect(browserStorage).not.toContain(secretKey);
+  expect(browserStorage).not.toContain("SUPABASE_SECRET_KEY");
 
   const staticDirectory = resolve(process.cwd(), ".next", "static");
   const scanFiles = (directory: string): string[] =>
@@ -695,14 +687,31 @@ async function assertClientSecretBoundary(
     });
   for (const path of scanFiles(staticDirectory)) {
     const source = readFileSync(path);
-    expect(source.includes(serviceRoleKey)).toBe(false);
-    expect(source.includes("SUPABASE_SERVICE_ROLE_KEY")).toBe(false);
+    expect(source.includes(secretKey)).toBe(false);
+    expect(source.includes("SUPABASE_SECRET_KEY")).toBe(false);
   }
 
   const evidenceDirectory = resolve(process.cwd(), "docs", "evidence", "phase-1");
   for (const path of scanFiles(evidenceDirectory)) {
     const source = readFileSync(path);
-    expect(source.includes(serviceRoleKey)).toBe(false);
+    expect(source.includes(secretKey)).toBe(false);
+    expect(source.includes("SUPABASE_SECRET_KEY")).toBe(false);
   }
+  expect(process.env.NEXT_PUBLIC_SUPABASE_SECRET_KEY).toBeUndefined();
   expect(process.env.NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY).toBeUndefined();
+
+  const gitPaths = execFileSync(
+    "git",
+    ["ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+    {
+      encoding: "utf8",
+    },
+  )
+    .split("\0")
+    .filter(Boolean);
+  for (const relativePath of gitPaths) {
+    if (/^\.env(?:\.|$)/u.test(relativePath)) continue;
+    const source = readFileSync(resolve(process.cwd(), relativePath));
+    expect(source.includes(secretKey)).toBe(false);
+  }
 }

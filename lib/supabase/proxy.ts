@@ -1,10 +1,11 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { browserEnvironment } from "@/lib/env";
+import { phase2Diagnostic } from "@/lib/diagnostics/phase2";
 
 export async function updateSession(request: NextRequest) {
   const url = browserEnvironment.NEXT_PUBLIC_SUPABASE_URL;
-  const key = browserEnvironment.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  const key = browserEnvironment.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
   if (!url || !key) return NextResponse.next({ request });
 
@@ -22,6 +23,9 @@ export async function updateSession(request: NextRequest) {
     },
   });
 
-  await supabase.auth.getClaims();
+  const claimsStarted = performance.now();
+  phase2Diagnostic("proxy.get_claims.started");
+  const { error } = await supabase.auth.getClaims();
+  phase2Diagnostic("proxy.get_claims.completed", claimsStarted, error ? "error" : "ok");
   return response;
 }

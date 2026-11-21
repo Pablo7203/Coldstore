@@ -10,8 +10,8 @@ describe("Supabase client boundaries", () => {
 
   it("initializes the browser client with the public URL and key only", async () => {
     vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://example.supabase.co");
-    vi.stubEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY", "public-test-key");
-    vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "");
+    vi.stubEnv("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY", "public-test-key");
+    vi.stubEnv("SUPABASE_SECRET_KEY", "");
     const { createClient } = await import("@/lib/supabase/client");
 
     expect(createClient().from("customers")).toBeDefined();
@@ -19,8 +19,8 @@ describe("Supabase client boundaries", () => {
 
   it("initializes the server-only admin client when the server key is present", async () => {
     vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://example.supabase.co");
-    vi.stubEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY", "public-test-key");
-    vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "server-only-test-key");
+    vi.stubEnv("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY", "public-test-key");
+    vi.stubEnv("SUPABASE_SECRET_KEY", "server-only-test-key");
     const { createAdminClient } = await import("@/lib/supabase/admin");
     const client = createAdminClient();
 
@@ -29,8 +29,8 @@ describe("Supabase client boundaries", () => {
 
   it("does not initialize an admin client without the server key", async () => {
     vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://example.supabase.co");
-    vi.stubEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY", "public-test-key");
-    vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "");
+    vi.stubEnv("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY", "public-test-key");
+    vi.stubEnv("SUPABASE_SECRET_KEY", "");
     const { createAdminClient } = await import("@/lib/supabase/admin");
 
     expect(() => createAdminClient()).toThrow(

@@ -1,5 +1,6 @@
 node_modules/
 .next/
+/.next-*/
 out/
 dist/
 coverage/
@@ -25,3 +26,13 @@ yarn-debug.log*
 .DS_Store
 Thumbs.db
 *.tsbuildinfo
+
+# Local browser traces can contain sessions and are not source artifacts.
+docs/evidence/**/trace.zip
+docs/evidence/chapter-7/local-supabase-artifacts-*/
+docs/evidence/chapter-7/local-supabase-phase*/
+docs/evidence/chapter-7/playwright-production-artifacts-*/
+
+# Keep academic report exports in the workspace, outside the public code repository.
+docs/reports/
+docs/evidence/chapter-7/final-report.pdf

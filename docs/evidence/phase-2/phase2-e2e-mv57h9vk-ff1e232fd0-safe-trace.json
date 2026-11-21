@@ -1,0 +1,1667 @@
+{
+  "run_id": "phase2-e2e-mv57h9vk-ff1e232fd0",
+  "final_stage": "cleanup.completed",
+  "workflow_outcome": "failed",
+  "cleanup_outcome": "passed",
+  "cleanup_failure_codes": [],
+  "events": [
+    {
+      "at_ms": 0,
+      "event": "stage",
+      "stage": "test.started"
+    },
+    {
+      "at_ms": 8,
+      "event": "stage",
+      "stage": "identity_setup.started"
+    },
+    {
+      "at_ms": 2574,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 2564
+    },
+    {
+      "at_ms": 3139,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/staff_profiles",
+      "status": 201,
+      "duration_ms": 551
+    },
+    {
+      "at_ms": 3145,
+      "event": "identity.provisioned",
+      "persona": "manager",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 3649,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 503
+    },
+    {
+      "at_ms": 3865,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/staff_profiles",
+      "status": 201,
+      "duration_ms": 213
+    },
+    {
+      "at_ms": 3868,
+      "event": "identity.provisioned",
+      "persona": "stock_assistant",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 5012,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 1143
+    },
+    {
+      "at_ms": 7767,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/staff_profiles",
+      "status": 201,
+      "duration_ms": 2744
+    },
+    {
+      "at_ms": 7768,
+      "event": "identity.provisioned",
+      "persona": "cashier",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 10660,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 2892
+    },
+    {
+      "at_ms": 10662,
+      "event": "identity.provisioned",
+      "persona": "customer",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 10662,
+      "event": "stage",
+      "stage": "identity_setup.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 11187,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/token",
+      "status": 200,
+      "duration_ms": 524
+    },
+    {
+      "at_ms": 11191,
+      "event": "identity.auth_preflight",
+      "persona": "manager",
+      "outcome": "ok",
+      "duration_ms": 528
+    },
+    {
+      "at_ms": 11634,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/logout",
+      "status": 204,
+      "duration_ms": 442
+    },
+    {
+      "at_ms": 11635,
+      "event": "stage",
+      "stage": "manager.ui_signin.started"
+    },
+    {
+      "at_ms": 11656,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/login"
+    },
+    {
+      "at_ms": 12179,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/login",
+      "status": 200,
+      "duration_ms": 522
+    },
+    {
+      "at_ms": 12232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app_globals_0yg4wg8plh8sv.css"
+    },
+    {
+      "at_ms": 12234,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1u6numnbt905r._.js"
+    },
+    {
+      "at_ms": 12234,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom-client_development_1-bukxayzyu6e.js"
+    },
+    {
+      "at_ms": 12234,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom_development_10f8ech_ajjbc.js"
+    },
+    {
+      "at_ms": 12234,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_1j0kgbfihs8s0._.js"
+    },
+    {
+      "at_ms": 12234,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-server-dom-turbopack_16dnf18sfi60f._.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_next-devtools_index_1-k_lcer5-lmr.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_0-pskmlkg7q2p._.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_client_0w8gus3fvmf-t._.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_1c2xvjgdkavxw._.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/0zix_%40swc_helpers_cjs_0hi-e474n4mns._.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1anvha4rlo79g._.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/turbopack-_1dpkm6e7d8eun._.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0mc45lbv0sa84._.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0dbar-e5xqhwr._.js"
+    },
+    {
+      "at_ms": 12235,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_12l9s44gghvnt._.js"
+    },
+    {
+      "at_ms": 12236,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app_globals_0yg4wg8plh8sv.css",
+      "status": 200,
+      "duration_ms": 4
+    },
+    {
+      "at_ms": 12256,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1u6numnbt905r._.js",
+      "status": 200,
+      "duration_ms": 22
+    },
+    {
+      "at_ms": 12362,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_1j0kgbfihs8s0._.js",
+      "status": 200,
+      "duration_ms": 127
+    },
+    {
+      "at_ms": 12362,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom_development_10f8ech_ajjbc.js",
+      "status": 200,
+      "duration_ms": 128
+    },
+    {
+      "at_ms": 12368,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-server-dom-turbopack_16dnf18sfi60f._.js",
+      "status": 200,
+      "duration_ms": 134
+    },
+    {
+      "at_ms": 12370,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_0-pskmlkg7q2p._.js",
+      "status": 200,
+      "duration_ms": 136
+    },
+    {
+      "at_ms": 12370,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1anvha4rlo79g._.js",
+      "status": 200,
+      "duration_ms": 135
+    },
+    {
+      "at_ms": 12370,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/0zix_%40swc_helpers_cjs_0hi-e474n4mns._.js",
+      "status": 200,
+      "duration_ms": 136
+    },
+    {
+      "at_ms": 12372,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_1c2xvjgdkavxw._.js",
+      "status": 200,
+      "duration_ms": 137
+    },
+    {
+      "at_ms": 12372,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0mc45lbv0sa84._.js",
+      "status": 200,
+      "duration_ms": 137
+    },
+    {
+      "at_ms": 12373,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0dbar-e5xqhwr._.js",
+      "status": 200,
+      "duration_ms": 137
+    },
+    {
+      "at_ms": 12373,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/turbopack-_1dpkm6e7d8eun._.js",
+      "status": 200,
+      "duration_ms": 138
+    },
+    {
+      "at_ms": 12373,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_12l9s44gghvnt._.js",
+      "status": 200,
+      "duration_ms": 138
+    },
+    {
+      "at_ms": 12373,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom-client_development_1-bukxayzyu6e.js",
+      "status": 200,
+      "duration_ms": 139
+    },
+    {
+      "at_ms": 12374,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_next-devtools_index_1-k_lcer5-lmr.js",
+      "status": 200,
+      "duration_ms": 139
+    },
+    {
+      "at_ms": 12374,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_client_0w8gus3fvmf-t._.js",
+      "status": 200,
+      "duration_ms": 139
+    },
+    {
+      "at_ms": 12591,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js"
+    },
+    {
+      "at_ms": 12596,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js",
+      "status": 200,
+      "duration_ms": 5
+    },
+    {
+      "at_ms": 12633,
+      "event": "stage",
+      "stage": "ui.login.page_loaded",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 12932,
+      "event": "stage",
+      "stage": "ui.login.action_submit_started"
+    },
+    {
+      "at_ms": 13020,
+      "event": "request.started",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/login"
+    },
+    {
+      "at_ms": 13028,
+      "event": "stage",
+      "stage": "ui.login.action_submit_dispatched",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 13190,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/__nextjs_font/geist-latin.woff2"
+    },
+    {
+      "at_ms": 13210,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/__nextjs_font/geist-latin.woff2",
+      "status": 200,
+      "duration_ms": 20
+    },
+    {
+      "at_ms": 15971,
+      "event": "request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/login",
+      "status": 200,
+      "duration_ms": 2951
+    },
+    {
+      "at_ms": 16960,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0zd4l3m43kah1._.js"
+    },
+    {
+      "at_ms": 16978,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0zd4l3m43kah1._.js",
+      "status": 200,
+      "duration_ms": 18
+    },
+    {
+      "at_ms": 17025,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0zd4l3m43kah1._.js"
+    },
+    {
+      "at_ms": 17026,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0zd4l3m43kah1._.js",
+      "status": 304,
+      "duration_ms": 1
+    },
+    {
+      "at_ms": 17479,
+      "event": "stage",
+      "stage": "ui.login.redirect_completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 17479,
+      "event": "stage",
+      "stage": "manager.ui_signin.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 17484,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 19207,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 1723
+    },
+    {
+      "at_ms": 19228,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app_globals_0yg4wg8plh8sv.css"
+    },
+    {
+      "at_ms": 19229,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1u6numnbt905r._.js"
+    },
+    {
+      "at_ms": 19229,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom-client_development_1-bukxayzyu6e.js"
+    },
+    {
+      "at_ms": 19229,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom_development_10f8ech_ajjbc.js"
+    },
+    {
+      "at_ms": 19230,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_1j0kgbfihs8s0._.js"
+    },
+    {
+      "at_ms": 19232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-server-dom-turbopack_16dnf18sfi60f._.js"
+    },
+    {
+      "at_ms": 19232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_next-devtools_index_1-k_lcer5-lmr.js"
+    },
+    {
+      "at_ms": 19232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_0-pskmlkg7q2p._.js"
+    },
+    {
+      "at_ms": 19232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_client_0w8gus3fvmf-t._.js"
+    },
+    {
+      "at_ms": 19232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_1c2xvjgdkavxw._.js"
+    },
+    {
+      "at_ms": 19232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/0zix_%40swc_helpers_cjs_0hi-e474n4mns._.js"
+    },
+    {
+      "at_ms": 19232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1anvha4rlo79g._.js"
+    },
+    {
+      "at_ms": 19232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/turbopack-_1dpkm6e7d8eun._.js"
+    },
+    {
+      "at_ms": 19232,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1w34tyv3yesxd._.js"
+    },
+    {
+      "at_ms": 19233,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0dbar-e5xqhwr._.js"
+    },
+    {
+      "at_ms": 19233,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1ogj8jyqae73c._.js"
+    },
+    {
+      "at_ms": 19241,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app_globals_0yg4wg8plh8sv.css",
+      "status": 304,
+      "duration_ms": 13
+    },
+    {
+      "at_ms": 19297,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1u6numnbt905r._.js",
+      "status": 304,
+      "duration_ms": 67
+    },
+    {
+      "at_ms": 19303,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom-client_development_1-bukxayzyu6e.js",
+      "status": 304,
+      "duration_ms": 74
+    },
+    {
+      "at_ms": 19305,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_1j0kgbfihs8s0._.js",
+      "status": 304,
+      "duration_ms": 75
+    },
+    {
+      "at_ms": 19305,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-server-dom-turbopack_16dnf18sfi60f._.js",
+      "status": 304,
+      "duration_ms": 73
+    },
+    {
+      "at_ms": 19305,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom_development_10f8ech_ajjbc.js",
+      "status": 304,
+      "duration_ms": 75
+    },
+    {
+      "at_ms": 19312,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_next-devtools_index_1-k_lcer5-lmr.js",
+      "status": 304,
+      "duration_ms": 80
+    },
+    {
+      "at_ms": 19312,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_0-pskmlkg7q2p._.js",
+      "status": 304,
+      "duration_ms": 80
+    },
+    {
+      "at_ms": 19312,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_client_0w8gus3fvmf-t._.js",
+      "status": 304,
+      "duration_ms": 80
+    },
+    {
+      "at_ms": 19312,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_1c2xvjgdkavxw._.js",
+      "status": 304,
+      "duration_ms": 80
+    },
+    {
+      "at_ms": 19312,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1anvha4rlo79g._.js",
+      "status": 304,
+      "duration_ms": 80
+    },
+    {
+      "at_ms": 19312,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/turbopack-_1dpkm6e7d8eun._.js",
+      "status": 304,
+      "duration_ms": 80
+    },
+    {
+      "at_ms": 19314,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/0zix_%40swc_helpers_cjs_0hi-e474n4mns._.js",
+      "status": 304,
+      "duration_ms": 82
+    },
+    {
+      "at_ms": 19314,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1w34tyv3yesxd._.js",
+      "status": 200,
+      "duration_ms": 82
+    },
+    {
+      "at_ms": 19314,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0dbar-e5xqhwr._.js",
+      "status": 304,
+      "duration_ms": 82
+    },
+    {
+      "at_ms": 19314,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1ogj8jyqae73c._.js",
+      "status": 200,
+      "duration_ms": 82
+    },
+    {
+      "at_ms": 19364,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js"
+    },
+    {
+      "at_ms": 19379,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js",
+      "status": 304,
+      "duration_ms": 15
+    },
+    {
+      "at_ms": 19400,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/__nextjs_font/geist-latin.woff2"
+    },
+    {
+      "at_ms": 19401,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/__nextjs_font/geist-latin.woff2",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 19558,
+      "event": "stage",
+      "stage": "category.create.started"
+    },
+    {
+      "at_ms": 19622,
+      "event": "request.started",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 21919,
+      "event": "request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 2297
+    },
+    {
+      "at_ms": 23715,
+      "event": "supabase.request.completed",
+      "method": "GET",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/categories",
+      "status": 200,
+      "duration_ms": 501
+    },
+    {
+      "at_ms": 23716,
+      "event": "stage",
+      "stage": "category.create.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 23721,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 26053,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 2332
+    },
+    {
+      "at_ms": 26073,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app_globals_0yg4wg8plh8sv.css"
+    },
+    {
+      "at_ms": 26074,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1u6numnbt905r._.js"
+    },
+    {
+      "at_ms": 26074,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom-client_development_1-bukxayzyu6e.js"
+    },
+    {
+      "at_ms": 26074,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom_development_10f8ech_ajjbc.js"
+    },
+    {
+      "at_ms": 26074,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_1j0kgbfihs8s0._.js"
+    },
+    {
+      "at_ms": 26074,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-server-dom-turbopack_16dnf18sfi60f._.js"
+    },
+    {
+      "at_ms": 26074,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_next-devtools_index_1-k_lcer5-lmr.js"
+    },
+    {
+      "at_ms": 26074,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_0-pskmlkg7q2p._.js"
+    },
+    {
+      "at_ms": 26074,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_client_0w8gus3fvmf-t._.js"
+    },
+    {
+      "at_ms": 26076,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_1c2xvjgdkavxw._.js"
+    },
+    {
+      "at_ms": 26076,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/0zix_%40swc_helpers_cjs_0hi-e474n4mns._.js"
+    },
+    {
+      "at_ms": 26077,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1anvha4rlo79g._.js"
+    },
+    {
+      "at_ms": 26077,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/turbopack-_1dpkm6e7d8eun._.js"
+    },
+    {
+      "at_ms": 26077,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1w34tyv3yesxd._.js"
+    },
+    {
+      "at_ms": 26077,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0dbar-e5xqhwr._.js"
+    },
+    {
+      "at_ms": 26077,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1ogj8jyqae73c._.js"
+    },
+    {
+      "at_ms": 26082,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app_globals_0yg4wg8plh8sv.css",
+      "status": 304,
+      "duration_ms": 10
+    },
+    {
+      "at_ms": 26083,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1u6numnbt905r._.js",
+      "status": 304,
+      "duration_ms": 9
+    },
+    {
+      "at_ms": 26112,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom-client_development_1-bukxayzyu6e.js",
+      "status": 304,
+      "duration_ms": 38
+    },
+    {
+      "at_ms": 26112,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom_development_10f8ech_ajjbc.js",
+      "status": 304,
+      "duration_ms": 38
+    },
+    {
+      "at_ms": 26113,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_1j0kgbfihs8s0._.js",
+      "status": 304,
+      "duration_ms": 39
+    },
+    {
+      "at_ms": 26113,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-server-dom-turbopack_16dnf18sfi60f._.js",
+      "status": 304,
+      "duration_ms": 39
+    },
+    {
+      "at_ms": 26113,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_next-devtools_index_1-k_lcer5-lmr.js",
+      "status": 304,
+      "duration_ms": 40
+    },
+    {
+      "at_ms": 26114,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_0-pskmlkg7q2p._.js",
+      "status": 304,
+      "duration_ms": 40
+    },
+    {
+      "at_ms": 26114,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_client_0w8gus3fvmf-t._.js",
+      "status": 304,
+      "duration_ms": 40
+    },
+    {
+      "at_ms": 26115,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_1c2xvjgdkavxw._.js",
+      "status": 304,
+      "duration_ms": 38
+    },
+    {
+      "at_ms": 26115,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1anvha4rlo79g._.js",
+      "status": 304,
+      "duration_ms": 38
+    },
+    {
+      "at_ms": 26116,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/turbopack-_1dpkm6e7d8eun._.js",
+      "status": 304,
+      "duration_ms": 39
+    },
+    {
+      "at_ms": 26116,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/0zix_%40swc_helpers_cjs_0hi-e474n4mns._.js",
+      "status": 304,
+      "duration_ms": 39
+    },
+    {
+      "at_ms": 26116,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1w34tyv3yesxd._.js",
+      "status": 304,
+      "duration_ms": 39
+    },
+    {
+      "at_ms": 26116,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0dbar-e5xqhwr._.js",
+      "status": 304,
+      "duration_ms": 39
+    },
+    {
+      "at_ms": 26116,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1ogj8jyqae73c._.js",
+      "status": 304,
+      "duration_ms": 39
+    },
+    {
+      "at_ms": 26128,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js"
+    },
+    {
+      "at_ms": 26138,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js",
+      "status": 304,
+      "duration_ms": 10
+    },
+    {
+      "at_ms": 26150,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/__nextjs_font/geist-latin.woff2"
+    },
+    {
+      "at_ms": 26151,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/__nextjs_font/geist-latin.woff2",
+      "status": 200,
+      "duration_ms": 1
+    },
+    {
+      "at_ms": 26382,
+      "event": "stage",
+      "stage": "product.create.started"
+    },
+    {
+      "at_ms": 26443,
+      "event": "request.started",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 27675,
+      "event": "request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 1232
+    },
+    {
+      "at_ms": 31373,
+      "event": "supabase.request.completed",
+      "method": "GET",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/products",
+      "status": 200,
+      "duration_ms": 1884
+    },
+    {
+      "at_ms": 31374,
+      "event": "stage",
+      "stage": "product.create.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 31378,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 33452,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 2074
+    },
+    {
+      "at_ms": 33481,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app_globals_0yg4wg8plh8sv.css"
+    },
+    {
+      "at_ms": 33481,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1u6numnbt905r._.js"
+    },
+    {
+      "at_ms": 33481,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom-client_development_1-bukxayzyu6e.js"
+    },
+    {
+      "at_ms": 33482,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom_development_10f8ech_ajjbc.js"
+    },
+    {
+      "at_ms": 33484,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_1j0kgbfihs8s0._.js"
+    },
+    {
+      "at_ms": 33484,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-server-dom-turbopack_16dnf18sfi60f._.js"
+    },
+    {
+      "at_ms": 33484,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_next-devtools_index_1-k_lcer5-lmr.js"
+    },
+    {
+      "at_ms": 33484,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_0-pskmlkg7q2p._.js"
+    },
+    {
+      "at_ms": 33484,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_client_0w8gus3fvmf-t._.js"
+    },
+    {
+      "at_ms": 33484,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_1c2xvjgdkavxw._.js"
+    },
+    {
+      "at_ms": 33485,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/0zix_%40swc_helpers_cjs_0hi-e474n4mns._.js"
+    },
+    {
+      "at_ms": 33485,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1anvha4rlo79g._.js"
+    },
+    {
+      "at_ms": 33485,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/turbopack-_1dpkm6e7d8eun._.js"
+    },
+    {
+      "at_ms": 33485,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1w34tyv3yesxd._.js"
+    },
+    {
+      "at_ms": 33485,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0dbar-e5xqhwr._.js"
+    },
+    {
+      "at_ms": 33485,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1ogj8jyqae73c._.js"
+    },
+    {
+      "at_ms": 33510,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app_globals_0yg4wg8plh8sv.css",
+      "status": 304,
+      "duration_ms": 29
+    },
+    {
+      "at_ms": 33584,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1u6numnbt905r._.js",
+      "status": 200,
+      "duration_ms": 103
+    },
+    {
+      "at_ms": 33608,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom_development_10f8ech_ajjbc.js",
+      "status": 200,
+      "duration_ms": 126
+    },
+    {
+      "at_ms": 33608,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_1j0kgbfihs8s0._.js",
+      "status": 200,
+      "duration_ms": 124
+    },
+    {
+      "at_ms": 33608,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/0zix_%40swc_helpers_cjs_0hi-e474n4mns._.js",
+      "status": 200,
+      "duration_ms": 124
+    },
+    {
+      "at_ms": 33608,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1anvha4rlo79g._.js",
+      "status": 200,
+      "duration_ms": 124
+    },
+    {
+      "at_ms": 33613,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_0-pskmlkg7q2p._.js",
+      "status": 200,
+      "duration_ms": 128
+    },
+    {
+      "at_ms": 33613,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-server-dom-turbopack_16dnf18sfi60f._.js",
+      "status": 200,
+      "duration_ms": 130
+    },
+    {
+      "at_ms": 33614,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_1c2xvjgdkavxw._.js",
+      "status": 200,
+      "duration_ms": 129
+    },
+    {
+      "at_ms": 33637,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_client_0w8gus3fvmf-t._.js",
+      "status": 200,
+      "duration_ms": 153
+    },
+    {
+      "at_ms": 33645,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_react-dom_cjs_react-dom-client_development_1-bukxayzyu6e.js",
+      "status": 200,
+      "duration_ms": 164
+    },
+    {
+      "at_ms": 33658,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1w34tyv3yesxd._.js",
+      "status": 200,
+      "duration_ms": 173
+    },
+    {
+      "at_ms": 33659,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/turbopack-_1dpkm6e7d8eun._.js",
+      "status": 200,
+      "duration_ms": 174
+    },
+    {
+      "at_ms": 33660,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_0dbar-e5xqhwr._.js",
+      "status": 200,
+      "duration_ms": 175
+    },
+    {
+      "at_ms": 33661,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/_1ogj8jyqae73c._.js",
+      "status": 200,
+      "duration_ms": 176
+    },
+    {
+      "at_ms": 33666,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/00o__next_dist_compiled_next-devtools_index_1-k_lcer5-lmr.js",
+      "status": 200,
+      "duration_ms": 182
+    },
+    {
+      "at_ms": 33695,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js"
+    },
+    {
+      "at_ms": 33709,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsayzyj2p6._.js",
+      "status": 200,
+      "duration_ms": 14
+    },
+    {
+      "at_ms": 33730,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/__nextjs_font/geist-latin.woff2"
+    },
+    {
+      "at_ms": 33730,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/__nextjs_font/geist-latin.woff2",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 34106,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/2ddb2e5d-a9b3-4af9-91f5-5e813b5619f4/edit"
+    },
+    {
+      "at_ms": 34157,
+      "event": "stage",
+      "stage": "product.edit.started"
+    },
+    {
+      "at_ms": 36439,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/2ddb2e5d-a9b3-4af9-91f5-5e813b5619f4/edit",
+      "status": 200,
+      "duration_ms": 2332
+    },
+    {
+      "at_ms": 37698,
+      "event": "request.failed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/2ddb2e5d-a9b3-4af9-91f5-5e813b5619f4/edit",
+      "outcome": "net::ERR_ABORTED"
+    },
+    {
+      "at_ms": 38228,
+      "event": "request.started",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products/2ddb2e5d-a9b3-4af9-91f5-5e813b5619f4/edit"
+    },
+    {
+      "at_ms": 40106,
+      "event": "request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products/2ddb2e5d-a9b3-4af9-91f5-5e813b5619f4/edit",
+      "status": 200,
+      "duration_ms": 1879
+    },
+    {
+      "at_ms": 43254,
+      "event": "stage",
+      "stage": "hosted_workflow.failed",
+      "outcome": "Error"
+    },
+    {
+      "at_ms": 43525,
+      "event": "stage",
+      "stage": "cleanup.started"
+    },
+    {
+      "at_ms": 44324,
+      "event": "supabase.request.completed",
+      "method": "GET",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/products",
+      "status": 200,
+      "duration_ms": 797
+    },
+    {
+      "at_ms": 44681,
+      "event": "supabase.request.completed",
+      "method": "PATCH",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/products",
+      "status": 204,
+      "duration_ms": 354
+    },
+    {
+      "at_ms": 45040,
+      "event": "supabase.request.completed",
+      "method": "GET",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/categories",
+      "status": 200,
+      "duration_ms": 358
+    },
+    {
+      "at_ms": 45358,
+      "event": "supabase.request.completed",
+      "method": "PATCH",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/categories",
+      "status": 204,
+      "duration_ms": 314
+    },
+    {
+      "at_ms": 45638,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/customers",
+      "status": 204,
+      "duration_ms": 278
+    },
+    {
+      "at_ms": 45996,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/rest/v1/staff_profiles",
+      "status": 204,
+      "duration_ms": 358
+    },
+    {
+      "at_ms": 46602,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/admin/users/394ceee2-70cd-4bff-9eb7-c77fca4c72bc",
+      "status": 200,
+      "duration_ms": 604
+    },
+    {
+      "at_ms": 46605,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/admin/users/3053f59e-96ac-49c1-b629-767c8fc07a31",
+      "status": 200,
+      "duration_ms": 602
+    },
+    {
+      "at_ms": 46608,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/admin/users/6f8acd62-8832-4355-950f-a893bd79ff82",
+      "status": 200,
+      "duration_ms": 608
+    },
+    {
+      "at_ms": 46613,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "xjzdcpuwrjnpjzntytjs.supabase.co",
+      "path": "/auth/v1/admin/users/100caa09-5ccf-44a8-976f-a48dd9f703bf",
+      "status": 200,
+      "duration_ms": 610
+    },
+    {
+      "at_ms": 46613,
+      "event": "stage",
+      "stage": "cleanup.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 46613,
+      "event": "cleanup.summary",
+      "products_deactivated": 1,
+      "categories_deactivated": 1,
+      "identities_removed": 4,
+      "failure_count": 0
+    }
+  ]
+}

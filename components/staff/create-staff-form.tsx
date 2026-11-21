@@ -12,9 +12,9 @@ export function CreateStaffForm() {
   const [state, formAction, pending] = useActionState(createStaffAccount, {});
 
   return (
-    <section className="mt-8 rounded-2xl border border-[#d9ded3] bg-white p-6 sm:p-8">
+    <section className="rounded-2xl border border-[#d7e0d9] bg-white p-6 sm:p-8">
       <h2 className="text-lg font-semibold">Create a staff account</h2>
-      <p className="mt-2 text-sm leading-6 text-[#667066]">
+      <p className="mt-2 text-sm leading-6 text-[#5e6b64]">
         Staff can set their password through the password recovery link after the account
         is created.
       </p>
@@ -58,7 +58,7 @@ export function CreateStaffForm() {
             autoComplete="tel"
             className={fieldClassName}
           />
-          <p className="mt-1.5 text-xs text-[#667066]">
+          <p className="mt-1.5 text-xs text-[#5e6b64]">
             Optional. Stored as +233 followed by nine digits.
           </p>
         </div>

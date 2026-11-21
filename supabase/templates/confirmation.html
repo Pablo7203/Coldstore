@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Confirm your Grand Pa’s Cold Store account</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      background: #f7f4ec;
+      color: #1f2924;
+      font-family: Arial, Helvetica, sans-serif;
+    "
+  >
+    <table
+      role="presentation"
+      width="100%"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      style="background: #f7f4ec; padding: 28px 12px"
+    >
+      <tr>
+        <td align="center">
+          <table
+            role="presentation"
+            width="600"
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            style="
+              width: 100%;
+              max-width: 600px;
+              background: #ffffff;
+              border: 1px solid #d7e0d9;
+              border-radius: 16px;
+              overflow: hidden;
+            "
+          >
+            <tr>
+              <td style="background: #153c33; padding: 22px 30px">
+                <strong style="color: #ffffff; font-size: 16px">
+                  Grand Pa’s
+                  <span
+                    style="
+                      color: #d9e8df;
+                      font-size: 11px;
+                      letter-spacing: 1.5px;
+                      text-transform: uppercase;
+                    "
+                  >
+                    Cold Store
+                  </span>
+                </strong>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 34px 32px 36px">
+                <p
+                  style="
+                    margin: 0 0 12px;
+                    color: #2f654f;
+                    font-size: 11px;
+                    font-weight: 700;
+                    letter-spacing: 1.8px;
+                    text-transform: uppercase;
+                  "
+                >
+                  Confirm your email
+                </p>
+                <h1 style="margin: 0; color: #153c33; font-size: 28px; line-height: 35px">
+                  Welcome, {{ .Data.full_name }}.
+                </h1>
+                <p
+                  style="
+                    margin: 16px 0 0;
+                    color: #5e6b64;
+                    font-size: 16px;
+                    line-height: 25px;
+                  "
+                >
+                  Confirm your email address to finish setting up your account and start
+                  ordering from Grand Pa’s Cold Store.
+                </p>
+                <p style="margin: 26px 0">
+                  <a
+                    href="{{ .ConfirmationURL }}"
+                    style="
+                      display: inline-block;
+                      background: #b7472a;
+                      border-radius: 10px;
+                      color: #ffffff;
+                      font-size: 15px;
+                      font-weight: 700;
+                      line-height: 20px;
+                      padding: 14px 22px;
+                      text-decoration: none;
+                    "
+                  >
+                    Confirm email address
+                  </a>
+                </p>
+                <p style="margin: 0; color: #5e6b64; font-size: 13px; line-height: 21px">
+                  If you did not create this account, you can ignore this message.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  border-top: 1px solid #d7e0d9;
+                  padding: 18px 30px;
+                  color: #5e6b64;
+                  font-size: 12px;
+                  line-height: 19px;
+                "
+              >
+                Grand Pa’s Cold Store · Osu, Accra
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Keep production and review builds isolated from any running local dev server.
+  distDir: process.env.NEXT_BUILD_OUTPUT_DIR || ".next",
   experimental: { agentUpgrade: "security" },
   async headers() {
     return [

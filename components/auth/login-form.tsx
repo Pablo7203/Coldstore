@@ -9,7 +9,7 @@ import {
   submitClassName,
 } from "@/components/auth/auth-shell";
 
-export function LoginForm({ notice }: { notice?: string }) {
+export function LoginForm({ notice, next }: { notice?: string; next?: string }) {
   const [state, formAction, pending] = useActionState(signIn, {});
   const noticeMessage =
     notice === "inactive"
@@ -22,11 +22,12 @@ export function LoginForm({ notice }: { notice?: string }) {
     <div>
       <div className="mb-7">
         <h2 className="text-2xl font-semibold tracking-tight">Sign in</h2>
-        <p className="mt-2 text-sm leading-6 text-[#667066]">
+        <p className="mt-2 text-sm leading-6 text-[#5e6b64]">
           Staff and customers can use their email and password.
         </p>
       </div>
       <form action={formAction} className="space-y-5">
+        {next ? <input type="hidden" name="next" value={next} /> : null}
         <AuthMessage message={state.message ?? noticeMessage} success={state.success} />
         <div>
           <label htmlFor="email" className="text-sm font-medium">
@@ -48,7 +49,7 @@ export function LoginForm({ notice }: { notice?: string }) {
             </label>
             <Link
               href="/forgot-password"
-              className="text-xs font-medium text-[#45634d] underline-offset-4 hover:underline"
+              className="text-xs font-medium text-[#2f654f] underline-offset-4 hover:underline"
             >
               Forgot password?
             </Link>
@@ -67,11 +68,11 @@ export function LoginForm({ notice }: { notice?: string }) {
           {pending ? "Signing in…" : "Sign in"}
         </button>
       </form>
-      <p className="mt-6 text-sm text-[#667066]">
+      <p className="mt-6 text-sm text-[#5e6b64]">
         Shopping with us online?{" "}
         <Link
-          href="/register"
-          className="font-semibold text-[#45634d] underline-offset-4 hover:underline"
+          href={next ? `/register?next=${encodeURIComponent(next)}` : "/register"}
+          className="font-semibold text-[#2f654f] underline-offset-4 hover:underline"
         >
           Create a customer account
         </Link>

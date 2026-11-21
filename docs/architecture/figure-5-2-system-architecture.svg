@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1320" viewBox="0 0 1920 1320">
+<title>Figure 5.2: System Architecture</title>
+<desc>Three-layer architecture for the Grand Pa’s Cold Store Management System, with a separate PWA offline data path and Paystack connected to online payments.</desc>
+<style>text{font-family:Arial, Helvetica, sans-serif}.title{font-size:36px;font-weight:700;fill:#24372F}.subtitle{font-size:18px;fill:#65736B}.layer-label{font-size:17px;font-weight:700;letter-spacing:1.2px;fill:#24372F}.box-title{font-weight:700;fill:#24372F}.box-subtitle{fill:#65736B}.small{font-size:14px;fill:#65736B}.flow{font-size:14px;font-weight:600;fill:#65736B}.tag{font-size:13px;font-weight:700;letter-spacing:.9px}</style>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3E6B54"/></marker>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3F748A"/></marker>
+<marker id="arrow-gold" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#A97522"/></marker>
+<marker id="arrow-purple" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#75628F"/></marker>
+<pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#e8e7df" stroke-width="1"/></pattern>
+</defs>
+<rect width="1920" height="1320" fill="#FBFAF6"/>
+<rect width="1920" height="1320" fill="url(#grid)" opacity=".35"/>
+<text x="92" y="78" class="title">System Architecture</text>
+<text x="94" y="114" class="subtitle">Grand Pa’s Cold Store Management System · layered web application with offline-capable POS workflows</text>
+<rect x="80" y="160" width="1760" height="250" rx="24" fill="#ffffff" stroke="#aab8af" stroke-width="2"/>
+<rect x="80" y="435" width="1760" height="445" rx="24" fill="#ffffff" stroke="#aab8af" stroke-width="2"/>
+<rect x="80" y="905" width="1760" height="220" rx="24" fill="#ffffff" stroke="#aab8af" stroke-width="2"/>
+<text x="112" y="194" class="layer-label">PRESENTATION LAYER</text>
+<text x="112" y="469" class="layer-label">APPLICATION LAYER</text>
+<text x="112" y="939" class="layer-label">DATA LAYER</text>
+<rect x="150" y="238" width="290" height="116" rx="15" fill="#E7F0E9" stroke="#3E6B54" stroke-width="2"/>
+<text x="295.0" y="292.0" text-anchor="middle" class="box-title" font-size="18">Customer Web Interface</text>
+<text x="295.0" y="315.0" text-anchor="middle" class="box-subtitle" font-size="13">Browse · cart · checkout</text>
+<rect x="485" y="238" width="260" height="116" rx="15" fill="#E7F0E9" stroke="#3E6B54" stroke-width="2"/>
+<text x="615.0" y="292.0" text-anchor="middle" class="box-title" font-size="18">POS Interface</text>
+<text x="615.0" y="315.0" text-anchor="middle" class="box-subtitle" font-size="13">Sales · payments · receipt</text>
+<rect x="790" y="238" width="280" height="116" rx="15" fill="#E7F0E9" stroke="#3E6B54" stroke-width="2"/>
+<text x="930.0" y="292.0" text-anchor="middle" class="box-title" font-size="18">Manager Dashboard</text>
+<text x="930.0" y="315.0" text-anchor="middle" class="box-subtitle" font-size="13">Operations · orders · credit</text>
+<rect x="1115" y="238" width="280" height="116" rx="15" fill="#E7F0E9" stroke="#3E6B54" stroke-width="2"/>
+<text x="1255.0" y="292.0" text-anchor="middle" class="box-title" font-size="17">Administrator Dashboard</text>
+<text x="1255.0" y="315.0" text-anchor="middle" class="box-subtitle" font-size="13">Staff · roles · oversight</text>
+<rect x="1440" y="238" width="290" height="116" rx="15" fill="#E7F0E9" stroke="#3E6B54" stroke-width="2"/>
+<text x="1585.0" y="292.0" text-anchor="middle" class="box-title" font-size="18">Stock Interface</text>
+<text x="1585.0" y="315.0" text-anchor="middle" class="box-subtitle" font-size="13">Inventory · movements</text>
+<rect x="175" y="515" width="350" height="110" rx="15" fill="#EAF2F6" stroke="#3F748A" stroke-width="2"/>
+<text x="350.0" y="566.0" text-anchor="middle" class="box-title" font-size="21">Next.js Application</text>
+<text x="350.0" y="589.0" text-anchor="middle" class="box-subtitle" font-size="13">Web routes · server actions · API</text>
+<rect x="590" y="515" width="350" height="110" rx="15" fill="#EAF2F6" stroke="#3F748A" stroke-width="2"/>
+<text x="765.0" y="566.0" text-anchor="middle" class="box-title" font-size="19">Authentication &amp; Authorisation</text>
+<text x="765.0" y="589.0" text-anchor="middle" class="box-subtitle" font-size="13">Supabase Auth · role permissions</text>
+<rect x="1005" y="515" width="330" height="110" rx="15" fill="#EAF2F6" stroke="#3F748A" stroke-width="2"/>
+<text x="1170.0" y="566.0" text-anchor="middle" class="box-title" font-size="18">POS Service</text>
+<text x="1170.0" y="589.0" text-anchor="middle" class="box-subtitle" font-size="13">Sale processing · receipt data</text>
+<rect x="1390" y="515" width="360" height="110" rx="15" fill="#EAF2F6" stroke="#3F748A" stroke-width="2"/>
+<text x="1570.0" y="566.0" text-anchor="middle" class="box-title" font-size="18">Inventory Service</text>
+<text x="1570.0" y="589.0" text-anchor="middle" class="box-subtitle" font-size="13">Stock movements · availability</text>
+<rect x="175" y="690" width="350" height="110" rx="15" fill="#EAF2F6" stroke="#3F748A" stroke-width="2"/>
+<text x="350.0" y="741.0" text-anchor="middle" class="box-title" font-size="19">Order &amp; Reservation Service</text>
+<text x="350.0" y="764.0" text-anchor="middle" class="box-subtitle" font-size="13">Customer pickup · stock reservation</text>
+<rect x="590" y="690" width="350" height="110" rx="15" fill="#EAF2F6" stroke="#3F748A" stroke-width="2"/>
+<text x="765.0" y="741.0" text-anchor="middle" class="box-title" font-size="18">Credit Service</text>
+<text x="765.0" y="764.0" text-anchor="middle" class="box-subtitle" font-size="13">Accounts · limits · repayments</text>
+<rect x="1005" y="690" width="330" height="110" rx="15" fill="#F0ECF6" stroke="#75628F" stroke-width="2"/>
+<text x="1170.0" y="741.0" text-anchor="middle" class="box-title" font-size="18">Synchronisation Service</text>
+<text x="1170.0" y="764.0" text-anchor="middle" class="box-subtitle" font-size="13">Reconcile queued offline work</text>
+<rect x="1390" y="690" width="360" height="110" rx="15" fill="#EAF2F6" stroke="#3F748A" stroke-width="2"/>
+<text x="1570.0" y="741.0" text-anchor="middle" class="box-title" font-size="18">Reporting Service</text>
+<text x="1570.0" y="764.0" text-anchor="middle" class="box-subtitle" font-size="13">Operational views and summaries</text>
+<rect x="230" y="987" width="500" height="100" rx="15" fill="#EAF2F6" stroke="#3F748A" stroke-width="2"/>
+<text x="480.0" y="1033.0" text-anchor="middle" class="box-title" font-size="21">Supabase PostgreSQL</text>
+<text x="480.0" y="1056.0" text-anchor="middle" class="box-subtitle" font-size="13">Products · inventory · sales · orders · credit</text>
+<rect x="820" y="987" width="400" height="100" rx="15" fill="#E7F0E9" stroke="#3E6B54" stroke-width="2"/>
+<text x="1020.0" y="1033.0" text-anchor="middle" class="box-title" font-size="20">Supabase Authentication</text>
+<text x="1020.0" y="1056.0" text-anchor="middle" class="box-subtitle" font-size="13">User identity and sessions</text>
+<rect x="1310" y="987" width="420" height="100" rx="15" fill="#FBF2DD" stroke="#A97522" stroke-width="2"/>
+<text x="1520.0" y="1033.0" text-anchor="middle" class="box-title" font-size="21">Row Level Security</text>
+<text x="1520.0" y="1056.0" text-anchor="middle" class="box-subtitle" font-size="13">Policies enforced on PostgreSQL</text>
+<path d="M350 354 L350 515" fill="none" stroke="#3F748A" stroke-width="3" marker-end="url(#arrow-blue)"/>
+<path d="M615 354 L1145 515" fill="none" stroke="#3F748A" stroke-width="3" marker-end="url(#arrow-blue)"/>
+<path d="M930 354 L350 690" fill="none" stroke="#3F748A" stroke-width="3" marker-end="url(#arrow-blue)"/>
+<path d="M1255 354 L765 515" fill="none" stroke="#3F748A" stroke-width="3" marker-end="url(#arrow-blue)"/>
+<path d="M1585 354 L1570 515" fill="none" stroke="#3F748A" stroke-width="3" marker-end="url(#arrow-blue)"/>
+<path d="M960 880 V958 H480 V987" fill="none" stroke="#3F748A" stroke-width="3" marker-end="url(#arrow-blue)"/>
+<text x="500" y="950" class="flow">application data</text>
+<path d="M940 570 H970 V958 H1020 V987" fill="none" stroke="#3E6B54" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arrow)"/>
+<rect x="175" y="1155" width="1120" height="105" rx="20" fill="#F0ECF6" stroke="#75628F" stroke-width="2.3"/>
+<text x="205" y="1185" class="tag" fill="#75628F">PWA / OFFLINE POS PATH</text>
+<rect x="205" y="1195" width="260" height="52" rx="15" fill="#ffffff" stroke="#75628F" stroke-width="2"/>
+<text x="335.0" y="1227.0" text-anchor="middle" class="box-title" font-size="15">PWA / Service Worker</text>
+<rect x="555" y="1195" width="260" height="52" rx="15" fill="#ffffff" stroke="#75628F" stroke-width="2"/>
+<text x="685.0" y="1227.0" text-anchor="middle" class="box-title" font-size="15">IndexedDB / Dexie</text>
+<rect x="905" y="1195" width="345" height="52" rx="15" fill="#ffffff" stroke="#75628F" stroke-width="2"/>
+<text x="1077.5" y="1227.0" text-anchor="middle" class="box-title" font-size="15">Synchronisation Service</text>
+<path d="M465 1221 L555 1221" fill="none" stroke="#75628F" stroke-width="3" marker-end="url(#arrow-purple)"/>
+<path d="M815 1221 L905 1221" fill="none" stroke="#75628F" stroke-width="3" marker-end="url(#arrow-purple)"/>
+<path d="M1080 1195 C1080 1110 1170 1002 1170 800" fill="none" stroke="#75628F" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arrow-purple)"/>
+<rect x="1450" y="1155" width="340" height="105" rx="20" fill="#FBF2DD" stroke="#A97522" stroke-width="2.3"/>
+<text x="1480" y="1185" class="tag" fill="#A97522">ONLINE PAYMENT ONLY</text>
+<rect x="1500" y="1195" width="250" height="52" rx="15" fill="#ffffff" stroke="#A97522" stroke-width="2"/>
+<text x="1625.0" y="1227.0" text-anchor="middle" class="box-title" font-size="17">Paystack</text>
+<path d="M525 615 V650 H1805 V1221 H1750" fill="none" stroke="#A97522" stroke-width="3" stroke-dasharray="9 7" marker-end="url(#arrow-gold)"/>
+<text x="1510" y="642" class="flow" fill="#A97522">online checkout payment only</text>
+<text x="92" y="1295" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="500" fill="#65736B">Figure 5.2: System Architecture</text>
+</svg>

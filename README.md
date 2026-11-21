@@ -18,7 +18,7 @@ pnpm install
 Copy-Item .env.example .env.local
 ```
 
-Fill in the dedicated Grand Pa development Supabase values when that project is provisioned. Paystack values are optional until the Paystack phase. Never place service-role or Paystack secret keys in client code.
+Fill in the dedicated Grand Pa development Supabase values when that project is provisioned. Paystack values are optional until the Paystack phase. Never place the Supabase secret key or Paystack secret key in client code.
 
 ## Development
 

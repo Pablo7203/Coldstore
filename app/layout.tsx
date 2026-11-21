@@ -4,7 +4,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Grand Pa’s Cold Store",
-  description: "Foundation for Grand Pa’s Cold Store management system.",
+  description:
+    "Browse the Grand Pa’s Cold Store selection and find good food, kept cold.",
   applicationName: "Grand Pa’s Cold Store",
   appleWebApp: {
     capable: true,
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f7f6f2",
+  themeColor: "#f7f4ec",
   width: "device-width",
   initialScale: 1,
 };

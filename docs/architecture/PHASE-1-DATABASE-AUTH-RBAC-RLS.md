@@ -16,7 +16,7 @@ The permission catalog is database-owned. Managers receive operational access wi
 
 Supabase Auth email/password serves staff and customers. Customer registration hardcodes customer account type and links the customer record through an Auth trigger. Staff have no public signup route. `/staff` and `/account` resolve server-side profiles and require active staff or linked customer context respectively. Session refresh is handled by the Next.js Proxy.
 
-An operator can bootstrap the first admin using `pnpm bootstrap:admin -- <confirmed-auth-email> <full-name>` with the local service-role key. Thereafter, active admins with `manage_staff` can create staff identities from `/staff`. The server action creates a confirmed Auth identity, invokes the permission-checking profile-assignment RPC with the current user session, and cleans up the identity if profile assignment fails. A new staff member sets a password through password recovery.
+An operator can bootstrap the first admin using `pnpm bootstrap:admin -- <confirmed-auth-email> <full-name>` with the local Supabase secret key. Thereafter, active admins with `manage_staff` can create staff identities from `/staff`. The server action creates a confirmed Auth identity, invokes the permission-checking profile-assignment RPC with the current user session, and cleans up the identity if profile assignment fails. A new staff member sets a password through password recovery.
 
 ## Ghana phone handling
 
@@ -28,7 +28,7 @@ An operator can bootstrap the first admin using `pnpm bootstrap:admin -- <confir
 - Hosted schema inspection confirmed the five expected application tables, all five with RLS, expected role/status enums, helper functions, triggers, and policies. No Phase 2 tables exist.
 - Thirty pgTAP assertions passed against the hosted database inside a rollback transaction. `supabase test db --linked` itself cannot resolve the pgTAP extension under the CLI runner role without additional schema privileges; a persistent extension-schema grant was rejected by automatic review. The assertions were executed through the privileged SQL query path instead, without widening runner privileges.
 - Hosted phone SQL checks passed six accepted normalization forms and rejected six invalid forms; all run inside a rollback transaction.
-- `scripts/verify-supabase-clients.mjs` verified a public Auth settings HTTP 200 using the public key and initialized a real server admin client from local configuration. It made no privileged data request. The browser and server clients use generated `Database` types; the service-role client remains in a `server-only` module.
+- `scripts/verify-supabase-clients.mjs` verifies public Auth reachability with the publishable key and performs a minimal Auth Admin API request with the server-only secret key. The response data is discarded. The browser and server clients use generated `Database` types; the elevated client remains in a `server-only` module.
 - Unit, type, lint, format, E2E, build, and diff checks are recorded in `docs/phase-1/REPORT.md` and `docs/evidence/phase-1/`.
 
 ## Scope boundary

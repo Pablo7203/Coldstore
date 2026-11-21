@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<title>Customer Product and Checkout Wireframe</title>
+<desc>Customer product catalogue and pickup checkout</desc>
+<rect width="1600" height="1120" fill="#F3F3F3"/>
+<style>text{font-family:Arial,Helvetica,sans-serif} .shadow{filter:none}</style>
+<rect x="0" y="0" width="800" height="1024" rx="0" fill="#F3F3F3" stroke="none" stroke-width="1.5"/>
+<rect x="800" y="0" width="800" height="1024" rx="0" fill="#F3F3F3" stroke="none" stroke-width="1.5"/>
+<text x="64" y="54" fill="#555555" font-size="12" font-weight="600" text-anchor="start" letter-spacing="0.5">LOW-FIDELITY WIREFRAME · BROWSE PRODUCTS</text>
+<text x="836" y="54" fill="#555555" font-size="12" font-weight="600" text-anchor="start" letter-spacing="0.5">LOW-FIDELITY WIREFRAME · CHECKOUT</text>
+<rect x="40" y="77" width="720" height="910" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="68" y="98.34" width="36.12" height="36.12" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="86.06" y="119.84" fill="#555555" font-size="6.88" font-weight="400" text-anchor="middle" letter-spacing="0">LOGO</text>
+<text x="116.16" y="117.26" fill="#222222" font-size="18.06" font-weight="700" text-anchor="start" letter-spacing="0">Grand Pa’s</text>
+<text x="116.16" y="135.32" fill="#555555" font-size="8.6" font-weight="700" text-anchor="start" letter-spacing="1.548">COLD STORE</text>
+<text x="590" y="116" fill="#444444" font-size="12" font-weight="600" text-anchor="end" letter-spacing="0">Shop   Cart (2)   My account</text>
+<line x1="68" y1="153" x2="732" y2="153" stroke="#888888" stroke-width="1.5"/>
+<text x="68" y="205" fill="#222222" font-size="30" font-weight="700" text-anchor="start" letter-spacing="0">Browse the shop</text>
+<text x="68" y="232" fill="#555555" font-size="13" font-weight="400" text-anchor="start" letter-spacing="0">Find something for the table.</text>
+<rect x="68" y="257" width="423" height="44" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="111" y="284" fill="#899189" font-size="13" font-weight="400" text-anchor="start" letter-spacing="0">Search products</text>
+<rect x="502" y="257" width="150" height="44" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="520" y="284" fill="#555555" font-size="12" font-weight="400" text-anchor="start" letter-spacing="0">All categories  ▾</text>
+<rect x="660" y="257" width="72" height="44" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="696.0" y="283.08" fill="#222222" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="0">Find</text>
+<text x="68" y="334" fill="#444444" font-size="12" font-weight="700" text-anchor="start" letter-spacing="0">Poultry</text>
+<text x="732" y="334" fill="#555555" font-size="11" font-weight="400" text-anchor="end" letter-spacing="0">30 products</text>
+<rect x="68" y="356" width="312" height="240" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="69" y="357" width="310" height="111" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1" class="placeholder"/>
+<text x="224" y="417" fill="#555555" font-size="12" font-weight="500" text-anchor="middle" letter-spacing="0.7">PRODUCT IMAGE</text>
+<text x="85" y="495" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.9">POULTRY</text>
+<text x="85" y="520" fill="#222222" font-size="16" font-weight="700" text-anchor="start" letter-spacing="0">Whole Chicken</text>
+<text x="85" y="543" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Popular cut</text>
+<text x="85" y="577" fill="#333333" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 82.00 / kg</text>
+<rect x="319" y="554" width="42" height="36" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="340.0" y="578.12" fill="#222222" font-size="18" font-weight="600" text-anchor="middle" letter-spacing="0">+</text>
+<rect x="399" y="356" width="312" height="240" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="400" y="357" width="310" height="111" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1" class="placeholder"/>
+<text x="555" y="417" fill="#555555" font-size="12" font-weight="500" text-anchor="middle" letter-spacing="0.7">PRODUCT IMAGE</text>
+<text x="416" y="495" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.9">POULTRY</text>
+<text x="416" y="520" fill="#222222" font-size="16" font-weight="700" text-anchor="start" letter-spacing="0">Chicken Wings</text>
+<text x="416" y="543" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Frozen · 1 kg pack</text>
+<text x="416" y="577" fill="#333333" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 66.00 / kg</text>
+<rect x="650" y="554" width="42" height="36" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="671.0" y="578.12" fill="#222222" font-size="18" font-weight="600" text-anchor="middle" letter-spacing="0">+</text>
+<rect x="68" y="619" width="312" height="240" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="69" y="620" width="310" height="111" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1" class="placeholder"/>
+<text x="224" y="680" fill="#555555" font-size="12" font-weight="500" text-anchor="middle" letter-spacing="0.7">PRODUCT IMAGE</text>
+<text x="85" y="758" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.9">POULTRY</text>
+<text x="85" y="783" fill="#222222" font-size="16" font-weight="700" text-anchor="start" letter-spacing="0">Chicken Drumsticks</text>
+<text x="85" y="806" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Frozen · 1 kg pack</text>
+<text x="85" y="840" fill="#333333" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 58.00 / kg</text>
+<rect x="319" y="817" width="42" height="36" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="340.0" y="841.12" fill="#222222" font-size="18" font-weight="600" text-anchor="middle" letter-spacing="0">+</text>
+<rect x="399" y="619" width="312" height="240" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="400" y="620" width="310" height="111" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1" class="placeholder"/>
+<text x="555" y="680" fill="#555555" font-size="12" font-weight="500" text-anchor="middle" letter-spacing="0.7">PRODUCT IMAGE</text>
+<text x="416" y="758" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.9">POULTRY</text>
+<text x="416" y="783" fill="#222222" font-size="16" font-weight="700" text-anchor="start" letter-spacing="0">Chicken Breast</text>
+<text x="416" y="806" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Boneless cut</text>
+<text x="416" y="840" fill="#333333" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 76.00 / kg</text>
+<rect x="650" y="817" width="42" height="36" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="671.0" y="841.12" fill="#222222" font-size="18" font-weight="600" text-anchor="middle" letter-spacing="0">+</text>
+<text x="68" y="940" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Store pickup in Osu  ·  Secure customer account</text>
+<rect x="824" y="77" width="736" height="910" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="852" y="98.34" width="36.12" height="36.12" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="870.06" y="119.84" fill="#555555" font-size="6.88" font-weight="400" text-anchor="middle" letter-spacing="0">LOGO</text>
+<text x="900.16" y="117.26" fill="#222222" font-size="18.06" font-weight="700" text-anchor="start" letter-spacing="0">Grand Pa’s</text>
+<text x="900.16" y="135.32" fill="#555555" font-size="8.6" font-weight="700" text-anchor="start" letter-spacing="1.548">COLD STORE</text>
+<text x="1528" y="116" fill="#444444" font-size="12" font-weight="600" text-anchor="end" letter-spacing="0">Cart   Account</text>
+<line x1="852" y1="153" x2="1532" y2="153" stroke="#888888" stroke-width="1.5"/>
+<text x="852" y="194" fill="#444444" font-size="12" font-weight="600" text-anchor="start" letter-spacing="0">← Back to cart</text>
+<rect x="852" y="219" width="132" height="28" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="918.0" y="236.4" fill="#222222" font-size="10" font-weight="700" text-anchor="middle" letter-spacing="0">STORE PICKUP</text>
+<text x="852" y="291" fill="#222222" font-size="32" font-weight="700" text-anchor="start" letter-spacing="0">Checkout</text>
+<text x="852" y="318" fill="#555555" font-size="13" font-weight="400" text-anchor="start" letter-spacing="0">Reserve your items and pay when you collect.</text>
+<rect x="852" y="349" width="430" height="209" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="875" y="383" fill="#222222" font-size="18" font-weight="700" text-anchor="start" letter-spacing="0">Pickup details</text>
+<text x="875" y="409" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Collection at Grand Pa’s Cold Store in Osu.</text>
+<rect x="875" y="427" width="384" height="58" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1.5"/>
+<text x="892" y="451" fill="#222222" font-size="13" font-weight="700" text-anchor="start" letter-spacing="0">Ama Owusu</text>
+<text x="892" y="472" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">Signed-in customer account</text>
+<text x="875" y="520" fill="#555555" font-size="10" font-weight="700" text-anchor="start" letter-spacing="0.9">PAYMENT AT COLLECTION</text>
+<rect x="852" y="577" width="430" height="146" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="879" y="617" fill="#222222" font-size="14" font-weight="500" text-anchor="start" letter-spacing="0">(x)</text>
+<text x="900" y="616" fill="#222222" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">Cash at pickup</text>
+<text x="900" y="642" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Pay store staff when you collect your order.</text>
+<text x="900" y="665" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Reserved stock is held for your collection.</text>
+<rect x="1302" y="349" width="230" height="374" rx="0" fill="#FCFCFA" stroke="#888888" stroke-width="1.5"/>
+<text x="1322" y="385" fill="#222222" font-size="17" font-weight="700" text-anchor="start" letter-spacing="0">Order summary</text>
+<text x="1322" y="426" fill="#222222" font-size="11" font-weight="600" text-anchor="start" letter-spacing="0">Whole Chicken</text>
+<text x="1510" y="426" fill="#222222" font-size="11" font-weight="600" text-anchor="end" letter-spacing="0">GH₵ 82.00</text>
+<text x="1322" y="449" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">1.0 kg</text>
+<line x1="1322" y1="474" x2="1512" y2="474" stroke="#888888" stroke-width="1.5"/>
+<text x="1322" y="501" fill="#222222" font-size="11" font-weight="600" text-anchor="start" letter-spacing="0">Chicken Wings</text>
+<text x="1510" y="501" fill="#222222" font-size="11" font-weight="600" text-anchor="end" letter-spacing="0">GH₵ 66.00</text>
+<text x="1322" y="524" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">1.0 kg</text>
+<line x1="1322" y1="551" x2="1512" y2="551" stroke="#888888" stroke-width="1.5"/>
+<text x="1322" y="581" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Subtotal</text>
+<text x="1510" y="581" fill="#222222" font-size="11" font-weight="600" text-anchor="end" letter-spacing="0">GH₵ 148.00</text>
+<text x="1322" y="616" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Pickup</text>
+<text x="1510" y="616" fill="#222222" font-size="10" font-weight="600" text-anchor="end" letter-spacing="0">Store pickup</text>
+<line x1="1322" y1="639" x2="1512" y2="639" stroke="#888888" stroke-width="1.5"/>
+<text x="1322" y="678" fill="#444444" font-size="11" font-weight="700" text-anchor="start" letter-spacing="0.7">TOTAL</text>
+<text x="1510" y="680" fill="#333333" font-size="16" font-weight="700" text-anchor="end" letter-spacing="0">GH₵ 148.00</text>
+<rect x="852" y="751" width="680" height="50" rx="0" fill="#FFFFFF" stroke="#222222" stroke-width="1.5"/>
+<text x="1192.0" y="781.1" fill="#222222" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0">Place pickup order</text>
+<text x="852" y="827" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">You’ll receive an order number and pickup reservation details.</text>
+<text x="852" y="856" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Payment is collected at the store.</text>
+<text x="852" y="935" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Customer order · Store pickup · Cash at collection</text>
+<line x1="72" y1="1042" x2="1528" y2="1042" stroke="#888888" stroke-width="1.4"/>
+<text x="72" y="1081" fill="#444444" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.8">Figure 5.11</text>
+<text x="190" y="1081" fill="#222222" font-size="18" font-weight="600" text-anchor="start" letter-spacing="0">Customer Product and Checkout Interface Wireframe</text>
+</svg>

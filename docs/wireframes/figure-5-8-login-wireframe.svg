@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<title>Login Screen Wireframe</title>
+<desc>Staff and customer sign-in screen</desc>
+<rect width="1600" height="1120" fill="#F3F3F3"/>
+<style>text{font-family:Arial,Helvetica,sans-serif} .shadow{filter:none}</style>
+<rect x="74" y="54" width="1452" height="936" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="800" y="115" fill="#555555" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="1">LOW-FIDELITY WIREFRAME · SIGN-IN</text>
+<rect x="124" y="178" width="1352" height="740" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1.5"/>
+<rect x="164" y="208.1" width="37.800000000000004" height="37.800000000000004" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="182.9" y="230.6" fill="#555555" font-size="7.2" font-weight="400" text-anchor="middle" letter-spacing="0">LOGO</text>
+<text x="214.4" y="227.9" fill="#222222" font-size="18.900000000000002" font-weight="700" text-anchor="start" letter-spacing="0">Grand Pa’s</text>
+<text x="214.4" y="246.8" fill="#555555" font-size="9.0" font-weight="700" text-anchor="start" letter-spacing="1.62">COLD STORE</text>
+<text x="164" y="326" fill="#222222" font-size="30" font-weight="600" text-anchor="start" letter-spacing="0">Sign-in page</text>
+<text x="164" y="361" fill="#555555" font-size="16" font-weight="400" text-anchor="start" letter-spacing="0">Staff and customer access</text>
+<rect x="164" y="399" width="500" height="440" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="188" y="436" fill="#555555" font-size="13" font-weight="500" text-anchor="start" letter-spacing="0">Store information / illustration area</text>
+<rect x="188" y="459" width="452" height="220" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1" class="placeholder"/>
+<text x="414" y="573" fill="#555555" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0.8">CONTENT PLACEHOLDER</text>
+<text x="188" y="724" fill="#222222" font-size="15" font-weight="500" text-anchor="start" letter-spacing="0">Role-based access</text>
+<text x="188" y="756" fill="#555555" font-size="13" font-weight="400" text-anchor="start" letter-spacing="0">Supporting sign-in information</text>
+<rect x="724" y="399" width="700" height="440" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="754" y="445" fill="#222222" font-size="26" font-weight="600" text-anchor="start" letter-spacing="0">Sign in</text>
+<text x="754" y="479" fill="#555555" font-size="14" font-weight="400" text-anchor="start" letter-spacing="0">Enter your account details to continue</text>
+<text x="754" y="520" fill="#555555" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">Email address</text>
+<rect x="754" y="530" width="640" height="46" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="770" y="559.0" fill="#222222" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">name@example.com</text>
+<text x="754" y="620" fill="#555555" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">Password</text>
+<rect x="754" y="630" width="640" height="46" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="770" y="659.0" fill="#555555" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Password</text>
+<text x="1394" y="686" fill="#222222" font-size="13" font-weight="500" text-anchor="end" letter-spacing="0">Forgot password?</text>
+<rect x="754" y="712" width="640" height="48" rx="0" fill="#FFFFFF" stroke="#222222" stroke-width="1.5"/>
+<text x="1074.0" y="741.1" fill="#222222" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0">Sign in</text>
+<text x="1074" y="798" fill="#555555" font-size="13" font-weight="500" text-anchor="middle" letter-spacing="0">Create customer account</text>
+<text x="800" y="885" fill="#555555" font-size="12" font-weight="400" text-anchor="middle" letter-spacing="0">Primary action · Form fields · Account recovery</text>
+<line x1="72" y1="1042" x2="1528" y2="1042" stroke="#888888" stroke-width="1.4"/>
+<text x="72" y="1081" fill="#444444" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.8">Figure 5.8</text>
+<text x="190" y="1081" fill="#222222" font-size="18" font-weight="600" text-anchor="start" letter-spacing="0">Login Screen Wireframe</text>
+</svg>

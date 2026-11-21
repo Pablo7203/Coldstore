@@ -16,7 +16,7 @@ export function RequestPasswordResetForm() {
     <div>
       <div className="mb-7">
         <h2 className="text-2xl font-semibold tracking-tight">Reset your password</h2>
-        <p className="mt-2 text-sm leading-6 text-[#667066]">
+        <p className="mt-2 text-sm leading-6 text-[#5e6b64]">
           Enter your account email and we’ll send a reset link if an account matches.
         </p>
       </div>
@@ -42,7 +42,7 @@ export function RequestPasswordResetForm() {
       <p className="mt-6 text-sm">
         <Link
           href="/login"
-          className="font-semibold text-[#45634d] underline-offset-4 hover:underline"
+          className="font-semibold text-[#2f654f] underline-offset-4 hover:underline"
         >
           Back to sign in
         </Link>
@@ -58,7 +58,7 @@ export function SetNewPasswordForm() {
     <div>
       <div className="mb-7">
         <h2 className="text-2xl font-semibold tracking-tight">Choose a new password</h2>
-        <p className="mt-2 text-sm leading-6 text-[#667066]">
+        <p className="mt-2 text-sm leading-6 text-[#5e6b64]">
           Set a password with at least 8 characters.
         </p>
       </div>

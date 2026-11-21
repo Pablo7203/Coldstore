@@ -6,5 +6,18 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/staff/:path*", "/account/:path*", "/auth/callback"],
+  // Refresh Supabase cookies on public storefront routes as well as protected pages.
+  matcher: [
+    "/",
+    "/shop/:path*",
+    "/cart/:path*",
+    "/checkout/:path*",
+    "/login",
+    "/register",
+    "/forgot-password",
+    "/reset-password",
+    "/staff/:path*",
+    "/account/:path*",
+    "/auth/callback",
+  ],
 };

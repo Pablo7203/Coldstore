@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1280" viewBox="0 0 1920 1280">
+<title>Figure 5.1: Iterative Development Approach for the Grand Pa’s Cold Store Management System</title>
+<desc>Diagram of an iterative DSDM development cycle, guided by MoSCoW priorities within a fixed academic timeframe.</desc>
+<defs>
+<marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3E6B54"/></marker>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3F748A"/></marker>
+<pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#e8e7df" stroke-width="1"/></pattern>
+</defs>
+<rect width="1920" height="1280" fill="#FBFAF6"/>
+<rect width="1920" height="1280" fill="url(#grid)" opacity=".35"/>
+<text x="92" y="82" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#24372F" text-anchor="start">Grand Pa’s Cold Store Management System</text>
+<text x="94" y="119" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" fill="#65736B" text-anchor="start">DSDM iterative development · Fixed academic timeframe · Progressive refinement</text>
+<circle cx="960" cy="640" r="145" fill="#fffefa" stroke="#D4DDD6" stroke-width="2"/>
+<text x="960" y="616" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#2F5140" text-anchor="middle">ITERATIVE</text>
+<text x="960" y="650" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#24372F" text-anchor="middle">development</text>
+<text x="960" y="684" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" fill="#24372F" text-anchor="middle">cycle</text>
+<path d="M1022 300 C1080 310 1095 385 1135 434" fill="none" stroke="#3E6B54" stroke-width="5" marker-end="url(#arrow-green)"/>
+<path d="M1317 584 C1395 660 1380 758 1280 834" fill="none" stroke="#3E6B54" stroke-width="5" marker-end="url(#arrow-green)"/>
+<path d="M902 910 C840 900 820 826 808 730" fill="none" stroke="#3E6B54" stroke-width="5" marker-end="url(#arrow-green)"/>
+<path d="M603 648 C528 536 540 374 623 300" fill="none" stroke="#3E6B54" stroke-width="5" marker-end="url(#arrow-green)"/>
+<rect x="622" y="224" width="400" height="152" rx="22" fill="#EAF2F6" stroke="#3F748A" stroke-width="2.5"/>
+<text x="822" y="267" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#3F748A" text-anchor="middle">01</text>
+<text x="822" y="305" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#24372F" text-anchor="middle">Requirements analysis</text>
+<text x="822" y="338" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#65736B" text-anchor="middle">Identify business problems and</text>
+<text x="822" y="362" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#65736B" text-anchor="middle">prioritise requirements.</text>
+<rect x="1112" y="432" width="410" height="152" rx="22" fill="#E6F0E9" stroke="#3E6B54" stroke-width="2.5"/>
+<text x="1317" y="475" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#3E6B54" text-anchor="middle">02</text>
+<text x="1317" y="513" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#24372F" text-anchor="middle">Design</text>
+<text x="1317" y="546" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#65736B" text-anchor="middle">Architecture · database · roles</text>
+<text x="1317" y="570" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#65736B" text-anchor="middle">interfaces · behavioural models</text>
+<rect x="902" y="834" width="410" height="152" rx="22" fill="#FBF2DD" stroke="#A97522" stroke-width="2.5"/>
+<text x="1107" y="877" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#A97522" text-anchor="middle">03</text>
+<text x="1107" y="915" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#24372F" text-anchor="middle">Incremental implementation</text>
+<text x="1107" y="948" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#65736B" text-anchor="middle">Build prioritised functions in manageable</text>
+<text x="1107" y="972" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#65736B" text-anchor="middle">stages, then refine them.</text>
+<rect x="398" y="648" width="410" height="152" rx="22" fill="#F1EEE7" stroke="#95815E" stroke-width="2.5"/>
+<text x="603" y="691" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#A97522" text-anchor="middle">04</text>
+<text x="603" y="729" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#24372F" text-anchor="middle">Testing and refinement</text>
+<text x="603" y="762" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#65736B" text-anchor="middle">Verify functions and interactions;</text>
+<text x="603" y="786" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#65736B" text-anchor="middle">feed findings into the next cycle.</text>
+<rect x="85" y="198" width="420" height="380" rx="24" fill="#ffffff" stroke="#3E6B54" stroke-width="2.5"/>
+<rect x="85" y="198" width="420" height="62" rx="24" fill="#2F5140"/>
+<rect x="85" y="234" width="420" height="26" fill="#2F5140"/>
+<text x="120" y="238" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="start">PROJECT GUIDANCE</text>
+<text x="120" y="300" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" fill="#24372F" text-anchor="start">MoSCoW priorities</text>
+<rect x="120" y="323" width="108" height="35" rx="17" fill="#E6F0E9"/>
+<text x="174" y="347" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#2F5140" text-anchor="middle">MUST</text>
+<text x="248" y="347" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" fill="#24372F" text-anchor="start">Core requirements first</text>
+<text x="120" y="391" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#65736B" text-anchor="start">SHOULD · COULD · WON’T</text>
+<text x="120" y="416" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#24372F" text-anchor="start">Secondary functions follow</text>
+<text x="120" y="440" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" fill="#24372F" text-anchor="start">within the available project time.</text>
+<line x1="120" y1="468" x2="470" y2="468" stroke="#D4DDD6" stroke-width="1.5"/>
+<text x="120" y="502" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#3F748A" text-anchor="start">Fixed academic timeframe</text>
+<text x="120" y="530" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#65736B" text-anchor="start">Each stage fits the deadline; scope is</text>
+<text x="120" y="554" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#65736B" text-anchor="start">prioritised and refined progressively.</text>
+<rect x="1435" y="634" width="400" height="380" rx="24" fill="#ffffff" stroke="#3F748A" stroke-width="2.5"/>
+<rect x="1435" y="634" width="400" height="62" rx="24" fill="#3F748A"/>
+<rect x="1435" y="670" width="400" height="26" fill="#3F748A"/>
+<text x="1470" y="674" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="start">MUST HAVE · DEVELOP AND VERIFY</text>
+<text x="1470" y="739" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#24372F" text-anchor="start">Core system functions</text>
+<text x="1470" y="785" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" fill="#24372F" text-anchor="start">• Authentication</text>
+<text x="1470" y="823" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" fill="#24372F" text-anchor="start">• Inventory management</text>
+<text x="1470" y="861" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" fill="#24372F" text-anchor="start">• Point-of-sale processing</text>
+<text x="1470" y="899" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" fill="#24372F" text-anchor="start">• Customer credit</text>
+<text x="1470" y="937" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" fill="#24372F" text-anchor="start">• Customer ordering</text>
+<text x="1470" y="975" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="500" fill="#24372F" text-anchor="start">• Offline transactions and sync</text>
+<path d="M505 330 C548 311 582 301 622 300" fill="none" stroke="#3F748A" stroke-width="3.5" stroke-dasharray="9 8" marker-end="url(#arrow-blue)"/>
+<path d="M1435 812 C1390 830 1350 853 1312 875" fill="none" stroke="#3F748A" stroke-width="3.5" stroke-dasharray="9 8" marker-end="url(#arrow-blue)"/>
+<path d="M808 754 C696 660 594 565 505 520" fill="none" stroke="#3F748A" stroke-width="3" stroke-dasharray="9 8" marker-end="url(#arrow-blue)"/>
+<text x="560" y="286" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#3F748A" text-anchor="middle">MoSCoW selects scope</text>
+<text x="1375" y="806" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#3F748A" text-anchor="middle">Must Have scope</text>
+<text x="714" y="642" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600" fill="#3F748A" text-anchor="middle">learning informs reprioritisation</text>
+<rect x="1435" y="1040" width="400" height="64" rx="18" fill="#FBFAF6" stroke="#D4DDD6" stroke-width="1.7"/>
+<text x="1470" y="1068" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#65736B" text-anchor="start">SECONDARY FEATURES</text>
+<text x="1470" y="1092" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="500" fill="#24372F" text-anchor="start">Add when time and priority allow</text>
+<text x="92" y="1190" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="500" fill="#65736B" text-anchor="start">Figure 5.1: Iterative Development Approach for the Grand Pa’s Cold Store Management System</text>
+</svg>

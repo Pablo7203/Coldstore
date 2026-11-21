@@ -1303,14 +1303,14 @@ Public/browser-safe examples:
 
 ```text
 NEXT_PUBLIC_SUPABASE_URL
-NEXT_PUBLIC_SUPABASE_ANON_KEY
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
 NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY
 ```
 
 Server-only examples:
 
 ```text
-SUPABASE_SERVICE_ROLE_KEY
+SUPABASE_SECRET_KEY
 PAYSTACK_SECRET_KEY
 ```
 
@@ -1377,9 +1377,9 @@ Examples:
 
 ---
 
-# 54. Service-Role Key Rule
+# 54. Supabase Secret-Key Rule
 
-Supabase service-role credentials are server-only.
+Supabase secret API keys are server-only and bypass Row Level Security. The browser uses a publishable key; its access remains governed by authenticated user identity and RLS policies.
 
 Never put them in:
 
@@ -1424,7 +1424,7 @@ Never log:
 - passwords;
 - access tokens;
 - refresh tokens;
-- service-role key;
+- Supabase secret key;
 - Paystack secret key.
 
 ---

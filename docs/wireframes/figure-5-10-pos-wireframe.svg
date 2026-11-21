@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<title>Point-of-Sale Interface Wireframe</title>
+<desc>Cashier point-of-sale screen</desc>
+<rect width="1600" height="1120" fill="#F3F3F3"/>
+<style>text{font-family:Arial,Helvetica,sans-serif} .shadow{filter:none}</style>
+<rect x="0" y="0" width="1600" height="132" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<line x1="0" y1="131" x2="1600" y2="131" stroke="#888888" stroke-width="1.5"/>
+<rect x="72" y="41" width="42" height="42" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="93.0" y="66" fill="#555555" font-size="8" font-weight="400" text-anchor="middle" letter-spacing="0">LOGO</text>
+<text x="128" y="63" fill="#222222" font-size="21" font-weight="700" text-anchor="start" letter-spacing="0">Grand Pa’s</text>
+<text x="128" y="84" fill="#555555" font-size="10" font-weight="700" text-anchor="start" letter-spacing="1.8">COLD STORE</text>
+<text x="565" y="68" fill="#555555" font-size="14" font-weight="600" text-anchor="start" letter-spacing="0">Point of sale</text>
+<rect x="1210" y="48" width="126" height="38" rx="0" fill="#E5E5E5" stroke="#888888" stroke-width="1"/>
+<text x="1273.0" y="71.76" fill="#333333" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="0">Cashier</text>
+<rect x="1354" y="45" width="44" height="44" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1376" y="73" fill="#555555" font-size="8" font-weight="600" text-anchor="middle" letter-spacing="0">USER</text>
+<rect x="1420" y="47" width="112" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1476.0" y="71.76" fill="#222222" font-size="14" font-weight="600" text-anchor="middle" letter-spacing="0">Sign out</text>
+<rect x="72" y="151" width="124" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="134.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Workspace</text>
+<rect x="205" y="151" width="72" height="40" rx="0" fill="#E5E5E5" stroke="#888888" stroke-width="1.5"/>
+<text x="241.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">POS</text>
+<rect x="286" y="151" width="82" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="327.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Sales</text>
+<rect x="377" y="151" width="114" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="434.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Customers</text>
+<rect x="500" y="151" width="100" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="550.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Products</text>
+<rect x="609" y="151" width="110" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="664.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Inventory</text>
+<rect x="728" y="151" width="84" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="770.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Credit</text>
+<rect x="821" y="151" width="92" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="867.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Orders</text>
+<text x="72" y="256" fill="#444444" font-size="12" font-weight="700" text-anchor="start" letter-spacing="1.5">POINT OF SALE</text>
+<text x="72" y="300" fill="#222222" font-size="34" font-weight="700" text-anchor="start" letter-spacing="0">New sale</text>
+<text x="72" y="331" fill="#555555" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Scan or search products, build the cart, and select a tender.</text>
+<rect x="1321" y="267" width="112" height="32" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="1377.0" y="287.08" fill="#222222" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">ONLINE</text>
+<rect x="72" y="366" width="900" height="626" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="101" y="406" fill="#222222" font-size="22" font-weight="700" text-anchor="start" letter-spacing="0">Find a product</text>
+<text x="101" y="432" fill="#555555" font-size="13" font-weight="400" text-anchor="start" letter-spacing="0">Search by name, SKU, or barcode.</text>
+<rect x="101" y="452" width="842" height="54" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="151" y="484" fill="#899189" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Search or scan barcode</text>
+<rect x="100" y="524" width="98" height="28" rx="0" fill="#E5E5E5" stroke="#888888" stroke-width="1"/>
+<text x="149.0" y="542.08" fill="#333333" font-size="12" font-weight="700" text-anchor="middle" letter-spacing="0">8 products</text>
+<rect x="101" y="570" width="412" height="96" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="115" y="584" width="66" height="66" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1" class="placeholder"/>
+<text x="148" y="621" fill="#555555" font-size="9" font-weight="400" text-anchor="middle" letter-spacing="0">IMG</text>
+<text x="195" y="600" fill="#222222" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">Whole Chicken</text>
+<text x="195" y="622" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Poultry · SKU CHK-001</text>
+<text x="195" y="646" fill="#333333" font-size="13" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 82.00</text>
+<text x="356" y="646" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">In stock · 18</text>
+<rect x="436" y="595" width="63" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="467.5" y="619.42" fill="#222222" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0">Add</text>
+<rect x="530" y="570" width="412" height="96" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="544" y="584" width="66" height="66" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1" class="placeholder"/>
+<text x="577" y="621" fill="#555555" font-size="9" font-weight="400" text-anchor="middle" letter-spacing="0">IMG</text>
+<text x="624" y="600" fill="#222222" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">Chicken Wings</text>
+<text x="624" y="622" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Poultry · SKU CHK-014</text>
+<text x="624" y="646" fill="#333333" font-size="13" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 66.00</text>
+<text x="785" y="646" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">In stock · 12</text>
+<rect x="865" y="595" width="63" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="896.5" y="619.42" fill="#222222" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0">Add</text>
+<rect x="101" y="684" width="412" height="96" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="115" y="698" width="66" height="66" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1" class="placeholder"/>
+<text x="148" y="735" fill="#555555" font-size="9" font-weight="400" text-anchor="middle" letter-spacing="0">IMG</text>
+<text x="195" y="714" fill="#222222" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">Frozen Tilapia</text>
+<text x="195" y="736" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Fish · SKU FSH-003</text>
+<text x="195" y="760" fill="#333333" font-size="13" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 74.00</text>
+<text x="356" y="760" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">Low stock · 4</text>
+<rect x="436" y="709" width="63" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="467.5" y="733.42" fill="#222222" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0">Add</text>
+<rect x="530" y="684" width="412" height="96" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="544" y="698" width="66" height="66" rx="0" fill="#F7F7F7" stroke="#888888" stroke-width="1" class="placeholder"/>
+<text x="577" y="735" fill="#555555" font-size="9" font-weight="400" text-anchor="middle" letter-spacing="0">IMG</text>
+<text x="624" y="714" fill="#222222" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">Beef Cubes</text>
+<text x="624" y="736" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Beef &amp; goat · SKU BEEF-02</text>
+<text x="624" y="760" fill="#333333" font-size="13" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 91.00</text>
+<text x="785" y="760" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">In stock · 9</text>
+<rect x="865" y="709" width="63" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="896.5" y="733.42" fill="#222222" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0">Add</text>
+<text x="101" y="912" fill="#555555" font-size="12" font-weight="400" text-anchor="start" letter-spacing="0">USB barcode scanners can type directly into the search field.</text>
+<rect x="996" y="366" width="532" height="318" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1022" y="406" fill="#222222" font-size="22" font-weight="700" text-anchor="start" letter-spacing="0">Current sale</text>
+<text x="1504" y="404" fill="#444444" font-size="12" font-weight="700" text-anchor="end" letter-spacing="0">Clear cart</text>
+<line x1="1020" y1="437" x2="1504" y2="437" stroke="#EDF0EB" stroke-width="1"/>
+<text x="1022" y="459" fill="#222222" font-size="15" font-weight="600" text-anchor="start" letter-spacing="0">Whole Chicken</text>
+<text x="1022" y="483" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">GH₵ 82.00 / kg</text>
+<rect x="1022" y="493" width="90" height="29" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1067" y="513" fill="#222222" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0">1.0 kg</text>
+<text x="1504" y="470" fill="#222222" font-size="14" font-weight="700" text-anchor="end" letter-spacing="0">GH₵ 82.00</text>
+<line x1="1020" y1="525" x2="1504" y2="525" stroke="#EDF0EB" stroke-width="1"/>
+<text x="1022" y="547" fill="#222222" font-size="15" font-weight="600" text-anchor="start" letter-spacing="0">Chicken Wings</text>
+<text x="1022" y="571" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">GH₵ 66.00 / kg</text>
+<rect x="1022" y="581" width="90" height="29" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1067" y="601" fill="#222222" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0">2.0 kg</text>
+<text x="1504" y="558" fill="#222222" font-size="14" font-weight="700" text-anchor="end" letter-spacing="0">GH₵ 132.00</text>
+<line x1="1020" y1="624" x2="1504" y2="624" stroke="#888888" stroke-width="1.5"/>
+<text x="1022" y="652" fill="#555555" font-size="14" font-weight="400" text-anchor="start" letter-spacing="0">Subtotal</text>
+<text x="1504" y="652" fill="#222222" font-size="14" font-weight="600" text-anchor="end" letter-spacing="0">GH₵ 214.00</text>
+<text x="1022" y="678" fill="#444444" font-size="13" font-weight="700" text-anchor="start" letter-spacing="1">TOTAL</text>
+<text x="1504" y="679" fill="#333333" font-size="21" font-weight="700" text-anchor="end" letter-spacing="0">GH₵ 214.00</text>
+<rect x="996" y="704" width="532" height="288" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1022" y="744" fill="#222222" font-size="17" font-weight="700" text-anchor="start" letter-spacing="0">Customer (optional)</text>
+<rect x="1022" y="761" width="480" height="44" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1038" y="789" fill="#899189" font-size="13" font-weight="400" text-anchor="start" letter-spacing="0">Search name, phone, or email</text>
+<text x="1022" y="833" fill="#444444" font-size="12" font-weight="700" text-anchor="start" letter-spacing="0">+ Create walk-in customer</text>
+<text x="1022" y="868" fill="#222222" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">Payment method</text>
+<rect x="1022" y="884" width="145" height="38" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1034" y="908" fill="#222222" font-size="11" font-weight="500" text-anchor="start" letter-spacing="0">(x)</text>
+<text x="1062" y="908" fill="#222222" font-size="12" font-weight="500" text-anchor="start" letter-spacing="0">Cash</text>
+<rect x="1179" y="884" width="145" height="38" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1191" y="908" fill="#222222" font-size="11" font-weight="500" text-anchor="start" letter-spacing="0">( )</text>
+<text x="1219" y="908" fill="#222222" font-size="12" font-weight="500" text-anchor="start" letter-spacing="0">Mobile money</text>
+<rect x="1336" y="884" width="145" height="38" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1348" y="908" fill="#222222" font-size="11" font-weight="500" text-anchor="start" letter-spacing="0">( )</text>
+<text x="1376" y="908" fill="#222222" font-size="12" font-weight="500" text-anchor="start" letter-spacing="0">Credit</text>
+<rect x="1022" y="936" width="480" height="44" rx="0" fill="#FFFFFF" stroke="#222222" stroke-width="1.5"/>
+<text x="1262.0" y="962.76" fill="#222222" font-size="14" font-weight="600" text-anchor="middle" letter-spacing="0">Complete sale  ·  GH₵ 214.00</text>
+<line x1="72" y1="1042" x2="1528" y2="1042" stroke="#888888" stroke-width="1.4"/>
+<text x="72" y="1081" fill="#444444" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.8">Figure 5.10</text>
+<text x="190" y="1081" fill="#222222" font-size="18" font-weight="600" text-anchor="start" letter-spacing="0">Point-of-Sale Interface Wireframe</text>
+</svg>

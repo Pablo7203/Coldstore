@@ -1,0 +1,3994 @@
+{
+  "run_id": "phase2-e2e-mwm5idap-969dd13c52",
+  "final_stage": "cleanup.completed",
+  "workflow_outcome": "failed",
+  "cleanup_outcome": "passed",
+  "cleanup_failure_codes": [],
+  "events": [
+    {
+      "at_ms": 0,
+      "event": "stage",
+      "stage": "test.started"
+    },
+    {
+      "at_ms": 15,
+      "event": "stage",
+      "stage": "identity_setup.started"
+    },
+    {
+      "at_ms": 1446,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 1431
+    },
+    {
+      "at_ms": 1629,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/staff_profiles",
+      "status": 201,
+      "duration_ms": 156
+    },
+    {
+      "at_ms": 1632,
+      "event": "identity.provisioned",
+      "persona": "manager",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 1841,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 208
+    },
+    {
+      "at_ms": 1859,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/staff_profiles",
+      "status": 201,
+      "duration_ms": 15
+    },
+    {
+      "at_ms": 1860,
+      "event": "identity.provisioned",
+      "persona": "stock_assistant",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 1979,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 119
+    },
+    {
+      "at_ms": 1995,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/staff_profiles",
+      "status": 201,
+      "duration_ms": 13
+    },
+    {
+      "at_ms": 1997,
+      "event": "identity.provisioned",
+      "persona": "cashier",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 2134,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 137
+    },
+    {
+      "at_ms": 2136,
+      "event": "identity.provisioned",
+      "persona": "customer",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 2136,
+      "event": "stage",
+      "stage": "identity_setup.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 2336,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/token",
+      "status": 200,
+      "duration_ms": 198
+    },
+    {
+      "at_ms": 2339,
+      "event": "identity.auth_preflight",
+      "persona": "manager",
+      "outcome": "ok",
+      "duration_ms": 202
+    },
+    {
+      "at_ms": 2473,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/logout",
+      "status": 204,
+      "duration_ms": 130
+    },
+    {
+      "at_ms": 2474,
+      "event": "stage",
+      "stage": "manager.ui_signin.started"
+    },
+    {
+      "at_ms": 2512,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/login"
+    },
+    {
+      "at_ms": 2542,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/login",
+      "status": 200,
+      "duration_ms": 31
+    },
+    {
+      "at_ms": 2572,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 2575,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 2575,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 2575,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 2576,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 2576,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 2576,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 2576,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(auth)/login/page-fb298df66f26cff4.js"
+    },
+    {
+      "at_ms": 2583,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 11
+    },
+    {
+      "at_ms": 2622,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/auth-background.png"
+    },
+    {
+      "at_ms": 2624,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/auth-background.png",
+      "status": 200,
+      "duration_ms": 2
+    },
+    {
+      "at_ms": 2629,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 54
+    },
+    {
+      "at_ms": 2629,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 54
+    },
+    {
+      "at_ms": 2630,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 54
+    },
+    {
+      "at_ms": 2649,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 73
+    },
+    {
+      "at_ms": 2651,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(auth)/login/page-fb298df66f26cff4.js",
+      "status": 200,
+      "duration_ms": 75
+    },
+    {
+      "at_ms": 2651,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 76
+    },
+    {
+      "at_ms": 2652,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 77
+    },
+    {
+      "at_ms": 2775,
+      "event": "stage",
+      "stage": "ui.login.page_loaded",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 2795,
+      "event": "browser.console_error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "at_ms": 2824,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/"
+    },
+    {
+      "at_ms": 2825,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/forgot-password"
+    },
+    {
+      "at_ms": 2825,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/register"
+    },
+    {
+      "at_ms": 2845,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/",
+      "status": 200,
+      "duration_ms": 20
+    },
+    {
+      "at_ms": 2851,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/register",
+      "status": 200,
+      "duration_ms": 26
+    },
+    {
+      "at_ms": 2875,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/"
+    },
+    {
+      "at_ms": 2876,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/register"
+    },
+    {
+      "at_ms": 2886,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/",
+      "status": 200,
+      "duration_ms": 12
+    },
+    {
+      "at_ms": 2905,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/register",
+      "status": 200,
+      "duration_ms": 29
+    },
+    {
+      "at_ms": 2934,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/forgot-password",
+      "status": 200,
+      "duration_ms": 109
+    },
+    {
+      "at_ms": 2957,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/forgot-password"
+    },
+    {
+      "at_ms": 2974,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/forgot-password",
+      "status": 200,
+      "duration_ms": 16
+    },
+    {
+      "at_ms": 2974,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(auth)/forgot-password/page-bc0ed583f88a2494.js"
+    },
+    {
+      "at_ms": 2999,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(auth)/forgot-password/page-bc0ed583f88a2494.js",
+      "status": 200,
+      "duration_ms": 25
+    },
+    {
+      "at_ms": 3112,
+      "event": "stage",
+      "stage": "ui.login.action_submit_started"
+    },
+    {
+      "at_ms": 3288,
+      "event": "request.started",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/login"
+    },
+    {
+      "at_ms": 3337,
+      "event": "stage",
+      "stage": "ui.login.action_submit_dispatched",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 3743,
+      "event": "request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/login",
+      "status": 200,
+      "duration_ms": 455
+    },
+    {
+      "at_ms": 3807,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/staff/page-670b6b8910d73a07.js"
+    },
+    {
+      "at_ms": 3993,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/staff/page-670b6b8910d73a07.js",
+      "status": 200,
+      "duration_ms": 186
+    },
+    {
+      "at_ms": 4148,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 4148,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 4148,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 4148,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 4217,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 69
+    },
+    {
+      "at_ms": 4218,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 70
+    },
+    {
+      "at_ms": 4235,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 87
+    },
+    {
+      "at_ms": 4248,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 4248,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 4249,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 100
+    },
+    {
+      "at_ms": 4249,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 4249,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 4260,
+      "event": "stage",
+      "stage": "ui.login.redirect_completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 4260,
+      "event": "stage",
+      "stage": "manager.ui_signin.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 4321,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 73
+    },
+    {
+      "at_ms": 4323,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 74
+    },
+    {
+      "at_ms": 4323,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 74
+    },
+    {
+      "at_ms": 4323,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 74
+    },
+    {
+      "at_ms": 4344,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 4808,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 464
+    },
+    {
+      "at_ms": 4854,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 4854,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 4854,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 4854,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 4855,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 4855,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 4866,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 12
+    },
+    {
+      "at_ms": 4876,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 22
+    },
+    {
+      "at_ms": 5001,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 146
+    },
+    {
+      "at_ms": 5001,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 146
+    },
+    {
+      "at_ms": 5057,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 202
+    },
+    {
+      "at_ms": 5058,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 204
+    },
+    {
+      "at_ms": 5106,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 5106,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js"
+    },
+    {
+      "at_ms": 5106,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 5112,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js",
+      "status": 200,
+      "duration_ms": 6
+    },
+    {
+      "at_ms": 5502,
+      "event": "stage",
+      "stage": "category.create.started"
+    },
+    {
+      "at_ms": 5805,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 5805,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 5805,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 5805,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 5822,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 17
+    },
+    {
+      "at_ms": 5831,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 26
+    },
+    {
+      "at_ms": 5852,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 47
+    },
+    {
+      "at_ms": 5853,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 48
+    },
+    {
+      "at_ms": 5862,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 5865,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 5872,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 5872,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 5885,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 23
+    },
+    {
+      "at_ms": 5902,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 38
+    },
+    {
+      "at_ms": 5932,
+      "event": "request.started",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 5952,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 80
+    },
+    {
+      "at_ms": 6005,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 6005,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 133
+    },
+    {
+      "at_ms": 6146,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 142
+    },
+    {
+      "at_ms": 6162,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 6247,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 85
+    },
+    {
+      "at_ms": 6431,
+      "event": "request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 499
+    },
+    {
+      "at_ms": 6799,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 6799,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 6799,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 6799,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 6854,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 55
+    },
+    {
+      "at_ms": 6879,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 80
+    },
+    {
+      "at_ms": 6881,
+      "event": "supabase.request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/categories",
+      "status": 200,
+      "duration_ms": 127
+    },
+    {
+      "at_ms": 6884,
+      "event": "stage",
+      "stage": "category.create.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 6894,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 94
+    },
+    {
+      "at_ms": 6912,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 113
+    },
+    {
+      "at_ms": 6930,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 6934,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 6938,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 6939,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 6939,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 6947,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 14
+    },
+    {
+      "at_ms": 6985,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 46
+    },
+    {
+      "at_ms": 7018,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 79
+    },
+    {
+      "at_ms": 7029,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 91
+    },
+    {
+      "at_ms": 7048,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 7060,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 7076,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 27
+    },
+    {
+      "at_ms": 7116,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 56
+    },
+    {
+      "at_ms": 7296,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 366
+    },
+    {
+      "at_ms": 7500,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 7500,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 7500,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 7501,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 7509,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 7509,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 7509,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 7509,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 7509,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 7509,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 7509,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 7509,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 7545,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 7546,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 7553,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js"
+    },
+    {
+      "at_ms": 7690,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js",
+      "status": 200,
+      "duration_ms": 137
+    },
+    {
+      "at_ms": 7752,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 7753,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 7753,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 7753,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 7800,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 47
+    },
+    {
+      "at_ms": 7805,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 52
+    },
+    {
+      "at_ms": 7822,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 69
+    },
+    {
+      "at_ms": 7851,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 99
+    },
+    {
+      "at_ms": 7856,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 7862,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 7862,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 7863,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 7900,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 44
+    },
+    {
+      "at_ms": 7920,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 58
+    },
+    {
+      "at_ms": 7936,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 74
+    },
+    {
+      "at_ms": 7960,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 7961,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 97
+    },
+    {
+      "at_ms": 7961,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 8003,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 42
+    },
+    {
+      "at_ms": 8015,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 54
+    },
+    {
+      "at_ms": 8837,
+      "event": "stage",
+      "stage": "product.create.started"
+    },
+    {
+      "at_ms": 8927,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 8927,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 8928,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit"
+    },
+    {
+      "at_ms": 9004,
+      "event": "request.started",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 9068,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 142
+    },
+    {
+      "at_ms": 9141,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 214
+    },
+    {
+      "at_ms": 9281,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 9281,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 9281,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit",
+      "status": 200,
+      "duration_ms": 354
+    },
+    {
+      "at_ms": 9292,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit"
+    },
+    {
+      "at_ms": 9340,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 59
+    },
+    {
+      "at_ms": 9340,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 59
+    },
+    {
+      "at_ms": 9340,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit",
+      "status": 200,
+      "duration_ms": 49
+    },
+    {
+      "at_ms": 9746,
+      "event": "request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 742
+    },
+    {
+      "at_ms": 10097,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 10097,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 10097,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit"
+    },
+    {
+      "at_ms": 10103,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 6
+    },
+    {
+      "at_ms": 10116,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 19
+    },
+    {
+      "at_ms": 10120,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit",
+      "status": 200,
+      "duration_ms": 23
+    },
+    {
+      "at_ms": 10128,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 10131,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 10136,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit"
+    },
+    {
+      "at_ms": 10151,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 24
+    },
+    {
+      "at_ms": 10163,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 32
+    },
+    {
+      "at_ms": 10178,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit",
+      "status": 200,
+      "duration_ms": 42
+    },
+    {
+      "at_ms": 10477,
+      "event": "supabase.request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/products",
+      "status": 200,
+      "duration_ms": 21
+    },
+    {
+      "at_ms": 10479,
+      "event": "stage",
+      "stage": "product.create.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 10514,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 10724,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 210
+    },
+    {
+      "at_ms": 10868,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 10869,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 10869,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 10885,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 17
+    },
+    {
+      "at_ms": 10886,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 10887,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 10887,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 10889,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 2
+    },
+    {
+      "at_ms": 10889,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 10889,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 10889,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 10889,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 10917,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 10917,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 10917,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js"
+    },
+    {
+      "at_ms": 10918,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 11098,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 11098,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 11098,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 11098,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 11108,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 10
+    },
+    {
+      "at_ms": 11127,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 29
+    },
+    {
+      "at_ms": 11130,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 32
+    },
+    {
+      "at_ms": 11134,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 36
+    },
+    {
+      "at_ms": 11154,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 11161,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 11169,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 11169,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 11208,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 54
+    },
+    {
+      "at_ms": 11221,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 60
+    },
+    {
+      "at_ms": 11228,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 59
+    },
+    {
+      "at_ms": 11243,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 74
+    },
+    {
+      "at_ms": 11258,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 11268,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 11277,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 19
+    },
+    {
+      "at_ms": 11290,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4fbafabe-0bea-4676-b481-16ac735d2e3d/edit"
+    },
+    {
+      "at_ms": 11290,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/522c407d-3adf-44e4-8b42-373be1ac6a27/edit"
+    },
+    {
+      "at_ms": 11294,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 26
+    },
+    {
+      "at_ms": 11325,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4fbafabe-0bea-4676-b481-16ac735d2e3d/edit",
+      "status": 200,
+      "duration_ms": 35
+    },
+    {
+      "at_ms": 11325,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/522c407d-3adf-44e4-8b42-373be1ac6a27/edit",
+      "status": 200,
+      "duration_ms": 35
+    },
+    {
+      "at_ms": 11327,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/c4567350-ea79-4870-83ab-d2099148cc63/edit"
+    },
+    {
+      "at_ms": 11328,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4fbafabe-0bea-4676-b481-16ac735d2e3d/edit"
+    },
+    {
+      "at_ms": 11329,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/522c407d-3adf-44e4-8b42-373be1ac6a27/edit"
+    },
+    {
+      "at_ms": 11333,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bd0c6604-02a4-4daf-8d7d-c35512d260f5/edit"
+    },
+    {
+      "at_ms": 11338,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/c4567350-ea79-4870-83ab-d2099148cc63/edit",
+      "status": 200,
+      "duration_ms": 11
+    },
+    {
+      "at_ms": 11354,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/9ec6f20b-8d41-457c-95fa-2a8902a85bc3/edit"
+    },
+    {
+      "at_ms": 11358,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/9ec6f20b-8d41-457c-95fa-2a8902a85bc3/edit"
+    },
+    {
+      "at_ms": 11383,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4fbafabe-0bea-4676-b481-16ac735d2e3d/edit",
+      "status": 200,
+      "duration_ms": 56
+    },
+    {
+      "at_ms": 11400,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/522c407d-3adf-44e4-8b42-373be1ac6a27/edit",
+      "status": 200,
+      "duration_ms": 71
+    },
+    {
+      "at_ms": 11405,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bd0c6604-02a4-4daf-8d7d-c35512d260f5/edit",
+      "status": 200,
+      "duration_ms": 72
+    },
+    {
+      "at_ms": 11452,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/9ec6f20b-8d41-457c-95fa-2a8902a85bc3/edit",
+      "status": 200,
+      "duration_ms": 98
+    },
+    {
+      "at_ms": 11485,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/9ec6f20b-8d41-457c-95fa-2a8902a85bc3/edit",
+      "status": 200,
+      "duration_ms": 127
+    },
+    {
+      "at_ms": 11553,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/c4567350-ea79-4870-83ab-d2099148cc63/edit"
+    },
+    {
+      "at_ms": 11554,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/5eb6a7be-9af1-490d-8a3b-fa0eed0fb0eb/edit"
+    },
+    {
+      "at_ms": 11568,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/13be7f71-50c5-4014-9290-f3e792c9f9f9/edit"
+    },
+    {
+      "at_ms": 11568,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/b3f93b1b-173f-4f95-bf44-79b2552ad006/edit"
+    },
+    {
+      "at_ms": 11568,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/c4567350-ea79-4870-83ab-d2099148cc63/edit",
+      "status": 200,
+      "duration_ms": 18
+    },
+    {
+      "at_ms": 11568,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/5eb6a7be-9af1-490d-8a3b-fa0eed0fb0eb/edit",
+      "status": 200,
+      "duration_ms": 15
+    },
+    {
+      "at_ms": 11568,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/13be7f71-50c5-4014-9290-f3e792c9f9f9/edit",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 11611,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/b3f93b1b-173f-4f95-bf44-79b2552ad006/edit",
+      "status": 200,
+      "duration_ms": 43
+    },
+    {
+      "at_ms": 11656,
+      "event": "stage",
+      "stage": "product.edit.started"
+    },
+    {
+      "at_ms": 11691,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 11691,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 11691,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit"
+    },
+    {
+      "at_ms": 11724,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 33
+    },
+    {
+      "at_ms": 11745,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 54
+    },
+    {
+      "at_ms": 11779,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/bc2c9eff-4385-4f7b-83b2-99800a7c4ec7/edit",
+      "status": 200,
+      "duration_ms": 88
+    },
+    {
+      "at_ms": 11987,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/%5BproductId%5D/edit/page-64ec05bbd799da10.js"
+    },
+    {
+      "at_ms": 12055,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/%5BproductId%5D/edit/page-64ec05bbd799da10.js",
+      "status": 200,
+      "duration_ms": 68
+    },
+    {
+      "at_ms": 12632,
+      "event": "request.started",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products/9ec6f20b-8d41-457c-95fa-2a8902a85bc3/edit"
+    },
+    {
+      "at_ms": 13545,
+      "event": "request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/products/9ec6f20b-8d41-457c-95fa-2a8902a85bc3/edit",
+      "status": 200,
+      "duration_ms": 913
+    },
+    {
+      "at_ms": 14166,
+      "event": "stage",
+      "stage": "product.edit.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 14215,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 14551,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 336
+    },
+    {
+      "at_ms": 14605,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 14605,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 14606,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 14613,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 7
+    },
+    {
+      "at_ms": 14613,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 14613,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 14613,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 14613,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 14613,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 14613,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 14613,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 14613,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 14635,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 14635,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 14637,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js"
+    },
+    {
+      "at_ms": 14637,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 14761,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 14761,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 14762,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 14762,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 14811,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 49
+    },
+    {
+      "at_ms": 14818,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 56
+    },
+    {
+      "at_ms": 14821,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 59
+    },
+    {
+      "at_ms": 14859,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 14860,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 98
+    },
+    {
+      "at_ms": 14870,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 14872,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 14872,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 14912,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 53
+    },
+    {
+      "at_ms": 14924,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 54
+    },
+    {
+      "at_ms": 14947,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 75
+    },
+    {
+      "at_ms": 14976,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 105
+    },
+    {
+      "at_ms": 14989,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 14999,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 15045,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 56
+    },
+    {
+      "at_ms": 15046,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 47
+    },
+    {
+      "at_ms": 15050,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 15072,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 15115,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 65
+    },
+    {
+      "at_ms": 15152,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 15153,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 81
+    },
+    {
+      "at_ms": 15344,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 192
+    },
+    {
+      "at_ms": 15428,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 4
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 15432,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15437,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 15439,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 2
+    },
+    {
+      "at_ms": 15439,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js"
+    },
+    {
+      "at_ms": 15439,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15514,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 15514,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 15514,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 15514,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 15529,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 15
+    },
+    {
+      "at_ms": 15532,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 17
+    },
+    {
+      "at_ms": 15547,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 33
+    },
+    {
+      "at_ms": 15548,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 33
+    },
+    {
+      "at_ms": 15550,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 15552,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 15556,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 15558,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 15572,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 23
+    },
+    {
+      "at_ms": 15573,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 22
+    },
+    {
+      "at_ms": 15600,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 15602,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 47
+    },
+    {
+      "at_ms": 15602,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 15603,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 45
+    },
+    {
+      "at_ms": 15609,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 7
+    },
+    {
+      "at_ms": 15629,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 15630,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 15639,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 10
+    },
+    {
+      "at_ms": 15643,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 13
+    },
+    {
+      "at_ms": 15747,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 147
+    },
+    {
+      "at_ms": 15812,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 15822,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 10
+    },
+    {
+      "at_ms": 15822,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 15823,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15823,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 15823,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15823,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 15823,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15823,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 15823,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15823,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 15823,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15859,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 15860,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 1
+    },
+    {
+      "at_ms": 15860,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js"
+    },
+    {
+      "at_ms": 15860,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 15977,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 15977,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 15977,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 15978,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 16008,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 30
+    },
+    {
+      "at_ms": 16009,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 31
+    },
+    {
+      "at_ms": 16025,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 48
+    },
+    {
+      "at_ms": 16039,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 16039,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 62
+    },
+    {
+      "at_ms": 16046,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 16047,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 16057,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 16059,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 20
+    },
+    {
+      "at_ms": 16066,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 19
+    },
+    {
+      "at_ms": 16069,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 22
+    },
+    {
+      "at_ms": 16095,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 16095,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 16095,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 38
+    },
+    {
+      "at_ms": 16119,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 24
+    },
+    {
+      "at_ms": 16120,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 25
+    },
+    {
+      "at_ms": 16132,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 16132,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 16147,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 15
+    },
+    {
+      "at_ms": 16147,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 15
+    },
+    {
+      "at_ms": 16147,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 16149,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 16162,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 14
+    },
+    {
+      "at_ms": 16170,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 21
+    },
+    {
+      "at_ms": 16253,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 16629,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 376
+    },
+    {
+      "at_ms": 16766,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 16766,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 16766,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 16778,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 12
+    },
+    {
+      "at_ms": 16778,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 16778,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 16778,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 16778,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 16778,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 16778,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 16778,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 16778,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 16782,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 16782,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 16784,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js"
+    },
+    {
+      "at_ms": 16784,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 16892,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 16894,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 16894,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 16894,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 16934,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 40
+    },
+    {
+      "at_ms": 16934,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 40
+    },
+    {
+      "at_ms": 16935,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 41
+    },
+    {
+      "at_ms": 16946,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 54
+    },
+    {
+      "at_ms": 16947,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 16958,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 16961,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 16967,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 16967,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 16969,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 22
+    },
+    {
+      "at_ms": 16980,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 19
+    },
+    {
+      "at_ms": 17016,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 49
+    },
+    {
+      "at_ms": 17023,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 56
+    },
+    {
+      "at_ms": 17032,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 17033,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 17042,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 17061,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 29
+    },
+    {
+      "at_ms": 17087,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 54
+    },
+    {
+      "at_ms": 17099,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 58
+    },
+    {
+      "at_ms": 17261,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 303
+    },
+    {
+      "at_ms": 17311,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 17314,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 3
+    },
+    {
+      "at_ms": 17314,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 17314,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 17314,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 17314,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 17314,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 17314,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 17315,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 17315,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 17315,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 17315,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 17343,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 17343,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 17347,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js"
+    },
+    {
+      "at_ms": 17347,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(staff)/products/page-8a349e978822ad92.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 17431,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 17431,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 17432,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 17432,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 17470,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 40
+    },
+    {
+      "at_ms": 17471,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 39
+    },
+    {
+      "at_ms": 17471,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 40
+    },
+    {
+      "at_ms": 17475,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 45
+    },
+    {
+      "at_ms": 17483,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery"
+    },
+    {
+      "at_ms": 17486,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory"
+    },
+    {
+      "at_ms": 17487,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements"
+    },
+    {
+      "at_ms": 17487,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff"
+    },
+    {
+      "at_ms": 17499,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/settings/delivery",
+      "status": 200,
+      "duration_ms": 15
+    },
+    {
+      "at_ms": 17505,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/inventory",
+      "status": 200,
+      "duration_ms": 19
+    },
+    {
+      "at_ms": 17524,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/stock-movements",
+      "status": 200,
+      "duration_ms": 37
+    },
+    {
+      "at_ms": 17528,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders"
+    },
+    {
+      "at_ms": 17545,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/staff",
+      "status": 200,
+      "duration_ms": 58
+    },
+    {
+      "at_ms": 17548,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 17560,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 17562,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/orders",
+      "status": 200,
+      "duration_ms": 34
+    },
+    {
+      "at_ms": 17573,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 26
+    },
+    {
+      "at_ms": 17576,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 15
+    },
+    {
+      "at_ms": 17580,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit"
+    },
+    {
+      "at_ms": 17580,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit"
+    },
+    {
+      "at_ms": 17589,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/1e0d4bc7-39e6-4cd9-aae7-ace29baa4c29/edit",
+      "status": 200,
+      "duration_ms": 9
+    },
+    {
+      "at_ms": 17607,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products/4eba263b-a47d-4ebb-adfd-bf085621f233/edit",
+      "status": 200,
+      "duration_ms": 27
+    },
+    {
+      "at_ms": 17634,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products"
+    },
+    {
+      "at_ms": 17742,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/products",
+      "status": 200,
+      "duration_ms": 108
+    },
+    {
+      "at_ms": 17798,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 17803,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 4
+    },
+    {
+      "at_ms": 17803,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 17803,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 17924,
+      "event": "stage",
+      "stage": "product.search.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 24770,
+      "event": "stage",
+      "stage": "hosted_workflow.failed",
+      "outcome": "Error"
+    },
+    {
+      "at_ms": 24964,
+      "event": "stage",
+      "stage": "cleanup.started"
+    },
+    {
+      "at_ms": 25762,
+      "event": "stage",
+      "stage": "cleanup.completed",
+      "outcome": "ok"
+    }
+  ]
+}

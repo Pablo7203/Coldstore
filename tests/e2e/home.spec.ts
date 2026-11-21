@@ -1,18 +1,57 @@
 import { expect, test } from "@playwright/test";
 import { randomUUID } from "node:crypto";
 
-test("homepage offers sign-in and customer registration", async ({ page }) => {
+test("homepage presents the customer storefront", async ({ page }) => {
   await page.goto("/");
   await expect(
-    page.getByRole("heading", { name: "Welcome to Grand Pa’s" }),
+    page.getByRole("heading", { name: "Good food. Ready when you are." }),
   ).toBeVisible();
+  await expect(page.getByRole("search")).toBeVisible();
+  await expect(
+    page
+      .getByRole("navigation", { name: "Main navigation" })
+      .getByRole("link", { name: "Shop", exact: true }),
+  ).toHaveAttribute("href", "/shop");
   await expect(page.getByRole("link", { name: "Sign in" })).toHaveAttribute(
     "href",
-    "/login",
+    "/login?next=%2Faccount",
   );
+  await expect(page.getByText("Pickup or door-to-door delivery")).toBeVisible();
+});
+
+test("customer can add an available product and open the cart", async ({ page }) => {
+  await page.goto("/");
+  const addButton = page.getByRole("button", { name: "Add to cart" }).first();
+  await expect(addButton).toBeVisible();
+  await addButton.click();
+
+  await expect(page.getByRole("link", { name: "Cart 1" })).toBeVisible();
+  await page.getByRole("link", { name: "Cart 1" }).click();
+  await expect(page.getByRole("heading", { name: "Shopping cart" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 2 }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Continue to checkout" })).toBeVisible();
+});
+
+test("customer storefront fits a narrow viewport in dark mode", async ({ browser }) => {
+  const context = await browser.newContext({
+    colorScheme: "dark",
+    viewport: { width: 375, height: 812 },
+  });
+  const page = await context.newPage();
+  await page.goto("/");
+
   await expect(
-    page.getByRole("link", { name: "Create customer account" }),
-  ).toHaveAttribute("href", "/register");
+    page.getByRole("heading", { name: "Good food. Ready when you are." }),
+  ).toBeVisible();
+  await expect(page.locator(".storefront")).toHaveCSS(
+    "background-color",
+    "rgb(16, 37, 31)",
+  );
+  const fitsWidth = await page.evaluate(
+    () => document.documentElement.scrollWidth <= window.innerWidth,
+  );
+  expect(fitsWidth).toBe(true);
+  await context.close();
 });
 
 test("PWA manifest is available with install metadata", async ({ page }) => {
@@ -101,13 +140,13 @@ test("production service worker caches only the public foundation shell", async 
     };
   });
 
-  expect(worker.scope).toBe("http://127.0.0.1:3000/");
+  expect(worker.scope).toBe(new URL("/", page.url()).toString());
   expect(worker.scriptURL).toContain("/service-worker.js");
   await page.reload();
   await context.setOffline(true);
   await page.reload();
   await expect(
-    page.getByRole("heading", { name: "Welcome to Grand Pa’s" }),
+    page.getByRole("heading", { name: "Good food. Ready when you are." }),
   ).toBeVisible();
   await context.setOffline(false);
 });

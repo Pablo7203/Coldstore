@@ -2,6 +2,7 @@ import "server-only";
 
 import { redirect } from "next/navigation";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { phase2Diagnostic } from "@/lib/diagnostics/phase2";
 import { createClient } from "@/lib/supabase/server";
 import type { Database } from "@/types/database";
 
@@ -23,17 +24,29 @@ export type AuthContext =
 export async function resolveAuthContext(
   client: SupabaseClient<Database>,
 ): Promise<AuthContext> {
+  const claimsStarted = performance.now();
   const { data: claimData, error: claimError } = await client.auth.getClaims();
+  phase2Diagnostic(
+    "auth_context.claims.completed",
+    claimsStarted,
+    claimError ? "error" : "ok",
+  );
   const claims = claimData?.claims;
   const userId = claims?.sub;
 
   if (claimError || !claims || typeof userId !== "string") return null;
 
+  const staffQueryStarted = performance.now();
   const { data: staff, error: staffError } = await client
     .from("staff_profiles")
     .select("user_id, full_name, role, is_active")
     .eq("user_id", userId)
     .maybeSingle();
+  phase2Diagnostic(
+    "auth_context.staff_profile.completed",
+    staffQueryStarted,
+    staffError ? "error" : "ok",
+  );
 
   if (staffError) return null;
   if (staff) {
@@ -50,11 +63,17 @@ export async function resolveAuthContext(
     };
   }
 
+  const customerQueryStarted = performance.now();
   const { data: customer, error: customerError } = await client
     .from("customers")
     .select("id, full_name")
     .eq("auth_user_id", userId)
     .maybeSingle();
+  phase2Diagnostic(
+    "auth_context.customer_profile.completed",
+    customerQueryStarted,
+    customerError ? "error" : "ok",
+  );
 
   if (customerError || !customer) return null;
 

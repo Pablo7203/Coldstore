@@ -6,8 +6,8 @@ All application schema is defined by committed migrations in `supabase/migration
 
 - Dedicated development project: GrandPa, Supabase ref `xjzdcpuwrjnpjzntytjs` (region `eu-west-3`). Production will use a separate project later.
 - Supabase CLI is linked to this development project. Confirm the target before any linked database operation with `pnpm exec supabase projects list` and `pnpm exec supabase migration list`.
-- `.env.local` is Git-ignored. Store public URL/key and server-only service-role key locally. Never put secret values in source, docs, terminal captures, or evidence.
-- `pnpm exec node scripts/verify-supabase-clients.mjs` checks public Auth reachability and initializes both public and server admin clients. It prints statuses only and makes no privileged data request.
+- `.env.local` is Git-ignored. Store `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, and server-only `SUPABASE_SECRET_KEY` locally. Never put secret values in source, docs, terminal captures, or evidence.
+- `pnpm exec node scripts/verify-supabase-clients.mjs` checks the linked development endpoint, public Auth reachability, and a minimal server Admin API request. It prints statuses only and discards response data.
 
 ## Initial administrator
 
@@ -17,7 +17,7 @@ Use the local operator bootstrap only for the confirmed owner Auth identity:
 pnpm bootstrap:admin -- owner@example.com "Owner Name"
 ```
 
-The script reads the service-role key locally, refuses customer or already-profiled identities, and does not print credentials. Staff accounts can then be created from `/staff` by an active admin with `manage_staff`; the server action creates a confirmed Auth identity, assigns its profile through the permission-checked database function, and removes the new identity if profile assignment fails. Staff set their password through password recovery.
+The script reads the secret key locally, refuses customer or already-profiled identities, and does not print credentials. Staff accounts can then be created from `/staff` by an active admin with `manage_staff`; the server action creates a confirmed Auth identity, assigns its profile through the permission-checked database function, and removes the new identity if profile assignment fails. Staff set their password through password recovery.
 
 ## Authentication behavior
 

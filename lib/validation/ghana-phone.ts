@@ -9,3 +9,13 @@ export function normalizeGhanaPhone(input: string): string | null {
 
   return null;
 }
+
+/** Convert valid partial Ghana phone input into a prefix matching canonical stored values. */
+export function normalizeGhanaPhoneSearchPrefix(input: string): string {
+  const compact = input.trim().replace(/[-\s()]/gu, "");
+  const normalized = normalizeGhanaPhone(compact);
+  if (normalized) return normalized;
+  if (/^0\d{1,8}$/u.test(compact)) return `+233${compact.slice(1)}`;
+  if (/^\+?233\d{0,8}$/u.test(compact)) return `+${compact.replace(/^\+?/u, "")}`;
+  return input.trim();
+}

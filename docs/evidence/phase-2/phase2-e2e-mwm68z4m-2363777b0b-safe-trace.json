@@ -1,0 +1,540 @@
+{
+  "run_id": "phase2-e2e-mwm68z4m-2363777b0b",
+  "final_stage": "cleanup.completed",
+  "workflow_outcome": "failed",
+  "cleanup_outcome": "passed",
+  "cleanup_failure_codes": [],
+  "events": [
+    {
+      "at_ms": 0,
+      "event": "stage",
+      "stage": "test.started"
+    },
+    {
+      "at_ms": 12,
+      "event": "stage",
+      "stage": "identity_setup.started"
+    },
+    {
+      "at_ms": 417,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 404
+    },
+    {
+      "at_ms": 579,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/staff_profiles",
+      "status": 201,
+      "duration_ms": 144
+    },
+    {
+      "at_ms": 581,
+      "event": "identity.provisioned",
+      "persona": "manager",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 804,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 222
+    },
+    {
+      "at_ms": 893,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/staff_profiles",
+      "status": 201,
+      "duration_ms": 81
+    },
+    {
+      "at_ms": 895,
+      "event": "identity.provisioned",
+      "persona": "stock_assistant",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 1083,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 187
+    },
+    {
+      "at_ms": 1150,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/staff_profiles",
+      "status": 201,
+      "duration_ms": 58
+    },
+    {
+      "at_ms": 1152,
+      "event": "identity.provisioned",
+      "persona": "cashier",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 1501,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users",
+      "status": 200,
+      "duration_ms": 349
+    },
+    {
+      "at_ms": 1505,
+      "event": "identity.provisioned",
+      "persona": "customer",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 1505,
+      "event": "stage",
+      "stage": "identity_setup.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 1711,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/token",
+      "status": 200,
+      "duration_ms": 202
+    },
+    {
+      "at_ms": 1713,
+      "event": "identity.auth_preflight",
+      "persona": "manager",
+      "outcome": "ok",
+      "duration_ms": 205
+    },
+    {
+      "at_ms": 1848,
+      "event": "supabase.request.completed",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/logout",
+      "status": 204,
+      "duration_ms": 134
+    },
+    {
+      "at_ms": 1849,
+      "event": "stage",
+      "stage": "manager.ui_signin.started"
+    },
+    {
+      "at_ms": 1875,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/login"
+    },
+    {
+      "at_ms": 1941,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/login",
+      "status": 200,
+      "duration_ms": 66
+    },
+    {
+      "at_ms": 1971,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css"
+    },
+    {
+      "at_ms": 1974,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js"
+    },
+    {
+      "at_ms": 1974,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js"
+    },
+    {
+      "at_ms": 1974,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js"
+    },
+    {
+      "at_ms": 1975,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js"
+    },
+    {
+      "at_ms": 1975,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js"
+    },
+    {
+      "at_ms": 1975,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js"
+    },
+    {
+      "at_ms": 1975,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(auth)/login/page-fb298df66f26cff4.js"
+    },
+    {
+      "at_ms": 1992,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/css/ec9b40a6e54560a4.css",
+      "status": 200,
+      "duration_ms": 21
+    },
+    {
+      "at_ms": 2120,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/main-app-b8488d91ecd32fae.js",
+      "status": 200,
+      "duration_ms": 145
+    },
+    {
+      "at_ms": 2121,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/webpack-d66f41728bddc267.js",
+      "status": 200,
+      "duration_ms": 147
+    },
+    {
+      "at_ms": 2122,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/layout-ef24253930fb7488.js",
+      "status": 200,
+      "duration_ms": 147
+    },
+    {
+      "at_ms": 2155,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/auth-background.png"
+    },
+    {
+      "at_ms": 2156,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/1623-e98423ef81439fb8.js",
+      "status": 200,
+      "duration_ms": 181
+    },
+    {
+      "at_ms": 2156,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(auth)/login/page-fb298df66f26cff4.js",
+      "status": 200,
+      "duration_ms": 181
+    },
+    {
+      "at_ms": 2176,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/c265cc7e-9de843cbd6e0773b.js",
+      "status": 200,
+      "duration_ms": 202
+    },
+    {
+      "at_ms": 2177,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/136-7ad564cc9df32f11.js",
+      "status": 200,
+      "duration_ms": 203
+    },
+    {
+      "at_ms": 2258,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/auth-background.png",
+      "status": 200,
+      "duration_ms": 103
+    },
+    {
+      "at_ms": 2443,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/"
+    },
+    {
+      "at_ms": 2443,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/forgot-password"
+    },
+    {
+      "at_ms": 2443,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/register"
+    },
+    {
+      "at_ms": 2548,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/",
+      "status": 200,
+      "duration_ms": 105
+    },
+    {
+      "at_ms": 2624,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/register",
+      "status": 200,
+      "duration_ms": 181
+    },
+    {
+      "at_ms": 2678,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/"
+    },
+    {
+      "at_ms": 2678,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/register"
+    },
+    {
+      "at_ms": 2785,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/",
+      "status": 200,
+      "duration_ms": 107
+    },
+    {
+      "at_ms": 2823,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/register",
+      "status": 200,
+      "duration_ms": 145
+    },
+    {
+      "at_ms": 2896,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/forgot-password",
+      "status": 200,
+      "duration_ms": 453
+    },
+    {
+      "at_ms": 2916,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/forgot-password"
+    },
+    {
+      "at_ms": 3020,
+      "event": "stage",
+      "stage": "ui.login.page_loaded",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 3148,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/forgot-password",
+      "status": 200,
+      "duration_ms": 232
+    },
+    {
+      "at_ms": 3166,
+      "event": "browser.console_error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "at_ms": 3169,
+      "event": "request.started",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(auth)/forgot-password/page-bc0ed583f88a2494.js"
+    },
+    {
+      "at_ms": 3169,
+      "event": "request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/_next/static/chunks/app/(auth)/forgot-password/page-bc0ed583f88a2494.js",
+      "status": 200,
+      "duration_ms": 0
+    },
+    {
+      "at_ms": 3719,
+      "event": "stage",
+      "stage": "ui.login.action_submit_started"
+    },
+    {
+      "at_ms": 4088,
+      "event": "request.started",
+      "method": "POST",
+      "host": "127.0.0.1",
+      "path": "/login"
+    },
+    {
+      "at_ms": 4117,
+      "event": "stage",
+      "stage": "ui.login.action_submit_dispatched",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 9216,
+      "event": "stage",
+      "stage": "hosted_workflow.failed",
+      "outcome": "Error"
+    },
+    {
+      "at_ms": 9715,
+      "event": "stage",
+      "stage": "cleanup.started"
+    },
+    {
+      "at_ms": 10114,
+      "event": "supabase.request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/products",
+      "status": 200,
+      "duration_ms": 396
+    },
+    {
+      "at_ms": 10223,
+      "event": "supabase.request.completed",
+      "method": "GET",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/categories",
+      "status": 200,
+      "duration_ms": 106
+    },
+    {
+      "at_ms": 10472,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/customers",
+      "status": 204,
+      "duration_ms": 240
+    },
+    {
+      "at_ms": 10524,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "127.0.0.1",
+      "path": "/rest/v1/staff_profiles",
+      "status": 204,
+      "duration_ms": 47
+    },
+    {
+      "at_ms": 11047,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users/a1fb236c-1491-4376-be1e-60557b47dd32",
+      "status": 200,
+      "duration_ms": 519
+    },
+    {
+      "at_ms": 11053,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users/a678384c-27f1-4375-ad08-6fccfca7408f",
+      "status": 200,
+      "duration_ms": 524
+    },
+    {
+      "at_ms": 11061,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users/bf9822db-6bed-458a-b616-382e5a9cd3c9",
+      "status": 200,
+      "duration_ms": 535
+    },
+    {
+      "at_ms": 11080,
+      "event": "supabase.request.completed",
+      "method": "DELETE",
+      "host": "127.0.0.1",
+      "path": "/auth/v1/admin/users/6990e7ee-cdd6-4fb0-903d-dd1bd9124296",
+      "status": 200,
+      "duration_ms": 555
+    },
+    {
+      "at_ms": 11081,
+      "event": "stage",
+      "stage": "cleanup.completed",
+      "outcome": "ok"
+    },
+    {
+      "at_ms": 11081,
+      "event": "cleanup.summary",
+      "products_deactivated": 0,
+      "categories_deactivated": 0,
+      "identities_removed": 4,
+      "failure_count": 0
+    }
+  ]
+}

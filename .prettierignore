@@ -6,3 +6,4 @@ test-results
 pnpm-lock.yaml
 docs/PRD.md
 docs/TECHNICAL-ARCHITECTURE.md
+**/*.sql

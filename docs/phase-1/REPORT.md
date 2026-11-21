@@ -1,8 +1,8 @@
-# Phase 1B Report — Hosted Supabase Verification
+# Phase 1 Report — Database, Auth, RBAC and RLS
 
 **Date:** 2026-10-12
-**Status:** PASS WITH LIMITATIONS
-**Scope:** Phase 1 completion only. Phase 2 has not started.
+**Status:** PASS WITH LIMITATIONS — Phase 1D; remaining live Customer B UI/session checks explicitly deferred by project owner.
+**Scope:** Phase 1 gate decision. Phase 2 is unblocked by explicit owner authorization; see `PHASE-1D-REPORT.md` for the unresolved live verification.
 
 ## Phase and Git baseline
 
@@ -13,9 +13,9 @@
 ## Development Supabase connection
 
 - Target verified by the CLI: GrandPa development project, ref `xjzdcpuwrjnpjzntytjs`, region `eu-west-3`, healthy and linked. Production is a separate future project.
-- `.env.local` is Git-ignored. A verification script reads local variables without printing their values.
-- Public browser client initialized and the public Auth settings endpoint returned HTTP 200.
-- Server admin client initialized with the locally configured service-role value; verification did not perform a privileged data request.
+- `.env.local` is Git-ignored and uses `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, and `SUPABASE_SECRET_KEY`; values are not recorded here.
+- The browser publishable client initialized and the public Auth settings endpoint returned HTTP 200.
+- The server-only secret client initialized and a minimal Auth Admin API request succeeded; response data was discarded.
 - Supabase CLI reports all local/remote migrations synchronized. No application schema was created manually in the Dashboard.
 
 ## Hosted database verification
@@ -41,8 +41,8 @@
 ## Auth and staff lifecycle coverage
 
 - Playwright verified failed hosted Auth login, anonymous redirects, customer-only registration fields, recovery screens, public home links, manifest, and service worker.
-- Live successful customer signup/login/logout, initial admin bootstrap, live deactivated-user route denial, and end-to-end admin-created staff sign-in were not executed. There are no controlled test identities/passwords in this workspace, and the verification did not create user accounts or request/print account data. The staff creation path is covered through its server/database authorization design, but its complete hosted UI lifecycle remains an acceptance limitation.
-- Phase 1C attempted the full controlled hosted workflow. It stopped on the first Auth Admin API call with `Invalid API key`; linked SQL counts confirmed that no test identities or profiles were created. See `docs/phase-1/PHASE-1C-REPORT.md`.
+- Phase 1C.1 live verification passed initial Admin bootstrap, Admin and staff sign-ins, staff creation and deactivation, unauthorized privileged-operation denial, and live Ghana phone validation/normalization. Generated identities were removed by test cleanup.
+- Phase 1D later passed Customer A's full live UI session path and Customer B's authenticated profile linkage/RLS checks, but its Customer B UI login did not reach `/account`. The confirmation-link flow was also reported to show errors. Those remaining checks are explicitly deferred by the project owner, not counted as passing; see `docs/phase-1/PHASE-1D-REPORT.md` and sanitized evidence.
 
 ## Regression results
 
@@ -58,9 +58,9 @@
 ## Security boundaries
 
 - `.env.local` was confirmed ignored by Git and is not staged.
-- Browser client uses only public Supabase URL/key. Admin client is marked `server-only`; no service-role value is referenced by client UI code.
+- Browser client uses only the public Supabase URL and publishable key. Admin client is marked `server-only`; the secret key remains server-side.
 - No secret values or user account data are included in documentation/evidence.
-- A Phase 1C test attempt was explicitly authorized; its initial privileged Auth API call was rejected before mutation. No staff/service-role operation succeeded. The configured value remains local and was not printed.
+- Phase 1C.1 live results, key boundary scans, and current regression results are recorded in `docs/phase-1/PHASE-1C-REPORT.md` and `docs/evidence/phase-1/phase1c-live-results.txt`.
 
 ## Files and artifacts
 
@@ -73,4 +73,4 @@
 
 ## Phase boundary
 
-Phase 1B work is complete with the live-auth lifecycle limitations above. **Do not start Phase 2** until the remaining controlled identity journeys are demonstrated or explicitly deferred by the project owner.
+Phase 1 is accepted with limitations. On 2026-10-12 the project owner explicitly deferred the remaining Customer B live UI/session checks and authorized proceeding. **Ready for Phase 2: YES**, with the Phase 1D verification limitation carried forward and to be resolved before calling customer authentication fully verified.

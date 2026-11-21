@@ -1,0 +1,35 @@
+Phase 1D preflight evidence (sanitized)
+Date: 2026-10-12
+Environment: GrandPa development Supabase project
+
+Configuration
+- Email signup enabled: true.
+- Confirm Email enabled: true.
+- .env.local is ignored by Git: verified.
+- Secret-safe Supabase client verification: development endpoint matched; browser publishable client initialized; server Admin API authenticated with response data withheld; public Auth endpoint returned HTTP 200.
+- No credentials, inbox address, passwords, tokens, or SMTP settings are included here.
+
+Email signup probe
+- One disposable fictional signup request was accepted by Auth; it did not return over_email_send_rate_limit.
+- The probe used an example.test address. Acceptance confirms the Auth signup request was accepted, but cannot establish receipt or completion of the confirmation email.
+- Probe customer profile and Auth identity cleanup completed.
+
+Hosted Phase 1 customer/RLS regression
+- Hosted rollback verification: 30 passed, 0 failed.
+- Covered customer profile self-read, cross-customer isolation, staff-profile denial, customer non-promotion, RLS enablement, and protected role operations.
+
+Local regression
+- pnpm lint: PASS.
+- pnpm typecheck: PASS.
+- pnpm format:check: PASS.
+- pnpm test: PASS (5 files, 20 tests).
+- pnpm test:e2e: PASS for standard suite (8 passed, 3 skipped, including the Phase 1C and Phase 1D live workflows).
+- pnpm build: PASS.
+- git diff --check: PASS (line-ending normalization warnings only).
+
+Customer application journey
+- Added an opt-in Phase 1D live test that uses two unique plus-addresses for the provided inbox, waits for real email confirmation, checks UI login/logout, profile normalization/linkage, authenticated customer isolation, staff-route denial, non-promotion, invalid-password handling, and logged-out account denial.
+- A live two-customer test was attempted. Customer A passed registration/profile linkage, wrong-password handling, valid UI login, account access, staff-route denial, logout, and logged-out account denial. Customer B passed authenticated profile linkage, own-profile access, cross-customer isolation, and staff-promotion denial.
+- The test then failed because Customer B's UI login remained at /login rather than reaching /account. The user reported confirmation-link errors; email delivery and successful browser confirmation callback for both identities are not claimed as verified. Temporary identities were cleaned up by the test's finally block.
+- The project owner explicitly deferred the remaining Customer B live UI/session verification on 2026-10-12 and authorized Phase 2 to proceed. Phase 1 status is PASS WITH LIMITATIONS; ready for Phase 2 is YES. Resume this acceptance check later.
+- No passwords, inbox address, confirmation links, session tokens, or credentials are embedded in the test or evidence.

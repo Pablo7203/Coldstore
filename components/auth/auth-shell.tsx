@@ -13,14 +13,14 @@ export function AuthShell({
   children: ReactNode;
 }) {
   return (
-    <main className="min-h-svh bg-[#f4f3ed] px-5 py-10 text-[#20251f] sm:px-8 sm:py-14">
-      <div className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-5xl overflow-hidden rounded-3xl border border-[#d9ded3] bg-white shadow-[0_24px_80px_-48px_rgba(31,49,37,0.38)] sm:min-h-[calc(100svh-7rem)] sm:grid-cols-[0.88fr_1.12fr]">
-        <section className="flex flex-col justify-between bg-[#30483a] p-7 text-[#f7f7f1] sm:p-10 lg:p-12">
+    <main className="min-h-svh bg-[#f7f4ec] px-5 py-10 text-[#1f2924] sm:px-8 sm:py-14">
+      <div className="mx-auto grid min-h-[calc(100svh-5rem)] w-full max-w-5xl overflow-hidden rounded-3xl border border-[#d7e0d9] bg-white shadow-[0_24px_80px_-48px_rgba(31,49,37,0.38)] sm:min-h-[calc(100svh-7rem)] sm:grid-cols-[0.88fr_1.12fr]">
+        <section className="auth-brand-panel flex flex-col justify-between p-7 text-[#f7f7f1] sm:p-10 lg:p-12">
           <Link href="/" className="w-fit text-sm font-semibold tracking-wide">
-            GRAND PA’S <span className="font-normal text-[#c8d0c5]">· COLD STORE</span>
+            GRAND PA’S <span className="font-normal text-[#d7e0d9]">· COLD STORE</span>
           </Link>
           <div className="my-12 max-w-sm sm:my-0">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#c8d0c5]">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#d7e0d9]">
               {eyebrow}
             </p>
             <h1 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
@@ -30,7 +30,7 @@ export function AuthShell({
               {description}
             </p>
           </div>
-          <p className="text-xs text-[#c8d0c5]">
+          <p className="text-xs text-[#d7e0d9]">
             A simpler way to keep the store moving.
           </p>
         </section>
@@ -62,7 +62,7 @@ export function AuthMessage({
 }
 
 export const fieldClassName =
-  "mt-1.5 block min-h-11 w-full rounded-lg border border-[#cfd6cc] bg-white px-3.5 text-sm text-[#20251f] outline-none transition placeholder:text-[#879087] focus:border-[#496652] focus:ring-2 focus:ring-[#496652]/20";
+  "mt-1.5 block min-h-11 w-full rounded-lg border border-[#d7e0d9] bg-white px-3.5 text-sm text-[#1f2924] outline-none transition placeholder:text-[#879087] focus:border-[#2f654f] focus:ring-2 focus:ring-[#2f654f]/20";
 
 export const submitClassName =
-  "inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-[#30483a] px-4 text-sm font-semibold text-white transition hover:bg-[#253a2d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#496652] focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-60";
+  "inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-[#153c33] px-4 text-sm font-semibold text-white transition hover:bg-[#253a2d] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2f654f] focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-60";

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+<title>Inventory and Customer-Credit Interface Wireframe</title>
+<desc>Staff inventory and customer credit management screens</desc>
+<rect width="1600" height="1120" fill="#F3F3F3"/>
+<style>text{font-family:Arial,Helvetica,sans-serif} .shadow{filter:none}</style>
+<rect x="0" y="0" width="1600" height="132" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<line x1="0" y1="131" x2="1600" y2="131" stroke="#888888" stroke-width="1.5"/>
+<rect x="72" y="41" width="42" height="42" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="93.0" y="66" fill="#555555" font-size="8" font-weight="400" text-anchor="middle" letter-spacing="0">LOGO</text>
+<text x="128" y="63" fill="#222222" font-size="21" font-weight="700" text-anchor="start" letter-spacing="0">Grand Pa’s</text>
+<text x="128" y="84" fill="#555555" font-size="10" font-weight="700" text-anchor="start" letter-spacing="1.8">COLD STORE</text>
+<text x="565" y="68" fill="#555555" font-size="14" font-weight="600" text-anchor="start" letter-spacing="0">Inventory and customer accounts</text>
+<rect x="1210" y="48" width="126" height="38" rx="0" fill="#E5E5E5" stroke="#888888" stroke-width="1"/>
+<text x="1273.0" y="71.76" fill="#333333" font-size="14" font-weight="700" text-anchor="middle" letter-spacing="0">Manager</text>
+<rect x="1354" y="45" width="44" height="44" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1376" y="73" fill="#555555" font-size="8" font-weight="600" text-anchor="middle" letter-spacing="0">USER</text>
+<rect x="1420" y="47" width="112" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1476.0" y="71.76" fill="#222222" font-size="14" font-weight="600" text-anchor="middle" letter-spacing="0">Sign out</text>
+<rect x="72" y="151" width="124" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="134.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Workspace</text>
+<rect x="205" y="151" width="72" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="241.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">POS</text>
+<rect x="286" y="151" width="82" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="327.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Sales</text>
+<rect x="377" y="151" width="114" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="434.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Customers</text>
+<rect x="500" y="151" width="100" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="550.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Products</text>
+<rect x="609" y="151" width="110" height="40" rx="0" fill="#E5E5E5" stroke="#888888" stroke-width="1.5"/>
+<text x="664.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Inventory</text>
+<rect x="728" y="151" width="84" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="770.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Credit</text>
+<rect x="821" y="151" width="92" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="867.0" y="177" fill="#222222" font-size="14" font-weight="500" text-anchor="middle" letter-spacing="0">Orders</text>
+<text x="72" y="254" fill="#444444" font-size="12" font-weight="700" text-anchor="start" letter-spacing="1.4">INVENTORY</text>
+<text x="72" y="292" fill="#222222" font-size="29" font-weight="700" text-anchor="start" letter-spacing="0">Stock control</text>
+<text x="72" y="318" fill="#555555" font-size="13" font-weight="400" text-anchor="start" letter-spacing="0">Current quantities and authorized movements.</text>
+<rect x="72" y="344" width="188" height="82" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="88" y="369" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">ACTIVE PRODUCTS</text>
+<text x="88" y="408" fill="#333333" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0">30</text>
+<rect x="217" y="371" width="28" height="28" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="231" y="389" fill="#555555" font-size="10" font-weight="500" text-anchor="middle" letter-spacing="0">#</text>
+<rect x="280" y="344" width="188" height="82" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="296" y="369" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">IN STOCK</text>
+<text x="296" y="408" fill="#333333" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0">26</text>
+<rect x="425" y="371" width="28" height="28" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="439" y="389" fill="#555555" font-size="10" font-weight="500" text-anchor="middle" letter-spacing="0">#</text>
+<rect x="488" y="344" width="188" height="82" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="504" y="369" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">LOW STOCK</text>
+<text x="504" y="408" fill="#805515" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0">3</text>
+<rect x="633" y="371" width="28" height="28" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="647" y="389" fill="#555555" font-size="10" font-weight="500" text-anchor="middle" letter-spacing="0">#</text>
+<rect x="696" y="344" width="188" height="82" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="712" y="369" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">OUT OF STOCK</text>
+<text x="712" y="408" fill="#333333" font-size="27" font-weight="700" text-anchor="start" letter-spacing="0">1</text>
+<rect x="841" y="371" width="28" height="28" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="855" y="389" fill="#555555" font-size="10" font-weight="500" text-anchor="middle" letter-spacing="0">#</text>
+<rect x="72" y="448" width="812" height="354" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="95" y="483" fill="#222222" font-size="18" font-weight="700" text-anchor="start" letter-spacing="0">Current stock</text>
+<text x="95" y="506" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Quantity / reorder level</text>
+<rect x="92" y="525" width="772" height="36" rx="0" fill="#F7F7F7" stroke="none" stroke-width="1.5"/>
+<text x="108" y="548" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">PRODUCT</text>
+<text x="398" y="548" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">SKU</text>
+<text x="522" y="548" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">CATEGORY</text>
+<text x="675" y="548" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">QTY / REORDER</text>
+<text x="815" y="548" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">STATUS</text>
+<line x1="92" y1="576" x2="864" y2="576" stroke="#EDF0EB" stroke-width="1"/>
+<text x="108" y="597" fill="#222222" font-size="11" font-weight="600" text-anchor="start" letter-spacing="0">Whole Chicken</text>
+<text x="398" y="597" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">CHK-001</text>
+<text x="522" y="597" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">Poultry</text>
+<text x="705" y="597" fill="#222222" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0">18 / 5</text>
+<rect x="781" y="579" width="66" height="25" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="814.0" y="594.56" fill="#222222" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0">In stock</text>
+<line x1="92" y1="626" x2="864" y2="626" stroke="#EDF0EB" stroke-width="1"/>
+<text x="108" y="647" fill="#222222" font-size="11" font-weight="600" text-anchor="start" letter-spacing="0">Chicken Wings</text>
+<text x="398" y="647" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">CHK-014</text>
+<text x="522" y="647" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">Poultry</text>
+<text x="705" y="647" fill="#222222" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0">4 / 6</text>
+<rect x="781" y="629" width="72" height="25" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="817.0" y="644.56" fill="#222222" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0">Low stock</text>
+<line x1="92" y1="676" x2="864" y2="676" stroke="#EDF0EB" stroke-width="1"/>
+<text x="108" y="697" fill="#222222" font-size="11" font-weight="600" text-anchor="start" letter-spacing="0">Frozen Tilapia</text>
+<text x="398" y="697" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">FSH-003</text>
+<text x="522" y="697" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">Fish</text>
+<text x="705" y="697" fill="#222222" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0">0 / 3</text>
+<rect x="781" y="679" width="89" height="25" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="825.5" y="694.56" fill="#222222" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0">Out of stock</text>
+<line x1="92" y1="726" x2="864" y2="726" stroke="#EDF0EB" stroke-width="1"/>
+<text x="108" y="747" fill="#222222" font-size="11" font-weight="600" text-anchor="start" letter-spacing="0">Beef Cubes</text>
+<text x="398" y="747" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">BEEF-02</text>
+<text x="522" y="747" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">Beef &amp; goat</text>
+<text x="705" y="747" fill="#222222" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0">9 / 4</text>
+<rect x="781" y="729" width="66" height="25" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="814.0" y="744.56" fill="#222222" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0">In stock</text>
+<text x="96" y="785" fill="#444444" font-size="11" font-weight="700" text-anchor="start" letter-spacing="0">View movement history  →</text>
+<rect x="904" y="344" width="624" height="458" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="930" y="368" width="151" height="27" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="1005.5" y="384.56" fill="#222222" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0">CONTROLLED UPDATE</text>
+<text x="930" y="430" fill="#222222" font-size="20" font-weight="700" text-anchor="start" letter-spacing="0">Record a stock movement</text>
+<text x="930" y="455" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Balance and immutable movement ledger update together.</text>
+<text x="930" y="490" fill="#555555" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">Product</text>
+<rect x="930" y="500" width="260" height="42" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="946" y="527.0" fill="#222222" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Select a product  ▾</text>
+<text x="1210" y="490" fill="#555555" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">Movement type</text>
+<rect x="1210" y="500" width="290" height="42" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1226" y="527.0" fill="#222222" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Stock receipt  ▾</text>
+<text x="930" y="585" fill="#555555" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">Quantity</text>
+<rect x="930" y="595" width="260" height="42" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="946" y="622.0" fill="#555555" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Enter quantity</text>
+<text x="1210" y="585" fill="#555555" font-size="14" font-weight="700" text-anchor="start" letter-spacing="0">Reason / reference</text>
+<rect x="1210" y="595" width="290" height="42" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1226" y="622.0" fill="#222222" font-size="15" font-weight="400" text-anchor="start" letter-spacing="0">Supplier delivery</text>
+<rect x="930" y="687" width="570" height="48" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="1215.0" y="715.76" fill="#222222" font-size="14" font-weight="600" text-anchor="middle" letter-spacing="0">Record movement</text>
+<text x="930" y="762" fill="#555555" font-size="10" font-weight="400" text-anchor="start" letter-spacing="0">Authorized actions depend on the staff role.</text>
+<text x="72" y="851" fill="#444444" font-size="12" font-weight="700" text-anchor="start" letter-spacing="1.4">CUSTOMER CREDIT</text>
+<text x="72" y="887" fill="#222222" font-size="25" font-weight="700" text-anchor="start" letter-spacing="0">Customer accounts</text>
+<text x="72" y="912" fill="#555555" font-size="12" font-weight="400" text-anchor="start" letter-spacing="0">Balances update through credit sales and repayments.</text>
+<rect x="72" y="934" width="832" height="66" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<rect x="91" y="947" width="567" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="107" y="973" fill="#899189" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">Search by customer name or phone</text>
+<rect x="672" y="947" width="104" height="40" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="724.0" y="971.08" fill="#222222" font-size="12" font-weight="600" text-anchor="middle" letter-spacing="0">Search</text>
+<text x="794" y="973" fill="#444444" font-size="11" font-weight="700" text-anchor="start" letter-spacing="0">Manage →</text>
+<rect x="930" y="828" width="598" height="172" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1.5"/>
+<text x="954" y="864" fill="#222222" font-size="18" font-weight="700" text-anchor="start" letter-spacing="0">Ama Owusu</text>
+<text x="954" y="887" fill="#555555" font-size="11" font-weight="400" text-anchor="start" letter-spacing="0">+233 24 555 0142  ·  Active</text>
+<line x1="954" y1="903" x2="1504" y2="903" stroke="#888888" stroke-width="1.5"/>
+<text x="954" y="932" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">CREDIT LIMIT</text>
+<text x="954" y="958" fill="#222222" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 1,000.00</text>
+<text x="1150" y="932" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">OUTSTANDING</text>
+<text x="1150" y="958" fill="#805515" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 280.00</text>
+<text x="1347" y="932" fill="#555555" font-size="9" font-weight="700" text-anchor="start" letter-spacing="0.5">AVAILABLE</text>
+<text x="1347" y="958" fill="#333333" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0">GH₵ 720.00</text>
+<rect x="954" y="968" width="143" height="23" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="1025.5" y="982.56" fill="#222222" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0">Record repayment</text>
+<rect x="1110" y="968" width="111" height="23" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="1165.5" y="982.56" fill="#222222" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0">Credit history</text>
+<rect x="1234" y="968" width="117" height="23" rx="0" fill="#FFFFFF" stroke="#888888" stroke-width="1"/>
+<text x="1292.5" y="982.56" fill="#222222" font-size="9" font-weight="700" text-anchor="middle" letter-spacing="0">Manage limit</text>
+<line x1="72" y1="1042" x2="1528" y2="1042" stroke="#888888" stroke-width="1.4"/>
+<text x="72" y="1081" fill="#444444" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.8">Figure 5.12</text>
+<text x="190" y="1081" fill="#222222" font-size="18" font-weight="600" text-anchor="start" letter-spacing="0">Inventory and Customer-Credit Interface Wireframe</text>
+</svg>
