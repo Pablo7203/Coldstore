@@ -1,9 +1,11 @@
 import Link from "next/link";
+import { connection } from "next/server";
 import { ShoppingBag, Snowflake, UserRound } from "lucide-react";
 import { CartCount } from "@/components/storefront/store-cart";
 import { getAuthContext } from "@/lib/auth/authorization";
 
 export async function StorefrontHeader() {
+  await connection();
   const auth = await getAuthContext();
   const accountHref =
     auth?.type === "customer"

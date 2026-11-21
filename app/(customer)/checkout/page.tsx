@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { connection } from "next/server";
 import { redirect } from "next/navigation";
 import { CheckoutForm } from "@/components/storefront/checkout-form";
 import { getAuthContext } from "@/lib/auth/authorization";
@@ -7,6 +8,7 @@ import { getServerEnvironment } from "@/lib/env";
 import { createClient } from "@/lib/supabase/server";
 
 export default async function CheckoutPage() {
+  await connection();
   const customer = await getAuthContext();
   if (customer?.type === "staff") redirect("/staff");
   if (customer?.type !== "customer") redirect("/login?next=%2Fcheckout");
