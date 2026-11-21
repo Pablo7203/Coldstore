@@ -219,7 +219,10 @@ $$;
 revoke all on function public.complete_pos_sale(uuid, jsonb, public.payment_method, uuid, text) from public, anon;
 grant execute on function public.complete_pos_sale(uuid, jsonb, public.payment_method, uuid, text) to authenticated;
 
-create or replace function public.get_pos_sale(p_sale_id uuid)
+-- PostgreSQL cannot replace a function when its RETURNS TABLE columns change.
+-- The Phase 4 receipt adds payment and credit columns, so recreate the RPC.
+drop function public.get_pos_sale(uuid);
+create function public.get_pos_sale(p_sale_id uuid)
 returns table (
   id uuid, receipt_number text, customer_id uuid, customer_name text, cashier_user_id uuid,
   cashier_name text, status public.sale_status, subtotal numeric, total numeric,
