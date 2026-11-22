@@ -2,45 +2,54 @@
 
 The application prepares branded transactional messages for customer signup,
 order placement, Paystack payment confirmation, pickup readiness, and delivery
-tracking updates. App messages use the Resend email API. Missing email settings
-disable sending safely; an email provider failure does not undo a signup,
-payment, or order update.
+tracking updates. The app sends these messages directly through the configured
+SMTP server. Missing SMTP settings disable sending safely; an email provider
+failure does not undo a signup, payment, or order update.
 
-## Application email settings
+## Application SMTP settings
 
-Add these server-only values to .env.local after creating a Resend account and
-verifying the sender domain:
+Add these server-only values to `.env.local` for local development and to the
+Vercel Production environment for the deployed store:
 
-    RESEND_API_KEY=re_...
-    EMAIL_FROM=Grand Pa's Cold Store <orders@example.com>
-    EMAIL_REPLY_TO=support@example.com
-    NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```dotenv
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=465
+SMTP_USER=your-mailbox@GrandPacoldstore.com
+SMTP_PASSWORD=your-google-app-password
+EMAIL_FROM="Grand Pa's Cold Store <order@GrandPacoldstore.com>"
+EMAIL_REPLY_TO=your-monitored-mailbox@GrandPacoldstore.com
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
 
-Use the actual development URL and port for local testing. In deployment,
-NEXT_PUBLIC_SITE_URL must be the public HTTPS origin so the email buttons point
-back to the deployed store. Never add NEXT_PUBLIC_ to the Resend key.
+Use the SMTP server's actual username and password. For Gmail, use a Google App
+Password rather than the account's normal password. Keep `SMTP_PASSWORD` in the
+Vercel Secret environment variable type. `SMTP_USER` should also be treated as
+secret. Never add `NEXT_PUBLIC_` to SMTP credentials.
 
-Replace example.com with a domain verified in Resend. EMAIL_REPLY_TO is
-optional. Restart the Next.js server after changing environment values.
+Supabase stores its Auth SMTP credentials separately and does not expose them
+to the Next.js application. If the app should use the same SMTP account, enter
+the SMTP username and password into Vercel too. The app connects directly to
+the SMTP server; it does not send through Supabase Auth.
 
-## Supabase account confirmation
+For Gmail, port 465 uses a direct TLS connection. Port 587 can be used with
+STARTTLS. Vercel blocks outbound port 25, so do not configure port 25. The send
+is awaited in the application request so the Vercel function does not stop
+before SMTP finishes.
 
-supabase/templates/confirmation.html contains the branded confirmation message,
-and supabase/config.toml points the local Auth confirmation template to it.
-Local email confirmations remain disabled for the existing development flow,
-so local Supabase can continue using its email catcher when started.
+The Supabase dashboard currently warns that Gmail SMTP is intended for
+personal rather than transactional messages. It can be adequate for a low-
+volume academic demonstration, but may have weaker delivery and sending limits
+for real customer traffic. Use the actual HTTPS deployment origin for
+`NEXT_PUBLIC_SITE_URL` so email buttons link back to the live store.
 
-For a hosted Supabase project, copy the same HTML into the Authentication email
-template for signup confirmation. Configure custom SMTP in Supabase before
-enabling email confirmations. With Resend, use host smtp.resend.com, port 465,
-username resend, and a Resend API key as the SMTP password. Use a verified
-sender address such as accounts@example.com. The default Supabase mail service
-is intended for limited testing, not normal customer use.
+## Supabase Auth email
 
-Keep the application sender and authentication sender as separate addresses,
-for example orders@example.com and accounts@example.com, on your verified
-domain. This keeps order delivery and login/confirmation traffic easy to
-identify and manage.
+Supabase Auth sends signup confirmation, password reset, magic link, and email
+change messages through its separately configured custom SMTP server.
+`supabase/templates/confirmation.html` contains the branded local confirmation
+message. For hosted Supabase, configure the Auth templates and SMTP settings in
+the Supabase dashboard. The local email catcher remains available for local
+development.
 
 ## Messages currently prepared
 
@@ -53,17 +62,20 @@ identify and manage.
   dispatch, and delivery completion. Tracking reference and estimated arrival
   are included when staff have set them.
 
-Order and delivery email keys are deterministic so a callback retry does not
-send duplicate messages. Resend retains idempotency keys for 24 hours; the
-database also limits normal delivery stages to a single forward transition.
+Each message uses a stable `Message-ID` derived from its notification key to
+help mail clients group repeated attempts. SMTP does not provide a delivery
+idempotency guarantee, so a provider retry after an ambiguous network failure
+could still deliver a duplicate message.
 
 ## Delivery setup checklist
 
-1. Verify the sender domain in Resend.
-2. Add the server-only Resend and sender values to .env.local.
-3. Set NEXT_PUBLIC_SITE_URL to the active local or deployed origin.
-4. Configure Supabase SMTP and the signup confirmation template when setting up
-   hosted Supabase authentication.
-5. Send a signup, cash order, Paystack test order, pickup-ready update, and each
-   delivery stage to a mailbox you control. Check both the delivered email and
-   the provider delivery log.
+1. Verify the sending domain with the SMTP provider and configure its SPF,
+   DKIM, and DMARC records.
+2. Add `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, and
+   `EMAIL_FROM` to Vercel Production. Add `EMAIL_REPLY_TO` only if there is a
+   mailbox that staff monitor.
+3. Set `NEXT_PUBLIC_SITE_URL` to the active local or deployed origin.
+4. Keep Supabase Auth SMTP configured separately for account emails.
+5. Send signup, cash order, Paystack test order, pickup-ready, and delivery
+   stage messages to a mailbox you control. Check the mailbox and SMTP provider
+   delivery logs.

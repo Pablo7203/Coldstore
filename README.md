@@ -16,7 +16,7 @@ Copy-Item .env.example .env.local
 pnpm dev
 ```
 
-Fill `.env.local` with the Supabase URL, publishable key, and server-only secret key. Set `NEXT_PUBLIC_SITE_URL` to the local origin printed by `pnpm dev`. Keep the Supabase secret and Paystack key out of client code and Git. The optional Resend settings are described in [docs/EMAIL-SETUP.md](docs/EMAIL-SETUP.md).
+Fill `.env.local` with the Supabase URL, publishable key, and server-only secret key. Set `NEXT_PUBLIC_SITE_URL` to the local origin printed by `pnpm dev`. Keep the Supabase secret, Paystack key, and SMTP password out of client code and Git. Email setup is described in [docs/EMAIL-SETUP.md](docs/EMAIL-SETUP.md).
 
 To apply the schema to a new Supabase project:
 
@@ -43,7 +43,7 @@ pnpm build
 
 ## Deployment
 
-Set the variables in `.env.example` in Vercel for the intended environment. Use the hosted Supabase project keys, the public HTTPS deployment URL for `NEXT_PUBLIC_SITE_URL`, and a Paystack **test** key until checkout is verified. Configure the hosted Supabase Auth site URL and redirect URL for the deployment domain. Configure Resend and Supabase SMTP on a verified domain before relying on external email delivery.
+Set the variables in `.env.example` in Vercel for the intended environment. Use the hosted Supabase project keys, the public HTTPS deployment URL for `NEXT_PUBLIC_SITE_URL`, and a Paystack **test** key until checkout is verified. Configure the hosted Supabase Auth site URL and redirect URL for the deployment domain. Configure app SMTP and Supabase Auth SMTP on a verified sender domain before relying on external email delivery.
 
 ## Documentation
 

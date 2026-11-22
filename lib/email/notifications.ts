@@ -10,10 +10,7 @@ import {
   type DeliveryEmailStage,
   type OrderEmailDetails,
 } from "@/lib/email/templates";
-import {
-  isTransactionalEmailConfigured,
-  sendTransactionalEmail,
-} from "@/lib/email/resend";
+import { isTransactionalEmailConfigured, sendTransactionalEmail } from "@/lib/email/smtp";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 type LoadedOrderDetails = OrderEmailDetails & { email: string };
